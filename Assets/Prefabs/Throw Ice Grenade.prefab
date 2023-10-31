@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4116142088996022146}
   - component: {fileID: 2311380149599538491}
   - component: {fileID: 4022812647020498886}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: Mesh Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 1645748340773383105}
   - component: {fileID: 1865821697229056646}
   - component: {fileID: 1549280762182268343}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Throw Ice Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,9 +269,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e59edc1975764d45a92c47a4d733811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
   meshObj: {fileID: 3726567649328789666}
   effectObj: {fileID: 6551062459360964138}
   rigid: {fileID: 1645748340773383105}
+  effect: {fileID: 0}
 --- !u!1 &6551062459360964138
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +285,7 @@ GameObject:
   - component: {fileID: 3446984065189472957}
   - component: {fileID: 1875945927563175348}
   - component: {fileID: 6402802658577814460}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Grenade Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5166,7 +5168,7 @@ GameObject:
   - component: {fileID: 5175255373790912738}
   - component: {fileID: 1822109053625253467}
   - component: {fileID: 1568912847995825542}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sub Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}

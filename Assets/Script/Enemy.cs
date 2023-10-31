@@ -15,9 +15,15 @@ public class Enemy : MonoBehaviour
     public BoxCollider meleeArea;
     public GameObject bullet;
     public GameObject[] coins;
+
     public bool isChase;
     public bool isAttack;
     public bool isDead;
+
+    //상태이상 여부
+    public bool isfire = false;
+    public bool isice = false;
+    public bool ispoison = false;
 
     public Rigidbody rigid;
     public BoxCollider boxCollider;
@@ -176,7 +182,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator OnDamage(Vector3 reactVec, bool isGrenade)
+    public IEnumerator OnDamage(Vector3 reactVec, bool isGrenade)
     {
         foreach (MeshRenderer mesh in meshs)
             mesh.material.color = Color.red;
@@ -240,5 +246,21 @@ public class Enemy : MonoBehaviour
 
             Destroy(gameObject, 4);
         }
+    }
+
+    void Debuff()
+    {
+         
+    }
+
+    IEnumerator Fire()
+    {
+        curHealth -= 5;
+        StartCoroutine(OnDamage(transform.position, false));
+        yield return new WaitForSeconds(1f);
+        if (curHealth > 0)
+            StartCoroutine(Fire());
+        else
+            StopAllCoroutines();
     }
 }

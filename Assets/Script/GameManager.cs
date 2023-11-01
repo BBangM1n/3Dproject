@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Boss boss;
     public GameObject itemShop;
     public GameObject weaponShop;
+    public GameObject potionShop;
     public GameObject startZone;
     public int stage;
     public float playTime;
@@ -155,6 +156,7 @@ public class GameManager : MonoBehaviour
     {
         itemShop.SetActive(false);
         weaponShop.SetActive(false);
+        potionShop.SetActive(false);
         startZone.SetActive(false);
 
         foreach (Transform zone in enemyZones)
@@ -170,6 +172,7 @@ public class GameManager : MonoBehaviour
 
         itemShop.SetActive(true);
         weaponShop.SetActive(true);
+        potionShop.SetActive(true);
         startZone.SetActive(true);
 
         foreach (Transform zone in enemyZones)

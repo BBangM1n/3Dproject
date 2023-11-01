@@ -1,0 +1,9 @@
+Fire Grenade 도트 데미지 방식에 대한 오류.
+쿨타임을 직접 Fire 기능안에 넣었기에 여러명에게 적용 안되는 현상 발견해서 Enemy 스크립트에 isFire일 시
+데미지 입히게 적용
+Ice Grenade는 들어온 몬스터에게 이동속도 2배 너프
+Fire, ice에 대한 디버프 이펙트 적용.
+gameobject.tag == ""보단 gameobject.CompareTag()를 이용하자 tag는 가비지 생성을 한다고 한다. 그러므로 태그 비교는 ComparTag가 낫다.
+버프상점 스테이지 시작시 남아있는 현상발견 > setactive false 적용
+아이템 상점 (총알 하트 수류탄)에서 ammo 늘어나지 않는 현상 발견. > 벨류값을 지정안해놨음.
+이제 수류탄 집으면 색깔에맞는 수류탄 돌아가게 설정해보자.

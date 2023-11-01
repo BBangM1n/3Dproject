@@ -5,9 +5,6 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float curtime = 0f;
-    float coolTime = 1f;
-    bool iscool = false;
     void Start()
     {
         transform.position = new Vector3(transform.position.x ,0.76f, transform.position.z);
@@ -15,31 +12,13 @@ public class Fire : MonoBehaviour
         Destroy(gameObject, 10f);
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        curtime += Time.deltaTime;
-        if (curtime >= coolTime)
-            cool();
-
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Enemy")
+        
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
-            if(iscool)
-            {
-                    enemy.curHealth -= 5;
-                    StartCoroutine(enemy.OnDamage(transform.position, false));
-                    iscool = false;
-                    curtime = 0;
-            }
+            enemy.isfire = true;
         }
     }
-
-    void cool()
-    {
-        iscool = true;
-    }
-
 }

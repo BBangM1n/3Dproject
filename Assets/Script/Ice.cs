@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Ice : MonoBehaviour
 {
@@ -14,16 +15,15 @@ public class Ice : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-
         if (other.gameObject.tag == "Enemy")
         {
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
-            if (!enemy.isice)
+            if(!enemy.isice)
             {
+                enemy.nav.speed /= 2;
                 enemy.isice = true;
+ 
             }
-
         }
-    }
+    } 
 }

@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     public bool isChase;
     public bool isAttack;
     public bool isDead;
+    public bool isdamage;
 
     //상태이상 여부
     public bool isfire = false;
@@ -30,6 +31,8 @@ public class Enemy : MonoBehaviour
     public MeshRenderer[] meshs;
     public NavMeshAgent nav;
     public Animator anim;
+
+    public GameObject[] Debuffeffect;
     
 
     private void Awake()
@@ -41,8 +44,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
 
         if(enemyType != Type.D)
-            Invoke("ChaseStart", 2);
-        
+        Invoke("ChaseStart", 2);
     }
 
     private void Update()
@@ -52,6 +54,8 @@ public class Enemy : MonoBehaviour
             nav.SetDestination(Target.position); // SetDestination : 도착할 목표 위치 정할 함수
             nav.isStopped = !isChase;
         }
+
+        Debuff();
     }
 
     private void FixedUpdate()
@@ -182,7 +186,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public IEnumerator OnDamage(Vector3 reactVec, bool isGrenade)
+    IEnumerator OnDamage(Vector3 reactVec, bool isGrenade)
     {
         foreach (MeshRenderer mesh in meshs)
             mesh.material.color = Color.red;
@@ -250,17 +254,49 @@ public class Enemy : MonoBehaviour
 
     void Debuff()
     {
-         
+        if(isice)
+        {
+            StartCoroutine(Iceoff());
+            Debuffeffect[0].SetActive(true);
+        }
+
+        if(isfire)
+        {
+            Debuffeffect[1].SetActive(true);
+            if (!isdamage)
+            {
+                isdamage = true;
+                StartCoroutine(fireon());
+            }
+            StartCoroutine(fireoff());
+        }
+    }
+    IEnumerator fireon()
+    {
+        if (curHealth <= 0)
+            StopCoroutine(OnDamage(transform.position, false));
+        else
+        {
+            curHealth -= 5;
+            StartCoroutine(OnDamage(transform.position, false));
+        }
+        yield return new WaitForSeconds(1f);
+        isdamage = false;
     }
 
-    IEnumerator Fire()
+    IEnumerator fireoff()
     {
-        curHealth -= 5;
-        StartCoroutine(OnDamage(transform.position, false));
-        yield return new WaitForSeconds(1f);
-        if (curHealth > 0)
-            StartCoroutine(Fire());
-        else
-            StopAllCoroutines();
+        yield return new WaitForSeconds(10f);
+        isfire = false;
+        Debuffeffect[1].SetActive(false);
+        StopCoroutine(fireoff());
+    }
+
+    IEnumerator Iceoff()
+    {
+        isice = false;
+        yield return new WaitForSeconds(10f);
+        Debuffeffect[0].SetActive(false);
+        nav.speed *= 2;
     }
 }

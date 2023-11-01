@@ -376,7 +376,7 @@ public class Player : MonoBehaviour
                 rigidGrenade.AddTorque(Vector3.back * 10, ForceMode.Impulse);
                 GrenadeList.RemoveAt(0);
                 hasGrenade--;
-                grenades[hasGrenade].SetActive(false);
+                grenades[hasGrenade].SetActive(false); //이부분이 수류탄
             }
         }
     }

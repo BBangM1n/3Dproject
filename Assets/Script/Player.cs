@@ -369,14 +369,13 @@ public class Player : MonoBehaviour
                 nextVec.y = 10;
 
                 // 생성
-                // 여기서 받아오는 값에 따라 수류탄 종류가 달라짐
                 GameObject instantGrenade = Instantiate(grenadeObj[GrenadeList[0]], transform.position, transform.rotation);
                 Rigidbody rigidGrenade = instantGrenade.GetComponent<Rigidbody>();
                 rigidGrenade.AddForce(nextVec, ForceMode.Impulse);
                 rigidGrenade.AddTorque(Vector3.back * 10, ForceMode.Impulse);
                 GrenadeList.RemoveAt(0);
                 hasGrenade--;
-                grenades[hasGrenade].SetActive(false); //이부분이 수류탄
+                childoff(grenades[hasGrenade]);
             }
         }
     }
@@ -445,7 +444,10 @@ public class Player : MonoBehaviour
                         return;
                     //수류탄 종류 판별 후 넣기
                     GrenadeList.Add(item.Grenadevalue);
-                    grenades[hasGrenade].SetActive(true); // 해당 수류탄 모습으로키기
+                    //위치 grenades에 0, 1, 2, 3 0이 켜지고 item.value값으로 차일드 키기
+                    //아마 hasgrenade가 1이상일때 미루는방식 고안해야할듯
+                    grenades[hasGrenade].SetActive(true);
+                    grenades[hasGrenade].transform.GetChild(item.Grenadevalue).gameObject.SetActive(true);// 해당 수류탄 모습으로키기
                     hasGrenade += item.value; // 수류탄 갯수
                     break;
                 case Item.Type.Potion:
@@ -498,6 +500,22 @@ public class Player : MonoBehaviour
             rigid.velocity = Vector3.zero;
 
         
+    }
+
+    void childoff(GameObject obj)
+    {
+        if (obj.transform.GetChild(0).gameObject.activeSelf)
+        {
+            obj.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else if (obj.transform.GetChild(1).gameObject.activeSelf)
+        {
+            obj.transform.GetChild(1).gameObject.SetActive(false);
+        }
+        else if (obj.transform.GetChild(2).gameObject.activeSelf)
+        {
+            obj.transform.GetChild(2).gameObject.SetActive(false);
+        }
     }
 
     void Usepotion()

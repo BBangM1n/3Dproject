@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     bool sdown1;
     bool sdown2;
     bool sdown3;
+    bool sdown4;
     bool sdownf1;
     bool sdownf2;
     bool sdownf3;
@@ -126,6 +127,7 @@ public class Player : MonoBehaviour
         sdown1 = Input.GetButtonDown("Swap1");
         sdown2 = Input.GetButtonDown("Swap2");
         sdown3 = Input.GetButtonDown("Swap3");
+        sdown4 = Input.GetButtonDown("Swap4");
         sdownf1 = Input.GetButtonDown("SlotF1");
         sdownf2 = Input.GetButtonDown("SlotF2");
         sdownf3 = Input.GetButtonDown("SlotF3");
@@ -219,6 +221,10 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        if (sdown4 && (!hasWeapons[3] || equipWeaponIndex == 3))
+        {
+            return;
+        }
 
         int weaponIndex = -1;
         if (sdown1)
@@ -227,8 +233,10 @@ public class Player : MonoBehaviour
             weaponIndex = 1;
         if (sdown3)
             weaponIndex = 2;
+        if (sdown4)
+            weaponIndex = 3;
 
-        if ((sdown1 || sdown2 || sdown3) && !isjump && !isdodge && !isDead)
+        if ((sdown1 || sdown2 || sdown3 || sdown4) && !isjump && !isdodge && !isDead)
         {
             if (equipWeapon != null)
                 equipWeapon.gameObject.SetActive(false);

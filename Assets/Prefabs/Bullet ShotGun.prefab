@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6358478812380674344}
   - component: {fileID: 2065770117679695496}
   - component: {fileID: 4672896602760210284}
-  - component: {fileID: 3355322057405450091}
+  - component: {fileID: -8389250030761795283}
   m_Layer: 6
   m_Name: Bullet ShotGun
   m_TagString: Bullet
@@ -172,7 +172,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3355322057405450091
+--- !u!114 &-8389250030761795283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 442063837956762186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 672dac026e722444184f66c17cdfba9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7166c8439003e2541ad908e46d794b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2

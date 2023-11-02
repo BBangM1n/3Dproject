@@ -9,7 +9,6 @@ public class Bullet : MonoBehaviour
     public bool isMelee;
     public bool isRock;
 
-
     private void OnCollisionEnter(Collision collision)
     {
         if(!isRock && collision.gameObject.tag == "Floor")

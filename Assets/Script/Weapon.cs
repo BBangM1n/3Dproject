@@ -62,12 +62,9 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Shotgun() //¼¦°ÇÀü¿ë ¼¦
     {
-        for (int i = 0; i < 10; i++)
-        {
-            GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
-            Rigidbody bulletrigid = instantBullet.GetComponent<Rigidbody>();
-            bulletrigid.velocity = bulletPos.forward * 50;
-        }
+        GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
+        Rigidbody bulletrigid = instantBullet.GetComponent<Rigidbody>();
+        bulletrigid.velocity = bulletPos.forward * 50;
         yield return null;
 
         GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);

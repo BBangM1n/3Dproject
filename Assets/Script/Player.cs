@@ -183,10 +183,6 @@ public class Player : MonoBehaviour
             isjump = true;
             anim.SetBool("isJump", true);
             anim.SetTrigger("Jump");
-            Debug.Log(GrenadeList[0]);
-            Debug.Log(GrenadeList[1]);
-            Debug.Log(GrenadeList[2]);
-            Debug.Log(GrenadeList[3]);
         }
     }
 
@@ -376,6 +372,7 @@ public class Player : MonoBehaviour
                 GrenadeList.RemoveAt(0);
                 hasGrenade--;
                 childoff(grenades[hasGrenade]);
+                //해당 수류탄 이미지 꺼지는 함수
             }
         }
     }
@@ -447,7 +444,8 @@ public class Player : MonoBehaviour
                     //위치 grenades에 0, 1, 2, 3 0이 켜지고 item.value값으로 차일드 키기
                     //아마 hasgrenade가 1이상일때 미루는방식 고안해야할듯
                     grenades[hasGrenade].SetActive(true);
-                    grenades[hasGrenade].transform.GetChild(item.Grenadevalue).gameObject.SetActive(true);// 해당 수류탄 모습으로키기
+                    grenadeargorizm();//함수자리
+                    grenades[0].transform.GetChild(item.Grenadevalue).gameObject.SetActive(true);
                     hasGrenade += item.value; // 수류탄 갯수
                     break;
                 case Item.Type.Potion:
@@ -469,6 +467,66 @@ public class Player : MonoBehaviour
 
             if (other.GetComponent<Rigidbody>() != null)
                 Destroy(other.gameObject);
+        }
+    }
+
+    void grenadeargorizm()
+    {
+        if (grenades[2].transform.GetChild(0).gameObject.activeSelf || grenades[2].transform.GetChild(1).gameObject.activeSelf || grenades[2].transform.GetChild(2).gameObject.activeSelf)
+        {
+            if (grenades[2].transform.GetChild(0).gameObject.activeSelf)
+            {
+                grenades[2].transform.GetChild(0).gameObject.SetActive(false);
+                grenades[3].transform.GetChild(0).gameObject.SetActive(true);
+            }
+            else if (grenades[2].transform.GetChild(1).gameObject.activeSelf)
+            {
+                grenades[2].transform.GetChild(1).gameObject.SetActive(false);
+                grenades[3].transform.GetChild(1).gameObject.SetActive(true);
+            }
+            else if (grenades[2].transform.GetChild(2).gameObject.activeSelf)
+            {
+                grenades[2].transform.GetChild(2).gameObject.SetActive(false);
+                grenades[3].transform.GetChild(2).gameObject.SetActive(true);
+            }
+        }
+
+        if (grenades[1].transform.GetChild(0).gameObject.activeSelf || grenades[1].transform.GetChild(1).gameObject.activeSelf || grenades[1].transform.GetChild(2).gameObject.activeSelf)
+        {
+            if (grenades[1].transform.GetChild(0).gameObject.activeSelf)
+            {
+                grenades[1].transform.GetChild(0).gameObject.SetActive(false);
+                grenades[2].transform.GetChild(0).gameObject.SetActive(true);
+            }
+            else if (grenades[1].transform.GetChild(1).gameObject.activeSelf)
+            {
+                grenades[1].transform.GetChild(1).gameObject.SetActive(false);
+                grenades[2].transform.GetChild(1).gameObject.SetActive(true);
+            }
+            else if (grenades[1].transform.GetChild(2).gameObject.activeSelf)
+            {
+                grenades[1].transform.GetChild(2).gameObject.SetActive(false);
+                grenades[2].transform.GetChild(2).gameObject.SetActive(true);
+            }
+        }
+
+        if (grenades[0].transform.GetChild(0).gameObject.activeSelf || grenades[0].transform.GetChild(1).gameObject.activeSelf || grenades[0].transform.GetChild(2).gameObject.activeSelf)
+        {
+            if (grenades[0].transform.GetChild(0).gameObject.activeSelf)
+            {
+                grenades[0].transform.GetChild(0).gameObject.SetActive(false);
+                grenades[1].transform.GetChild(0).gameObject.SetActive(true);
+            }
+            else if (grenades[0].transform.GetChild(1).gameObject.activeSelf)
+            {
+                grenades[0].transform.GetChild(1).gameObject.SetActive(false);
+                grenades[1].transform.GetChild(1).gameObject.SetActive(true);
+            }
+            else if (grenades[0].transform.GetChild(2).gameObject.activeSelf)
+            {
+                grenades[0].transform.GetChild(2).gameObject.SetActive(false);
+                grenades[1].transform.GetChild(2).gameObject.SetActive(true);
+            }
         }
     }
 

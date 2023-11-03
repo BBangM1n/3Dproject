@@ -50,6 +50,9 @@ public class GameManager : MonoBehaviour
     public Text enemyAText;
     public Text enemyBText;
     public Text enemyCText;
+    public Text QCoinText;
+    public Text QAmmoText;
+    public Text QScoreText;
     public RectTransform bossHealthGroup;
     public RectTransform bossHealthBar;
     public Text curScoreText;
@@ -101,6 +104,8 @@ public class GameManager : MonoBehaviour
     {
         if (isBattle)
             playTime += Time.deltaTime;
+
+        QuestInfo();
     }
 
     private void LateUpdate()
@@ -254,5 +259,12 @@ public class GameManager : MonoBehaviour
             potion3Img.sprite = potiomimage[value];
             isitembool3 = true;
         }
+    }
+
+    void QuestInfo()
+    {
+        QAmmoText.text = player.ammo.ToString();
+        QCoinText.text = player.coin.ToString();
+        QScoreText.text = player.score.ToString();
     }
 }

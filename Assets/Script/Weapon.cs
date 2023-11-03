@@ -40,11 +40,11 @@ public class Weapon : MonoBehaviour
             StartCoroutine("Shot");
         }
 
-        if (type == Type.Range && curammo > 0 && rangetype == RangeType.Shot)
+        /*if (type == Type.Range && curammo > 0 && rangetype == RangeType.Shot)
         {
             curammo--;
             StartCoroutine("Shotgun");
-        }
+        }*/
     }
 
     IEnumerator Swing()
@@ -60,7 +60,7 @@ public class Weapon : MonoBehaviour
         trailEffect.enabled = false;
     }
 
-    IEnumerator Shotgun() //¼¦°ÇÀü¿ë ¼¦
+    /*IEnumerator Shotgun() //¼¦°ÇÀü¿ë ¼¦
     {
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         Rigidbody bulletrigid = instantBullet.GetComponent<Rigidbody>();
@@ -72,7 +72,7 @@ public class Weapon : MonoBehaviour
         Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
         caserigid.AddForce(caseVec, ForceMode.Impulse);
         caserigid.AddTorque(Vector3.up * 10, ForceMode.Impulse); // È¸Àü°ª
-    }
+    }*/
 
     IEnumerator Shot()
     {

@@ -261,7 +261,6 @@ public class Player : MonoBehaviour
     {
         if(idown && nearObject != null && !isjump && !isdodge && !isDead)
         {
-            Debug.Log(nearObject);
             if(nearObject.tag == "Weapon")
             {
                 Item item = nearObject.GetComponent<Item>();
@@ -274,12 +273,6 @@ public class Player : MonoBehaviour
             {
                 Shop shop = nearObject.GetComponent<Shop>();
                 shop.Enter(this);
-                isshop = true;
-            }
-            else if (nearObject.tag == "Quest")
-            {
-                QuestManager quest = nearObject.GetComponent<QuestManager>();
-                quest.Enter(this);
                 isshop = true;
             }
             else if (nearObject.tag == "Potion")

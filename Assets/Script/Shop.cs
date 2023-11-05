@@ -16,6 +16,8 @@ public class Shop : MonoBehaviour
     public string[] talkData;
     public Text talkText;
 
+    public bool isQuest = false;
+
     Player enterPlayer;
     public void Enter(Player player)
     {
@@ -27,7 +29,8 @@ public class Shop : MonoBehaviour
     
     public void Exit()
     {
-        anim.SetTrigger("Hello");
+        if(!isQuest)
+            anim.SetTrigger("Hello");
         uiGroup.anchoredPosition = Vector3.down * 1000;
     }
 

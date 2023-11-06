@@ -43,11 +43,6 @@ public class Quest : MonoBehaviour
         quest.transform.GetChild(2).gameObject.SetActive(true);
     }
 
-    void QuestSetting()
-    {
-        
-    }
-
     public void Yesbtnclick()
     {
         Yesbtn.gameObject.SetActive(false);

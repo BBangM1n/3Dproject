@@ -47,8 +47,8 @@ public class QuestManager : MonoBehaviour
     private void Start()
     {
         print(path);
-        LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
         QuestList();
+        LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
     }
 
     public void SaveData()
@@ -86,6 +86,22 @@ public class QuestManager : MonoBehaviour
         newQuest2.Giftvalue = 1000;
         questDataList.questDataList.Add(newQuest2);
 
-        SaveData();
+        QuestData newQuest3 = new QuestData();
+        newQuest3.QuestID = 3;
+        newQuest3.QuestTitle = "퀘스트 제목3";
+        newQuest3.ContentText = "퀘스트 내용3";
+        newQuest3.Clear = false;
+        newQuest3.Giftitem = 14;
+        newQuest3.Giftvalue = 10200;
+        questDataList.questDataList.Add(newQuest3);
+
+        QuestData newQuest4 = new QuestData();
+        newQuest4.QuestID = 4;
+        newQuest4.QuestTitle = "퀘스트 제목4";
+        newQuest4.ContentText = "퀘스트 내용4";
+        newQuest4.Clear = false;
+        newQuest4.Giftitem = 45;
+        newQuest4.Giftvalue = 10200;
+        questDataList.questDataList.Add(newQuest4);
     }
 }

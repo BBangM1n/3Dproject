@@ -14,6 +14,8 @@ public class Quest : MonoBehaviour
     public Button Clearbtn;
     public Image Questicon;
     public bool isclear;
+    public int Qvalue;
+
 
     private void Awake()
     {
@@ -29,13 +31,14 @@ public class Quest : MonoBehaviour
 
     private void Start()
     {
+        
         QuestTitleText.text = "녹색 공룡 몬스터 처치";
         ContentText.text = "녹색 공룡 몬스터가 우리 마을에 피해를\n입히고 있어 도와줘!";
     }
 
     private void Update()
     {
-        condition();
+
     }
 
     public void QuestClickBtn()
@@ -64,16 +67,6 @@ public class Quest : MonoBehaviour
         else
         {
             Debug.Log("조건이 충족되지 않았습니다");
-        }
-    }
-
-    public void condition() //조건 함수
-    {
-        Player player = GameObject.Find("Player").GetComponent<Player>();
-        if (player.score >= 100)
-        {
-            isclear = true;
-            Questicon.color = Color.green;
         }
     }
 }

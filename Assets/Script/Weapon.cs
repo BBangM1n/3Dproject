@@ -88,7 +88,7 @@ public class Weapon : MonoBehaviour
         caserigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
     }
 
-    void RangeBuf()
+    void RangeBuf()// 해머때 버그걸림
     {
         Bullet bul = bullet.GetComponent<Bullet>();
         if (type == Type.Range && damage > 0)

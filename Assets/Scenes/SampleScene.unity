@@ -88010,6 +88010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quest
       objectReference: {fileID: 0}
+    - target: {fileID: 7963598303264323707, guid: d204de6b7939b0c4dbd64c2a1f4b3b58, type: 3}
+      propertyPath: examScript
+      value: 
+      objectReference: {fileID: 1343656861}
     - target: {fileID: 7963598303264323711, guid: d204de6b7939b0c4dbd64c2a1f4b3b58, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -70,8 +70,8 @@ public class QuestManager : MonoBehaviour
     {
         QuestData newQuest1 = new QuestData();
         newQuest1.QuestID = 1;
-        newQuest1.QuestTitle = "퀘스트 제목1";
-        newQuest1.ContentText = "퀘스트 내용1";
+        newQuest1.QuestTitle = "사냥을 해주세요";
+        newQuest1.ContentText = "몬스터를 사냥해서 점수를 100점 이상 만들어주세요";
         newQuest1.Clear = false;
         newQuest1.Giftitem = 2;
         newQuest1.Giftvalue = 100;
@@ -79,8 +79,8 @@ public class QuestManager : MonoBehaviour
 
         QuestData newQuest2 = new QuestData();
         newQuest2.QuestID = 2;
-        newQuest2.QuestTitle = "퀘스트 제목2";
-        newQuest2.ContentText = "퀘스트 내용2";
+        newQuest2.QuestTitle = "총알을 넘겨주세요";
+        newQuest2.ContentText = "총알을 100개 이상 들고있어주세요";
         newQuest2.Clear = false;
         newQuest2.Giftitem = 4;
         newQuest2.Giftvalue = 1000;
@@ -88,8 +88,8 @@ public class QuestManager : MonoBehaviour
 
         QuestData newQuest3 = new QuestData();
         newQuest3.QuestID = 3;
-        newQuest3.QuestTitle = "퀘스트 제목3";
-        newQuest3.ContentText = "퀘스트 내용3";
+        newQuest3.QuestTitle = "몬스터를 처치해주세요";
+        newQuest3.ContentText = "몬스터 한마리를 처치해주고 와주세요";
         newQuest3.Clear = false;
         newQuest3.Giftitem = 14;
         newQuest3.Giftvalue = 10200;
@@ -97,8 +97,8 @@ public class QuestManager : MonoBehaviour
 
         QuestData newQuest4 = new QuestData();
         newQuest4.QuestID = 4;
-        newQuest4.QuestTitle = "퀘스트 제목4";
-        newQuest4.ContentText = "퀘스트 내용4";
+        newQuest4.QuestTitle = "수류탄 한개를 사용해주세요";
+        newQuest4.ContentText = "수류탄 한개 사용";
         newQuest4.Clear = false;
         newQuest4.Giftitem = 45;
         newQuest4.Giftvalue = 10200;

@@ -28,6 +28,7 @@ public class Exam : MonoBehaviour
         QuestData fourthQuest = qmgr.questDataList.questDataList[3];
         Debug.Log("네 번째 퀘스트 Clear 여부: " + fourthQuest.Clear);
 
+        // 이런식으로 수정하기 fourthQuest.Clear = true;
     }
 
 }

@@ -16,6 +16,8 @@ public class Quest : MonoBehaviour
     public bool isclear;
     public int Qvalue;
 
+    public QuestManager qmgr;
+
 
     private void Awake()
     {
@@ -27,13 +29,14 @@ public class Quest : MonoBehaviour
         Button Clearbtn = GetComponent<Button>();
         Image Questicon = GetComponent<Image>();
         Text nobtnText = Nobtn.GetComponent<Text>();
+        QuestManager qmgr = GameObject.Find("QuestMgr").GetComponent<QuestManager>();
     }
 
     private void Start()
     {
-        
-        QuestTitleText.text = "녹색 공룡 몬스터 처치";
-        ContentText.text = "녹색 공룡 몬스터가 우리 마을에 피해를\n입히고 있어 도와줘!";
+        Qvalue = Random.Range(0, 3);
+        qmgr.LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
+        UseQuestList(Qvalue);
     }
 
     private void Update()
@@ -67,6 +70,47 @@ public class Quest : MonoBehaviour
         else
         {
             Debug.Log("조건이 충족되지 않았습니다");
+        }
+    }
+
+    void UseQuestList(int value)
+    {
+        switch (value)
+        {
+            case 0:
+                QuestData firstQuest = qmgr.questDataList.questDataList[0];
+                QuestTitleText.text = firstQuest.QuestTitle;
+                ContentText.text = firstQuest.ContentText;
+                break;
+            case 1:
+                QuestData secondQuest = qmgr.questDataList.questDataList[1];
+                QuestTitleText.text = secondQuest.QuestTitle;
+                ContentText.text = secondQuest.ContentText;
+                break;
+            case 2:
+                QuestData thirdQuest = qmgr.questDataList.questDataList[0];
+                QuestTitleText.text = thirdQuest.QuestTitle;
+                ContentText.text = thirdQuest.ContentText;
+                break;
+        }
+    }
+
+    void ClearQuest(int value)
+    {
+        switch (value)
+        {
+            case 0:
+                Player player = GetComponent<Player>();
+                if(player.score >= 100)
+                {
+                    //보상
+                    Debug.Log("클리어");
+                }
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
         }
     }
 }

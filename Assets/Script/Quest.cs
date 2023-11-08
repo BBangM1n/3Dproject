@@ -9,11 +9,13 @@ public class Quest : MonoBehaviour
     public GameObject[] questsobj;
     public Text QuestTitleText;
     public Text ContentText;
+    public Text ClearGiftText;
     public Text nobtnText;
     public Button Yesbtn;
     public Button Nobtn;
     public Button Clearbtn;
     public Image Questicon;
+    public Sprite ClearGiftImg;
     public bool isclear;
     public int Qvalue;
 
@@ -111,27 +113,40 @@ public class Quest : MonoBehaviour
 
     void UseQuestList(int value)
     {
+        Gift gi = gift.GetComponent<Gift>();
         switch (value)
         {
             case 0:
                 QuestData firstQuest = qmgr.questDataList.questDataList[0];
                 QuestTitleText.text = firstQuest.QuestTitle;
                 ContentText.text = firstQuest.ContentText;
+                gi.value = firstQuest.Giftvalue;
+                ClearGiftText.text = firstQuest.Giftvalue.ToString();
+                gi.itemcode = firstQuest.Giftitem;
                 break;
             case 1:
                 QuestData secondQuest = qmgr.questDataList.questDataList[1];
                 QuestTitleText.text = secondQuest.QuestTitle;
                 ContentText.text = secondQuest.ContentText;
+                gi.value = secondQuest.Giftvalue;
+                ClearGiftText.text = secondQuest.Giftvalue.ToString();
+                gi.itemcode = secondQuest.Giftitem;
                 break;
             case 2:
                 QuestData thirdQuest = qmgr.questDataList.questDataList[2];
                 QuestTitleText.text = thirdQuest.QuestTitle;
                 ContentText.text = thirdQuest.ContentText;
+                gi.value = thirdQuest.Giftvalue;
+                ClearGiftText.text = thirdQuest.Giftvalue.ToString();
+                gi.itemcode = thirdQuest.Giftitem;
                 break;
             case 3:
                 QuestData fourQuest = qmgr.questDataList.questDataList[3];
                 QuestTitleText.text = fourQuest.QuestTitle;
                 ContentText.text = fourQuest.ContentText;
+                gi.value = fourQuest.Giftvalue;
+                ClearGiftText.text = fourQuest.Giftvalue.ToString();
+                gi.itemcode = fourQuest.Giftitem;
                 break;
         }
     }

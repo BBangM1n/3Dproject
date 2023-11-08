@@ -73,8 +73,8 @@ public class QuestManager : MonoBehaviour
         newQuest1.QuestTitle = "사냥을 해주세요";
         newQuest1.ContentText = "몬스터를 사냥해서 점수를 100점 이상 만들어주세요";
         newQuest1.Clear = false;
-        newQuest1.Giftitem = 2;
-        newQuest1.Giftvalue = 100;
+        newQuest1.Giftitem = 0;
+        newQuest1.Giftvalue = 1000;
         questDataList.questDataList.Add(newQuest1);
 
         QuestData newQuest2 = new QuestData();
@@ -82,8 +82,8 @@ public class QuestManager : MonoBehaviour
         newQuest2.QuestTitle = "총알을 넘겨주세요";
         newQuest2.ContentText = "총알을 100개 이상 들고있어주세요";
         newQuest2.Clear = false;
-        newQuest2.Giftitem = 4;
-        newQuest2.Giftvalue = 1000;
+        newQuest2.Giftitem = 2;
+        newQuest2.Giftvalue = 1;
         questDataList.questDataList.Add(newQuest2);
 
         QuestData newQuest3 = new QuestData();
@@ -91,8 +91,8 @@ public class QuestManager : MonoBehaviour
         newQuest3.QuestTitle = "몬스터를 처치해주세요";
         newQuest3.ContentText = "몬스터 한마리를 처치해주고 와주세요";
         newQuest3.Clear = false;
-        newQuest3.Giftitem = 14;
-        newQuest3.Giftvalue = 10200;
+        newQuest3.Giftitem = 0;
+        newQuest3.Giftvalue = 1300;
         questDataList.questDataList.Add(newQuest3);
 
         QuestData newQuest4 = new QuestData();
@@ -100,8 +100,8 @@ public class QuestManager : MonoBehaviour
         newQuest4.QuestTitle = "수류탄 한개를 사용해주세요";
         newQuest4.ContentText = "수류탄 한개 사용";
         newQuest4.Clear = false;
-        newQuest4.Giftitem = 45;
-        newQuest4.Giftvalue = 10200;
+        newQuest4.Giftitem = 3;
+        newQuest4.Giftvalue = 1;
         questDataList.questDataList.Add(newQuest4);
     }
 }

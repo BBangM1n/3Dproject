@@ -16,3 +16,7 @@ public class QuestDataList{
 배열은 길이값 정해주거나 정 쓰고싶으면 List로.
 
 List랑 배열 공부 탄탄하게 다시해야할듯싶음.
+
+퀘스트 완료 - 이제 이미지랑 보상관련 함수들 설정하면 될것같음.
+localpostion 이랑 position 헷갈리지말기
+퀘스트 한번에 클리어완료가능

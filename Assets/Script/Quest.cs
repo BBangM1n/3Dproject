@@ -6,6 +6,7 @@ public class Quest : MonoBehaviour
 {
     public GameObject quest;
     public GameObject gift;
+    public GameObject[] questsobj;
     public Text QuestTitleText;
     public Text ContentText;
     public Text nobtnText;
@@ -16,7 +17,14 @@ public class Quest : MonoBehaviour
     public bool isclear;
     public int Qvalue;
 
+    public int QenemyCnt;
+    public int QgrenadeCnt;
+
     public QuestManager qmgr;
+
+    public Player player;
+
+    public float SetTransform;
 
 
     private void Awake()
@@ -30,23 +38,31 @@ public class Quest : MonoBehaviour
         Image Questicon = GetComponent<Image>();
         Text nobtnText = Nobtn.GetComponent<Text>();
         QuestManager qmgr = GameObject.Find("QuestMgr").GetComponent<QuestManager>();
+        player = GameObject.Find("Player").GetComponent<Player>();
+        Qvalue = Random.Range(0, 4);
     }
 
     private void Start()
     {
-        Qvalue = Random.Range(0, 3);
         qmgr.LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
         UseQuestList(Qvalue);
+        
     }
 
     private void Update()
     {
-
+        if (isclear == false)
+            ClearQuest(Qvalue);
     }
 
     public void QuestClickBtn()
     {
         quest.transform.GetChild(2).gameObject.SetActive(true);
+        quest.transform.GetChild(2).localPosition= new Vector3(0, SetTransform, 0);
+        questsobj[0].gameObject.SetActive(false);
+        questsobj[1].gameObject.SetActive(false);
+        questsobj[2].gameObject.SetActive(false);
+        questsobj[3].gameObject.SetActive(false);
     }
 
     public void Yesbtnclick()
@@ -57,6 +73,14 @@ public class Quest : MonoBehaviour
         nobtnText.text = "닫기";
     }
 
+    public void Nobtnclick()
+    {
+        questsobj[0].gameObject.SetActive(true);
+        questsobj[1].gameObject.SetActive(true);
+        questsobj[2].gameObject.SetActive(true);
+        questsobj[3].gameObject.SetActive(true);
+    }
+
     public void Clearbtnclick() //클리어 여부함수
     {
         if(isclear)
@@ -65,7 +89,19 @@ public class Quest : MonoBehaviour
             gi.Clear();
             Debug.Log("조건이 충족됐습니다");
             quest.transform.GetChild(2).gameObject.SetActive(false);
-            Destroy(gameObject);
+
+            Qvalue = Random.Range(0, 4);
+            UseQuestList(Qvalue);
+            isclear = false;
+            Questicon.color = Color.white;
+            Yesbtn.gameObject.SetActive(true);
+            Clearbtn.gameObject.SetActive(false);
+
+
+            questsobj[0].gameObject.SetActive(true);
+            questsobj[1].gameObject.SetActive(true);
+            questsobj[2].gameObject.SetActive(true);
+            questsobj[3].gameObject.SetActive(true);
         }
         else
         {
@@ -88,9 +124,14 @@ public class Quest : MonoBehaviour
                 ContentText.text = secondQuest.ContentText;
                 break;
             case 2:
-                QuestData thirdQuest = qmgr.questDataList.questDataList[0];
+                QuestData thirdQuest = qmgr.questDataList.questDataList[2];
                 QuestTitleText.text = thirdQuest.QuestTitle;
                 ContentText.text = thirdQuest.ContentText;
+                break;
+            case 3:
+                QuestData fourQuest = qmgr.questDataList.questDataList[3];
+                QuestTitleText.text = fourQuest.QuestTitle;
+                ContentText.text = fourQuest.ContentText;
                 break;
         }
     }
@@ -100,16 +141,38 @@ public class Quest : MonoBehaviour
         switch (value)
         {
             case 0:
-                Player player = GetComponent<Player>();
-                if(player.score >= 100)
+                if (player.score >= 100)
                 {
                     //보상
+                    isclear = true;
                     Debug.Log("클리어");
                 }
+                else
+                    return;
                 break;
             case 1:
+                if(player.ammo >= 100)
+                {
+                    isclear = true;
+                }
+                else
+                    return;
                 break;
             case 2:
+                if(player.Qenemy >= 1)
+                {
+                    isclear = true;
+                }
+                else
+                    return;
+                break;
+            case 3:
+                if(player.Qgrenade >= 1)
+                {
+                    isclear = true;
+                }
+                else
+                    return;
                 break;
         }
     }

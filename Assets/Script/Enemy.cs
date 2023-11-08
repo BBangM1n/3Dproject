@@ -34,7 +34,6 @@ public class Enemy : MonoBehaviour
 
     public GameObject[] Debuffeffect;
     
-
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -213,6 +212,7 @@ public class Enemy : MonoBehaviour
             player.score += score;
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity);
+            player.Qenemy++;
 
             switch (enemyType)
             {

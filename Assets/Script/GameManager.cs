@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     public Text bestScoreText;
 
     public Sprite[] potiomimage;
+    public GameObject[] tutorials;
     
 
     private void Awake()
@@ -80,6 +81,45 @@ public class GameManager : MonoBehaviour
         gamePanel.SetActive(true);
 
         player.gameObject.SetActive(true);
+    }
+
+    public void TutorialStart()
+    {
+        menuCam.SetActive(false);
+        gameCam.SetActive(true);
+
+        menuPanel.SetActive(false);
+        gamePanel.SetActive(true);
+
+        player.gameObject.SetActive(true);
+        StartCoroutine(turorial());
+    }
+
+    IEnumerator turorial()
+    {
+        yield return new WaitForSeconds(1f);
+        tutorials[0].gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorials[0].gameObject.SetActive(false);
+        tutorials[1].gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorials[1].gameObject.SetActive(false);
+        tutorials[2].gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorials[2].gameObject.SetActive(false);
+        tutorials[3].gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorials[3].gameObject.SetActive(false);
+        tutorials[4].gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorials[4].gameObject.SetActive(false);
+        tutorials[5].gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorials[5].gameObject.SetActive(false);
+        tutorials[6].gameObject.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        tutorials[6].gameObject.SetActive(false);
+        StopCoroutine(turorial());
     }
 
     public void GameOver()

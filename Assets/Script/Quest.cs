@@ -46,7 +46,7 @@ public class Quest : MonoBehaviour
 
     private void Start()
     {
-        qmgr.LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
+        //qmgr.LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
         UseQuestList(Qvalue);
         
     }
@@ -90,7 +90,9 @@ public class Quest : MonoBehaviour
             Gift gi= gift.GetComponent<Gift>();
             gi.Clear();
             Debug.Log("조건이 충족됐습니다");
+            Clear(Qvalue);
             quest.transform.GetChild(2).gameObject.SetActive(false);
+
 
             Qvalue = Random.Range(0, 4);
             UseQuestList(Qvalue);
@@ -150,7 +152,24 @@ public class Quest : MonoBehaviour
                 break;
         }
     }
+    void Clear(int value)
+    {
+        switch(value)
+        {
+            case 0:
+                break;
+            case 1:
+                player.ammo -= 100;
+                break;
+            case 2:
+                player.Qenemy = 0;
+                break;
+            case 3:
+                player.Qgrenade = 0;
+                break;
 
+        }
+    }
     void ClearQuest(int value)
     {
         switch (value)

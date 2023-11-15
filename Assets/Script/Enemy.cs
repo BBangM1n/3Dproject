@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
     public Animator anim;
 
     public GameObject[] Debuffeffect;
-    
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -218,15 +218,19 @@ public class Enemy : MonoBehaviour
             {
                 case Type.A:
                     manager.enemyCntA--;
+                    player.enemyAcount++;
                     break;
                 case Type.B:
                     manager.enemyCntB--;
+                    player.enemyBcount++;
                     break;
                 case Type.C:
                     manager.enemyCntC--;
+                    player.enemyCcount++;
                     break;
                 case Type.D:
                     manager.enemyCntD--;
+                    player.enemyDcount++;
                     break;
             }
 

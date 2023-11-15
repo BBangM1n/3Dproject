@@ -103,5 +103,41 @@ public class QuestManager : MonoBehaviour
         newQuest4.Giftitem = 3;
         newQuest4.Giftvalue = 1;
         questDataList.questDataList.Add(newQuest4);
+
+        QuestData newQuest5 = new QuestData();
+        newQuest5.QuestID = 5;
+        newQuest5.QuestTitle = "나는 초록색이 싫어";
+        newQuest5.ContentText = "초록색 공룡을 3마리만 물리쳐줄래?";
+        newQuest5.Clear = false;
+        newQuest5.Giftitem = 1;
+        newQuest5.Giftvalue = 3000;
+        questDataList.questDataList.Add(newQuest5);
+
+        QuestData newQuest6 = new QuestData();
+        newQuest6.QuestID = 6;
+        newQuest6.QuestTitle = "농작물을 망치는 애들이 있어!";
+        newQuest6.ContentText = "보라색 공룡들이 내 농작물을 망치고있어 \n 나 좀 도와줄래?";
+        newQuest6.Clear = false;
+        newQuest6.Giftitem = 2;
+        newQuest6.Giftvalue = 1;
+        questDataList.questDataList.Add(newQuest6);
+
+        QuestData newQuest7 = new QuestData();
+        newQuest7.QuestID = 7;
+        newQuest7.QuestTitle = "폭격이야!";
+        newQuest7.ContentText = "노란색 공룡들의 미사일을 막아줘!";
+        newQuest7.Clear = false;
+        newQuest7.Giftitem = 3;
+        newQuest7.Giftvalue = 1;
+        questDataList.questDataList.Add(newQuest7);
+
+        QuestData newQuest8 = new QuestData();
+        newQuest8.QuestID = 8;
+        newQuest8.QuestTitle = "거대한 공룡";
+        newQuest8.ContentText = "빨간색 거대한 공룡을 무찔러줘";
+        newQuest8.Clear = false;
+        newQuest8.Giftitem = 1;
+        newQuest8.Giftvalue = 10000;
+        questDataList.questDataList.Add(newQuest8);
     }
 }

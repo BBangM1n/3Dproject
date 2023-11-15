@@ -67,6 +67,10 @@ public class Player : MonoBehaviour
 
     public int Qenemy;
     public int Qgrenade;
+    public int enemyAcount;
+    public int enemyBcount;
+    public int enemyCcount;
+    public int enemyDcount;
 
     Color buffcolor;
 

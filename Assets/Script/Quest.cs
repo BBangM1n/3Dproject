@@ -16,9 +16,11 @@ public class Quest : MonoBehaviour
     public Button Clearbtn;
     public Image Questicon;
     public Sprite ClearGiftImg;
-    public bool isclear;
-    public int Qvalue;
 
+    public bool isclear;
+    public bool isyes;
+
+    public int Qvalue;
     public int QenemyCnt;
     public int QgrenadeCnt;
 
@@ -41,7 +43,7 @@ public class Quest : MonoBehaviour
         Text nobtnText = Nobtn.GetComponent<Text>();
         QuestManager qmgr = GameObject.Find("QuestMgr").GetComponent<QuestManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
-        Qvalue = Random.Range(0, 4);
+        Qvalue = Random.Range(0, 8);
     }
 
     private void Start()
@@ -53,7 +55,7 @@ public class Quest : MonoBehaviour
 
     private void Update()
     {
-        if (isclear == false)
+        if (isclear == false && isyes == true)
             ClearQuest(Qvalue);
     }
 
@@ -71,6 +73,7 @@ public class Quest : MonoBehaviour
     {
         Yesbtn.gameObject.SetActive(false);
         Clearbtn.gameObject.SetActive(true);
+        isyes = true;
         Questicon.color = Color.red;
         nobtnText.text = "´Ý±â";
     }
@@ -94,7 +97,7 @@ public class Quest : MonoBehaviour
             quest.transform.GetChild(2).gameObject.SetActive(false);
 
 
-            Qvalue = Random.Range(0, 4);
+            Qvalue = Random.Range(0, 8);
             UseQuestList(Qvalue);
             isclear = false;
             Questicon.color = Color.white;
@@ -150,6 +153,38 @@ public class Quest : MonoBehaviour
                 ClearGiftText.text = fourQuest.Giftvalue.ToString();
                 gi.itemcode = fourQuest.Giftitem;
                 break;
+            case 4:
+                QuestData fiveQuest = qmgr.questDataList.questDataList[4];
+                QuestTitleText.text = fiveQuest.QuestTitle;
+                ContentText.text = fiveQuest.ContentText;
+                gi.value = fiveQuest.Giftvalue;
+                ClearGiftText.text = fiveQuest.Giftvalue.ToString();
+                gi.itemcode = fiveQuest.Giftitem;
+                break;
+            case 5:
+                QuestData sixQuest = qmgr.questDataList.questDataList[5];
+                QuestTitleText.text = sixQuest.QuestTitle;
+                ContentText.text = sixQuest.ContentText;
+                gi.value = sixQuest.Giftvalue;
+                ClearGiftText.text = sixQuest.Giftvalue.ToString();
+                gi.itemcode = sixQuest.Giftitem;
+                break;
+            case 6:
+                QuestData sevenQuest = qmgr.questDataList.questDataList[6];
+                QuestTitleText.text = sevenQuest.QuestTitle;
+                ContentText.text = sevenQuest.ContentText;
+                gi.value = sevenQuest.Giftvalue;
+                ClearGiftText.text = sevenQuest.Giftvalue.ToString();
+                gi.itemcode = sevenQuest.Giftitem;
+                break;
+            case 7:
+                QuestData eightQuest = qmgr.questDataList.questDataList[7];
+                QuestTitleText.text = eightQuest.QuestTitle;
+                ContentText.text = eightQuest.ContentText;
+                gi.value = eightQuest.Giftvalue;
+                ClearGiftText.text = eightQuest.Giftvalue.ToString();
+                gi.itemcode = eightQuest.Giftitem;
+                break;
         }
     }
     void Clear(int value)
@@ -167,6 +202,18 @@ public class Quest : MonoBehaviour
             case 3:
                 player.Qgrenade = 0;
                 break;
+            case 4:
+                player.enemyAcount = 0;
+                break;
+            case 5:
+                player.enemyBcount = 0;
+                break;
+            case 6:
+                player.enemyCcount = 0;
+                break;
+            case 7:
+                player.enemyDcount = 0;
+                break;
 
         }
     }
@@ -182,7 +229,7 @@ public class Quest : MonoBehaviour
                     Debug.Log("Å¬¸®¾î");
                 }
                 else
-                    return;
+                    isclear = false;
                 break;
             case 1:
                 if(player.ammo >= 100)
@@ -190,7 +237,7 @@ public class Quest : MonoBehaviour
                     isclear = true;
                 }
                 else
-                    return;
+                    isclear = false;
                 break;
             case 2:
                 if(player.Qenemy >= 1)
@@ -198,7 +245,7 @@ public class Quest : MonoBehaviour
                     isclear = true;
                 }
                 else
-                    return;
+                    isclear = false;
                 break;
             case 3:
                 if(player.Qgrenade >= 1)
@@ -206,7 +253,39 @@ public class Quest : MonoBehaviour
                     isclear = true;
                 }
                 else
-                    return;
+                    isclear = false;
+                break;
+            case 4:
+                if (player.enemyAcount >= 3)
+                {
+                    isclear = true;
+                }
+                else
+                    isclear = false;
+                break;
+            case 5:
+                if (player.enemyBcount >= 5)
+                {
+                    isclear = true;
+                }
+                else
+                    isclear = false;
+                break;
+            case 6:
+                if (player.enemyCcount >= 2)
+                {
+                    isclear = true;
+                }
+                else
+                    isclear = false;
+                break;
+            case 7:
+                if (player.enemyDcount >= 1)
+                {
+                    isclear = true;
+                }
+                else
+                    isclear = false;
                 break;
         }
     }

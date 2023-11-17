@@ -386,7 +386,7 @@ public class Player : MonoBehaviour
                 rigidGrenade.AddTorque(Vector3.back * 10, ForceMode.Impulse);
                 GrenadeList.RemoveAt(0);
                 hasGrenade--;
-                Qgrenade++;
+                Qgrenade--;
                 childoff(grenades[hasGrenade]);
                 //해당 수류탄 이미지 꺼지는 함수
             }

@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public GameObject menuPanel;
     public GameObject gamePanel;
     public GameObject overPanel;
+    public GameObject pausePanel;
     public Text maxScoreText;
     public Text scoreText;
     public Text stageText;
@@ -75,12 +76,14 @@ public class GameManager : MonoBehaviour
     public void GameStart()
     {
         menuCam.SetActive(false);
+        pausePanel.SetActive(false);
         gameCam.SetActive(true);
 
         menuPanel.SetActive(false);
         gamePanel.SetActive(true);
 
         player.gameObject.SetActive(true);
+        Time.timeScale = 1f;
     }
 
     public void TutorialStart()
@@ -141,12 +144,32 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pausePanel.SetActive(true);
+            gamePanel.SetActive(false);
+            menuPanel.SetActive(false);
+
+            gameCam.SetActive(false);
+            menuCam.SetActive(true);
+
+            Time.timeScale = 0f;
+        }
+    }
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
     private void Update()
     {
         if (isBattle)
             playTime += Time.deltaTime;
 
         QuestInfo();
+        Pause();
     }
 
     private void LateUpdate()

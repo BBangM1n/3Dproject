@@ -71,7 +71,7 @@ public class QuestManager : MonoBehaviour
         QuestData newQuest1 = new QuestData();
         newQuest1.QuestID = 1;
         newQuest1.QuestTitle = "마을의 일거리를 도와주세요!";
-        newQuest1.ContentText = "몬스터가 너무 많아서 일을 할 수가 없어요.\n몬스터 좀 정리해주세요!";
+        newQuest1.ContentText = "일이 너무 많아서 쉴 수가 없어요.\n일 좀 정리해주세요!";
         newQuest1.Clear = false;
         newQuest1.Giftitem = 0;
         newQuest1.Giftvalue = 1000;

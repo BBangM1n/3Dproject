@@ -181,7 +181,8 @@ public class Enemy : MonoBehaviour
             curHealth -= bullet.damage;
             Vector3 reactVec = transform.position - other.transform.position;
             Destroy(other.gameObject);
-            StartCoroutine(OnDamage(reactVec, false));
+            if(!isDead)
+                StartCoroutine(OnDamage(reactVec, false));
         }
     }
 
@@ -212,25 +213,25 @@ public class Enemy : MonoBehaviour
             player.score += score;
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity);
-            player.Qenemy++;
+            player.Qenemy--;
 
             switch (enemyType)
             {
                 case Type.A:
                     manager.enemyCntA--;
-                    player.enemyAcount++;
+                    player.enemyAcount--;
                     break;
                 case Type.B:
                     manager.enemyCntB--;
-                    player.enemyBcount++;
+                    player.enemyBcount--;
                     break;
                 case Type.C:
                     manager.enemyCntC--;
-                    player.enemyCcount++;
+                    player.enemyCcount--;
                     break;
                 case Type.D:
                     manager.enemyCntD--;
-                    player.enemyDcount++;
+                    player.enemyDcount--;
                     break;
             }
 

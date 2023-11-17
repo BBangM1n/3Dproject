@@ -6,26 +6,24 @@ ScriptsOnlyBuild:
     - BossRock
     - Bullet
     - Enemy
+    - Fire
     - FollowCamera
     - GameManager
+    - Gift
     - Grenade
+    - Ice
     - Item
     - Missile
     - Orbit
     - Player
+    - Quest
+    - QuestManager
     - Shop
+    - ShotgunBullet
     - StartZone
     - Weapon
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -39,6 +37,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   serializedClasses:
+    Assembly-CSharp:
+    - QuestDataList
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -56,6 +56,30 @@ ScriptsOnlyBuild:
     fullTypeName: Shop
     methodName: Buy
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: TutorialStart
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Selectable
+    methodName: set_interactable
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Exit
+  - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Buy
   - assembly: Assembly-CSharp
@@ -67,12 +91,36 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Buy
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Selectable
+    methodName: set_interactable
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Next
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Next
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Exit
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Buy
@@ -82,6 +130,90 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: GameStart
+  - assembly: Assembly-CSharp
+    fullTypeName: Shop
+    methodName: Buy
+  - assembly: UnityEngine.UI
+    fullTypeName: UnityEngine.UI.Selectable
+    methodName: set_interactable
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Yesbtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Clearbtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: QuestClickBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Yesbtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: QuestClickBtn
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Nobtnclick
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Nobtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Clearbtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: QuestClickBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Clearbtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Yesbtnclick
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Nobtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: QuestClickBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Clearbtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: QuestClickBtn
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Clearbtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Yesbtnclick
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Nobtnclick
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Nobtnclick
+  - assembly: Assembly-CSharp
+    fullTypeName: Quest
+    methodName: Yesbtnclick
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -127,49 +259,69 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1556}
+      Script: {instanceID: 1558}
     - Class: 114
-      Script: {instanceID: 2546}
+      Script: {instanceID: 2550}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3104}
+      Script: {instanceID: 3026}
     - Class: 114
-      Script: {instanceID: 3612}
+      Script: {instanceID: 3110}
     - Class: 114
-      Script: {instanceID: 3764}
+      Script: {instanceID: 3184}
     - Class: 114
-      Script: {instanceID: 4192}
+      Script: {instanceID: 3620}
     - Class: 114
-      Script: {instanceID: 4414}
+      Script: {instanceID: 3772}
     - Class: 114
-      Script: {instanceID: 4464}
+      Script: {instanceID: 4200}
     - Class: 114
-      Script: {instanceID: 4900}
+      Script: {instanceID: 4382}
     - Class: 114
-      Script: {instanceID: 5192}
+      Script: {instanceID: 4424}
     - Class: 114
-      Script: {instanceID: 5486}
+      Script: {instanceID: 4474}
     - Class: 114
-      Script: {instanceID: 5690}
+      Script: {instanceID: 4912}
     - Class: 114
-      Script: {instanceID: 5754}
+      Script: {instanceID: 5008}
     - Class: 114
-      Script: {instanceID: 5956}
+      Script: {instanceID: 5146}
     - Class: 114
-      Script: {instanceID: 6138}
+      Script: {instanceID: 5208}
     - Class: 114
-      Script: {instanceID: 6970}
+      Script: {instanceID: 5502}
     - Class: 114
-      Script: {instanceID: 7038}
+      Script: {instanceID: 5706}
     - Class: 114
-      Script: {instanceID: 7508}
+      Script: {instanceID: 5770}
     - Class: 114
-      Script: {instanceID: 28468}
+      Script: {instanceID: 5972}
     - Class: 114
-      Script: {instanceID: 40230}
+      Script: {instanceID: 6086}
+    - Class: 114
+      Script: {instanceID: 6156}
+    - Class: 114
+      Script: {instanceID: 6988}
+    - Class: 114
+      Script: {instanceID: 7056}
+    - Class: 114
+      Script: {instanceID: 7448}
+    - Class: 114
+      Script: {instanceID: 7530}
+    - Class: 114
+      Script: {instanceID: 7598}
+    - Class: 114
+      Script: {instanceID: 77120}
+    - Class: 114
+      Script: {instanceID: 77128}
+    - Class: 114
+      Script: {instanceID: 77130}
+    - Class: 114
+      Script: {instanceID: 77132}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -255,6 +407,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: help
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -396,6 +554,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Ice
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
@@ -425,7 +589,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 94b2f6224f8b1f503559c9f94e20b7d2
+      Hash: f3782bed0d7bee57ac76bded83b97154
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Item
@@ -441,6 +605,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 3318f16193f92c049e2f92e00cbba6c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuestManager
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -527,7 +697,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0eb02fdc3248ebb883baede9323e4b2e
+      Hash: 04ca265dd58269169883d15d2e7220de
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boss
@@ -605,7 +775,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 29f796ba2326fb0c5b70496cca87308c
+      Hash: b05984ea2705adf995902c7f287ee739
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shop
@@ -623,7 +793,13 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
-      Hash: a47491056808b38d9b404cfdf5a07c38
+      Hash: c3bc2177fda2df0df5a202d43281e26c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Gift
+  - hash:
+      serializedVersion: 2
+      Hash: 17438a4ddb044f4c68f96c2540c5a870
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -639,6 +815,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Orbit
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Exam
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -732,6 +914,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Fire
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameInvisibleMessageListener
@@ -741,6 +929,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: d4c0f9a3e9dad144cb8a85fadc222973
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Quest
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -797,7 +991,7 @@ ScriptsOnlyBuild:
     className: BossMissile
   - hash:
       serializedVersion: 2
-      Hash: 9be7df290b766a74bf4de5d13458a56b
+      Hash: 855dca09b7650626ab10c3c87a785527
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Grenade
@@ -839,13 +1033,19 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: a2cd1b7d3f863e654ba3bb65abf407ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShotgunBullet
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: e1259bb52520abbc960f6f4168972cfa
+      Hash: 52d538287445d3bdda9b1ae9c56dcb19
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Weapon
@@ -971,7 +1171,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: bec0d90dd6d15581a1ff509f295860be
+      Hash: a16571e6415c00ff566036dfedc6d3bd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -987,6 +1187,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Missile
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: seads
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1025,6 +1231,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: cbeee4357632bb72c3c33d491da28e67
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartZone
+  - hash:
+      serializedVersion: 2
       Hash: a2cd1b7d3f863e654ba3bb65abf407ed
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1035,6 +1247,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: eb95a72ca5e37fa36bb88b3523dbda98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1059,19 +1277,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: bb961b83e72bef2c7e3937228f822966
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: cbeee4357632bb72c3c33d491da28e67
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StartZone
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/alswn/OneDrive/\uBC14\uD0D5 \uD654\uBA74/\uC2E4\uD589\uD30C\uC77C/3Dproject.exe"
+  playerPath: "C:/Users/student/Desktop/\uAC1C\uAC1C\uBE44/3Dproject.exe"

@@ -175,7 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  value: 10
+  value: 500
+  Grenadevalue: -1
 --- !u!1 &8457479574870679993
 GameObject:
   m_ObjectHideFlags: 0

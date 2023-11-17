@@ -9,6 +9,7 @@ public class Quest : MonoBehaviour
     public GameObject[] questsobj;
     public Text QuestTitleText;
     public Text ContentText;
+    public Text ConditionText;
     public Text ClearGiftText;
     public Text nobtnText;
     public Button Yesbtn;
@@ -36,6 +37,7 @@ public class Quest : MonoBehaviour
         Button QuestClick = GetComponent<Button>();
         Text QuestTitleText = GetComponent<Text>();
         Text ContentText = GetComponent<Text>();
+        Text ConditionText = GetComponent<Text>();
         Button Yesbtn = GetComponent<Button>();
         Button Nobtn = GetComponent<Button>();
         Button Clearbtn = GetComponent<Button>();
@@ -56,7 +58,10 @@ public class Quest : MonoBehaviour
     private void Update()
     {
         if (isclear == false && isyes == true)
+        {
             ClearQuest(Qvalue);
+            QconditionText(Qvalue);
+        }
     }
 
     public void QuestClickBtn()
@@ -74,6 +79,7 @@ public class Quest : MonoBehaviour
         Yesbtn.gameObject.SetActive(false);
         Clearbtn.gameObject.SetActive(true);
         isyes = true;
+        Qcondition(Qvalue);
         Questicon.color = Color.red;
         nobtnText.text = "닫기";
     }
@@ -115,6 +121,67 @@ public class Quest : MonoBehaviour
             Debug.Log("조건이 충족되지 않았습니다");
         }
     }
+
+    void Qcondition(int value)
+    {
+        switch(value)
+        {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                player.Qenemy = 5;
+                break;
+            case 3:
+                player.Qgrenade = 1;
+                break;
+            case 4:
+                player.enemyAcount = 5;
+                break;
+            case 5:
+                player.enemyBcount = 3;
+                break;
+            case 6:
+                player.enemyCcount = 2;
+                break;
+            case 7:
+                player.enemyDcount = 1;
+                break;
+        }
+    }
+
+    void QconditionText(int value)
+    {
+        switch (value)
+        {
+            case 0:
+                ConditionText.text = "조건 : 스코어 100점 달성";
+                break;
+            case 1:
+                ConditionText.text = "조건 : 총알 100개 기부";
+                break;
+            case 2:
+                ConditionText.text = "조건 : 몬스터 5마리 처치 " + player.Qenemy + "/ 0";
+                break;
+            case 3:
+                ConditionText.text = "조건 : 수류탄 사용 " + player.Qgrenade + "/ 0";
+                break;
+            case 4:
+                ConditionText.text = "조건 : 초록색 공룡 처치 " + player.enemyAcount + "/ 0";
+                break;
+            case 5:
+                ConditionText.text = "조건 : 보라색 공룡 처치 " + player.enemyBcount + "/ 0";
+                break;
+            case 6:
+                ConditionText.text = "조건 : 노란색 공룡 처치 " + player.enemyCcount + "/ 0";
+                break;
+            case 7:
+                ConditionText.text = "조건 : 빨간 공룡 처치" + player.enemyDcount + "/ 0";
+                break;
+        }
+    }
+
 
     void UseQuestList(int value)
     {
@@ -240,7 +307,7 @@ public class Quest : MonoBehaviour
                     isclear = false;
                 break;
             case 2:
-                if(player.Qenemy >= 1)
+                if(player.Qenemy <= 0)
                 {
                     isclear = true;
                 }
@@ -248,7 +315,7 @@ public class Quest : MonoBehaviour
                     isclear = false;
                 break;
             case 3:
-                if(player.Qgrenade >= 1)
+                if(player.Qgrenade <= 0)
                 {
                     isclear = true;
                 }
@@ -256,7 +323,7 @@ public class Quest : MonoBehaviour
                     isclear = false;
                 break;
             case 4:
-                if (player.enemyAcount >= 3)
+                if (player.enemyAcount <= 0)
                 {
                     isclear = true;
                 }
@@ -264,7 +331,7 @@ public class Quest : MonoBehaviour
                     isclear = false;
                 break;
             case 5:
-                if (player.enemyBcount >= 5)
+                if (player.enemyBcount <= 0)
                 {
                     isclear = true;
                 }
@@ -272,7 +339,7 @@ public class Quest : MonoBehaviour
                     isclear = false;
                 break;
             case 6:
-                if (player.enemyCcount >= 2)
+                if (player.enemyCcount <= 0)
                 {
                     isclear = true;
                 }
@@ -280,7 +347,7 @@ public class Quest : MonoBehaviour
                     isclear = false;
                 break;
             case 7:
-                if (player.enemyDcount >= 1)
+                if (player.enemyDcount <= 0)
                 {
                     isclear = true;
                 }

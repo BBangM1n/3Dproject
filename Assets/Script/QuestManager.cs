@@ -109,7 +109,7 @@ public class QuestManager : MonoBehaviour
         newQuest5.QuestTitle = "나는 초록색이 싫어";
         newQuest5.ContentText = "초록색 공룡을 3마리만 물리쳐줄래?";
         newQuest5.Clear = false;
-        newQuest5.Giftitem = 1;
+        newQuest5.Giftitem = 0;
         newQuest5.Giftvalue = 3000;
         questDataList.questDataList.Add(newQuest5);
 
@@ -136,8 +136,26 @@ public class QuestManager : MonoBehaviour
         newQuest8.QuestTitle = "거대한 공룡";
         newQuest8.ContentText = "빨간색 거대한 공룡을 무찔러줘";
         newQuest8.Clear = false;
-        newQuest8.Giftitem = 1;
+        newQuest8.Giftitem = 0;
         newQuest8.Giftvalue = 10000;
         questDataList.questDataList.Add(newQuest8);
+
+        QuestData newQuest9 = new QuestData();
+        newQuest9.QuestID = 9;
+        newQuest9.QuestTitle = "하트 수집가";
+        newQuest9.ContentText = "피가 모자라! 나에게 좀 나눠줘";
+        newQuest9.Clear = false;
+        newQuest9.Giftitem = 0;
+        newQuest9.Giftvalue = 2000;
+        questDataList.questDataList.Add(newQuest9);
+
+        QuestData newQuest10 = new QuestData();
+        newQuest10.QuestID = 10;
+        newQuest10.QuestTitle = "난 돈이 좋아";
+        newQuest10.ContentText = "나에게 돈좀 줄래? 대신 좋은걸 줄게";
+        newQuest10.Clear = false;
+        newQuest10.Giftitem = 3;
+        newQuest10.Giftvalue = 1;
+        questDataList.questDataList.Add(newQuest10);
     }
 }

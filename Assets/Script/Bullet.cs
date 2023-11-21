@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
     public int damage;
     public bool isMelee;
     public bool isRock;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(!isRock && collision.gameObject.tag == "Floor")
+        if(!isRock && collision.gameObject.tag == "Floor") // 바닥에 닿으면 사라지게
         {
             Destroy(gameObject, 3);
         }
@@ -19,11 +18,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!isMelee && other.gameObject.tag == "Wall")
+        if(!isMelee && other.gameObject.tag == "Wall") // 벽이면 사라지게
         {
             Destroy(gameObject);
         }
-        else if(!isMelee && other.gameObject.tag == "Floor")
+        else if(!isMelee && other.gameObject.tag == "Floor") // 바닥에 닿으면 사라지게
         {
             Destroy(gameObject, 3);
         }

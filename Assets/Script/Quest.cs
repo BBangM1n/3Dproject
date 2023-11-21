@@ -45,7 +45,7 @@ public class Quest : MonoBehaviour
         Text nobtnText = Nobtn.GetComponent<Text>();
         QuestManager qmgr = GameObject.Find("QuestMgr").GetComponent<QuestManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
-        Qvalue = Random.Range(0, 8);
+        Qvalue = Random.Range(0, 10);
     }
 
     private void Start()
@@ -105,6 +105,7 @@ public class Quest : MonoBehaviour
 
             Qvalue = Random.Range(0, 8);
             UseQuestList(Qvalue);
+            Qcondition(Qvalue);
             isclear = false;
             Questicon.color = Color.white;
             Yesbtn.gameObject.SetActive(true);
@@ -148,6 +149,10 @@ public class Quest : MonoBehaviour
             case 7:
                 player.enemyDcount = 1;
                 break;
+            case 8:
+                break;
+            case 9:
+                break;
         }
     }
 
@@ -178,6 +183,12 @@ public class Quest : MonoBehaviour
                 break;
             case 7:
                 ConditionText.text = "Á¶°Ç : »¡°£ °ø·æ Ã³Ä¡" + player.enemyDcount + "/ 0";
+                break;
+            case 8:
+                ConditionText.text = "Á¶°Ç : Ã¼·Â ³ª´²ÁÖ±â" + player.health + "/ 30";
+                break;
+            case 9:
+                ConditionText.text = "Á¶°Ç : µ· ³ª´²ÁÖ±â" + player.coin + "/ 3000";
                 break;
         }
     }
@@ -252,6 +263,22 @@ public class Quest : MonoBehaviour
                 ClearGiftText.text = eightQuest.Giftvalue.ToString();
                 gi.itemcode = eightQuest.Giftitem;
                 break;
+            case 8:
+                QuestData nineQuest = qmgr.questDataList.questDataList[8];
+                QuestTitleText.text = nineQuest.QuestTitle;
+                ContentText.text = nineQuest.ContentText;
+                gi.value = nineQuest.Giftvalue;
+                ClearGiftText.text = nineQuest.Giftvalue.ToString();
+                gi.itemcode = nineQuest.Giftitem;
+                break;
+            case 9:
+                QuestData tenQuest = qmgr.questDataList.questDataList[9];
+                QuestTitleText.text = tenQuest.QuestTitle;
+                ContentText.text = tenQuest.ContentText;
+                gi.value = tenQuest.Giftvalue;
+                ClearGiftText.text = tenQuest.Giftvalue.ToString();
+                gi.itemcode = tenQuest.Giftitem;
+                break;
         }
     }
     void Clear(int value)
@@ -281,7 +308,12 @@ public class Quest : MonoBehaviour
             case 7:
                 player.enemyDcount = 0;
                 break;
-
+            case 8:
+                player.health -= 30;
+                break;
+            case 9:
+                player.coin -= 3000;
+                break;
         }
     }
     void ClearQuest(int value)
@@ -348,6 +380,22 @@ public class Quest : MonoBehaviour
                 break;
             case 7:
                 if (player.enemyDcount <= 0)
+                {
+                    isclear = true;
+                }
+                else
+                    isclear = false;
+                break;
+            case 8:
+                if (player.health >= 40)
+                {
+                    isclear = true;
+                }
+                else
+                    isclear = false;
+                break;
+            case 9:
+                if (player.coin >= 3000)
                 {
                     isclear = true;
                 }

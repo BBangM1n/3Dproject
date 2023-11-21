@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class Boss : Enemy
 {
-    public GameObject missile;
-    public Transform missilePortA;
-    public Transform missilePortB;
+    public GameObject missile; // 보스 미사일
+    public Transform missilePortA; // 보스 미사일 입구
+    public Transform missilePortB; // 보스 미사일 입구
 
-    Vector3 lookVec;
+    Vector3 lookVec; //
     Vector3 tauntVec;
 
     public bool isLook;
@@ -24,19 +24,19 @@ public class Boss : Enemy
         anim = GetComponentInChildren<Animator>();
 
         nav.isStopped = true;
-        StartCoroutine(Think());
+        StartCoroutine(Think()); // 패턴을 위한 코루틴 시작
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDead)
+        if (isDead) // 죽을 시 모든 코루틴 스탑
         {
             StopAllCoroutines();
             return;
         }
 
-        if (isLook)
+        if (isLook) // 보스가 플레이어를 쳐다보게 만드는 함수
         {
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
@@ -49,7 +49,7 @@ public class Boss : Enemy
         }
     }
 
-    IEnumerator Think()
+    IEnumerator Think() // 패턴사용을 위한 코루틴
     {
         yield return new WaitForSeconds(0.1f);
 
@@ -71,13 +71,13 @@ public class Boss : Enemy
         }
     }
 
-    IEnumerator MissileShot()
+    IEnumerator MissileShot() // 미사일 샷
     {
         anim.SetTrigger("Shot");
         yield return new WaitForSeconds(0.2f);
         GameObject instantMissileA = Instantiate(missile, missilePortA.position, missilePortA.rotation);
         BossMissile bossMissileA = instantMissileA.GetComponent<BossMissile>();
-        bossMissileA.target = Target;
+        bossMissileA.target = Target; // 미사일이 플레이어를 따라가게 유도
         
 
         yield return new WaitForSeconds(0.3f);
@@ -86,10 +86,10 @@ public class Boss : Enemy
         bossMissileB.target = Target;
 
         yield return new WaitForSeconds(2.5f);
-        StartCoroutine(Think());
+        StartCoroutine(Think()); // 초기화
     }
 
-    IEnumerator RockShot()
+    IEnumerator RockShot() // 돌 굴리기 패턴
     {
         isLook = false;
         anim.SetTrigger("BigShot");
@@ -100,21 +100,21 @@ public class Boss : Enemy
         StartCoroutine(Think());
     }
 
-    IEnumerator TauntShot()
+    IEnumerator TauntShot() // 찍어누르기 패턴
     {
-        tauntVec = Target.position + lookVec;
+        tauntVec = Target.position + lookVec; // 타겟에게 가기 위한 벡터값
         
         isLook = false;
         nav.isStopped = false;
         boxCollider.enabled = false;
         anim.SetTrigger("Taunt");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.5f); // 점프해서 내려 올때 공격범위 활성화
         meleeArea.enabled = true;
 
         yield return new WaitForSeconds(0.5f);
         meleeArea.enabled = false;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3f); // 초기화
 
         isLook = true;
         nav.isStopped = true;

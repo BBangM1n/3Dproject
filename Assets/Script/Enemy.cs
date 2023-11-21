@@ -5,23 +5,24 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public enum Type { A, B, C, D };
+    public enum Type { A, B, C, D }; // 몬스터 타입별 구분
     public Type enemyType;
-    public int maxHealth;
-    public int curHealth;
-    public int score;
+    public int maxHealth; // 최대 체력
+    public int curHealth; // 현재 체력
+    public int score; // 점수
     public GameManager manager;
     public Transform Target;
     public BoxCollider meleeArea;
     public GameObject bullet;
     public GameObject[] coins;
 
+    // 현재 상태
     public bool isChase;
     public bool isAttack;
     public bool isDead;
     public bool isdamage;
 
-    //상태이상 여부
+    // 상태이상 여부
     public bool isfire = false;
     public bool isice = false;
     public bool ispoison = false;
@@ -48,7 +49,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (nav.enabled && enemyType != Type.D)
+        if (nav.enabled && enemyType != Type.D) // 자동으로 플레이어 추적하기
         {
             nav.SetDestination(Target.position); // SetDestination : 도착할 목표 위치 정할 함수
             nav.isStopped = !isChase;
@@ -63,7 +64,7 @@ public class Enemy : MonoBehaviour
         Targerting();
     }
 
-    void Targerting()
+    void Targerting() // 타겟이 반경안에 있으면 공격하도록 만드는 함수
     {
         if (!isDead && enemyType != Type.D)
         {
@@ -88,7 +89,7 @@ public class Enemy : MonoBehaviour
                     break;
             }
 
-            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius, transform.forward, targetRange, LayerMask.GetMask("Player"));
+            RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius, transform.forward, targetRange, LayerMask.GetMask("Player")); // 타입별 원형 레이를 만들어 타입별만의 범위안에 들어오면 공격하도록 함
 
             if (rayHits.Length > 0 && !isAttack)
             {
@@ -97,15 +98,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator Attack()
+    IEnumerator Attack() // 공격기능 코루틴
     {
         isChase = false;
         isAttack = true;
         anim.SetBool("Attack", true);
 
-        switch (enemyType)
+        switch (enemyType) // 타입별 공격 방식
         {
-            case Type.A:
+            case Type.A: // 초록 공룡 기본 박치기 공격
                 yield return new WaitForSeconds(0.2f);
                 meleeArea.enabled = true;
 
@@ -115,9 +116,9 @@ public class Enemy : MonoBehaviour
                 yield return new WaitForSeconds(1f);
                 break;
 
-            case Type.B:
+            case Type.B: // 보라 공룡 돌진 공격
                 yield return new WaitForSeconds(0.1f);
-                rigid.AddForce(transform.forward * 20, ForceMode.Impulse);
+                rigid.AddForce(transform.forward * 20, ForceMode.Impulse); // 달려가는 힘 증가
                 meleeArea.enabled = true;
 
                 yield return new WaitForSeconds(0.5f);
@@ -127,9 +128,9 @@ public class Enemy : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 break;
 
-            case Type.C:
+            case Type.C: // 노랑 공룡 미사일 공격
                 yield return new WaitForSeconds(0.5f);
-                GameObject instatBullet = Instantiate(bullet, transform.position, transform.rotation);
+                GameObject instatBullet = Instantiate(bullet, transform.position, transform.rotation); // 플레이어에게 미사일 생성 후 공격
                 Rigidbody rigidBullet = instatBullet.GetComponent<Rigidbody>();
                 rigidBullet.velocity = transform.forward * 20f;
 
@@ -143,13 +144,13 @@ public class Enemy : MonoBehaviour
         anim.SetBool("Attack", false);
     }
 
-    void ChaseStart()
+    void ChaseStart() // 패턴이 끝나고 다시 기본 움직임
     {
         isChase = true;
         anim.SetBool("Walk",true);
     }
 
-    void FreezeVelocity()
+    void FreezeVelocity() // 갑작스러운 부딫힘으로 인한 회전력 zero값.
     {
         if(isChase)
         {
@@ -158,51 +159,45 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void HitByGrenade(Vector3 explosionPos)
-    {
-        curHealth -= 100;
-        Vector3 reactVec = transform.position - explosionPos;
-        StartCoroutine(OnDamage(reactVec, true));
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Melee")
+        if(other.tag == "Melee") // 플레이어의 망치에 당할 때 함수
         {
             Weapon weapon = other.GetComponent<Weapon>();
             curHealth -= weapon.damage;
             Vector3 reactVec = transform.position - other.transform.position;
 
-            StartCoroutine(OnDamage(reactVec, false));
+            if (!isDead)
+                StartCoroutine(OnDamage(reactVec, false));
         }
-        else if(other.tag == "Bullet")
+        else if(other.tag == "Bullet") // 플레이어의 총에 당할 때 함수
         {
             Bullet bullet = other.GetComponent<Bullet>();
             curHealth -= bullet.damage;
             Vector3 reactVec = transform.position - other.transform.position;
             Destroy(other.gameObject);
-            if(!isDead)
+            if(!isDead) // 조건이 없을시 여러번의 죽음현상 발견
                 StartCoroutine(OnDamage(reactVec, false));
         }
     }
 
-    IEnumerator OnDamage(Vector3 reactVec, bool isGrenade)
+    IEnumerator OnDamage(Vector3 reactVec, bool isGrenade) // 데미지 입었을 시 호출되는 코루틴
     {
-        foreach (MeshRenderer mesh in meshs)
+        foreach (MeshRenderer mesh in meshs) // 피격 시 몸 색깔 변경 (빨강)
             mesh.material.color = Color.red;
  
         yield return new WaitForSeconds(0.1f);
 
-        if(curHealth > 0)
+        if(curHealth > 0) // 피격 시 Hp여부에 따른 함수
         {
             foreach (MeshRenderer mesh in meshs)
-                mesh.material.color = Color.white;
+                mesh.material.color = Color.white; // 다시 원래 색깔로 돌아간다.
 
         }
-        else
+        else // 죽은 판정
         {
             foreach (MeshRenderer mesh in meshs)
-                mesh.material.color = Color.gray;
+                mesh.material.color = Color.gray; // 회색 색깔로 변경
 
             gameObject.layer = 10;
             isDead = true;
@@ -212,10 +207,10 @@ public class Enemy : MonoBehaviour
             Player player = Target.GetComponent<Player>();
             player.score += score;
             int ranCoin = Random.Range(0, 3);
-            Instantiate(coins[ranCoin], transform.position, Quaternion.identity);
+            Instantiate(coins[ranCoin], transform.position, Quaternion.identity); // 코인 떨어트리는 기능
             player.Qenemy--;
 
-            switch (enemyType)
+            switch (enemyType) // 타입별 퀘스트전용 조건
             {
                 case Type.A:
                     manager.enemyCntA--;
@@ -237,7 +232,7 @@ public class Enemy : MonoBehaviour
 
 
 
-            if (isGrenade)
+            if (isGrenade) // 죽을 시 시체처리 (수류탄ver)
             {
                 reactVec = reactVec.normalized;
                 reactVec += Vector3.up * 3;
@@ -257,7 +252,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Debuff()
+    void Debuff() // 수류탄에 의한 디버프 오오라 생성.
     {
         if(isice)
         {
@@ -276,7 +271,15 @@ public class Enemy : MonoBehaviour
             StartCoroutine(fireoff());
         }
     }
-    IEnumerator fireon()
+
+    public void HitByGrenade(Vector3 explosionPos) // 플레이어 수류탄에 맞을 때
+    {
+        curHealth -= 100;
+        Vector3 reactVec = transform.position - explosionPos;
+        StartCoroutine(OnDamage(reactVec, true));
+    }
+
+    IEnumerator fireon() // 화염 수류탄에 맞았을 때
     {
         if (curHealth <= 0)
             StopCoroutine(OnDamage(transform.position, false));
@@ -289,7 +292,7 @@ public class Enemy : MonoBehaviour
         isdamage = false;
     }
 
-    IEnumerator fireoff()
+    IEnumerator fireoff() // 화염 수류탄 끝났을 때
     {
         yield return new WaitForSeconds(10f);
         isfire = false;
@@ -297,7 +300,7 @@ public class Enemy : MonoBehaviour
         StopCoroutine(fireoff());
     }
 
-    IEnumerator Iceoff()
+    IEnumerator Iceoff() // 얼음 수류탄 끝났을 때
     {
         isice = false;
         yield return new WaitForSeconds(10f);

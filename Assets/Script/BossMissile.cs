@@ -17,9 +17,9 @@ public class BossMissile : Bullet
     // Update is called once per frame
     void Update()
     {
-        nav.SetDestination(target.position);
+        nav.SetDestination(target.position); // 타겟을 따라가기 위한 함수
 
-        if (gmr.isBattle == false)
+        if (gmr.isBattle == false) // 라운드가 종료됐을때 미사일이 사라지게
         {
             Destroy(gameObject);
         }

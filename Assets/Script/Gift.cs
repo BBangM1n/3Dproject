@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Gift : MonoBehaviour
+public class Gift : MonoBehaviour // 퀘스트 클리어 아이템 관리 함수
 {
     public enum GiftType { Coin, Ammo, Grenade, Potion };
     public GiftType Gifttype;

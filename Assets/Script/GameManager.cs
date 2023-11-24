@@ -66,14 +66,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        enemyList = new List<int>();
-        maxScoreText.text = string.Format("{0:n0}", PlayerPrefs.GetInt("MaxScore"));
+        enemyList = new List<int>(); // 몬스터 갯수를 위한 리스트 선언
+        maxScoreText.text = string.Format("{0:n0}", PlayerPrefs.GetInt("MaxScore")); // 컴퓨터에 저장된 맥스스코어 가져오기
 
-        if (PlayerPrefs.HasKey("MaxScore"))
+        if (PlayerPrefs.HasKey("MaxScore")) // 만약 없다면 0
             PlayerPrefs.SetInt("MaxScore", 0);
     }
 
-    public void GameStart()
+    public void GameStart() // 게임 스타트 버튼을 누를 시
     {
         menuCam.SetActive(false);
         pausePanel.SetActive(false);
@@ -83,10 +83,11 @@ public class GameManager : MonoBehaviour
         gamePanel.SetActive(true);
 
         player.gameObject.SetActive(true);
+
         Time.timeScale = 1f;
     }
 
-    public void TutorialStart()
+    public void TutorialStart() // 튜토 리얼 버튼을 누를 시
     {
         menuCam.SetActive(false);
         gameCam.SetActive(true);
@@ -95,11 +96,12 @@ public class GameManager : MonoBehaviour
         gamePanel.SetActive(true);
 
         player.gameObject.SetActive(true);
-        StartCoroutine(turorial());
+        StartCoroutine(turorial()); // 튜토리얼 코루틴 시작
     }
 
-    IEnumerator turorial()
+    IEnumerator turorial() // 튜토리얼 코루틴
     {
+        // 일정 시간초마다 설정해둔 Ui들이 켜지고 꺼졌다 반복.
         yield return new WaitForSeconds(1f);
         tutorials[0].gameObject.SetActive(true);
         yield return new WaitForSeconds(5f);
@@ -125,13 +127,13 @@ public class GameManager : MonoBehaviour
         StopCoroutine(turorial());
     }
 
-    public void GameOver()
+    public void GameOver() // 게임 오버가 되면
     {
         gamePanel.SetActive(false);
         overPanel.SetActive(true);
         curScoreText.text = scoreText.text;
 
-        int maxScore = PlayerPrefs.GetInt("MaxScore");
+        int maxScore = PlayerPrefs.GetInt("MaxScore"); // 맥스 스코어로 저장
         if(player.score > maxScore)
         {
             bestScoreText.gameObject.SetActive(true);
@@ -139,14 +141,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Restart()
+    public void Restart() // 다시 시작버튼
     {
         SceneManager.LoadScene(0);
     }
 
-    public void Pause()
+    public void Pause() // 일시정지 버튼
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             pausePanel.SetActive(true);
             gamePanel.SetActive(false);
@@ -158,14 +160,14 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-    public void Exit()
+    public void Exit() // Exit버튼
     {
         Application.Quit();
     }
 
     private void Update()
     {
-        if (isBattle)
+        if (isBattle) // 스테이지 진입시 플레이 타임 증가
             playTime += Time.deltaTime;
 
         QuestInfo();
@@ -221,41 +223,41 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void StageStart()
+    public void StageStart() // 스테이지 시작할 때
     {
-        itemShop.SetActive(false);
+        itemShop.SetActive(false); // 상점들 비활성화
         weaponShop.SetActive(false);
         potionShop.SetActive(false);
         startZone.SetActive(false);
         QuestShop.SetActive(false);
 
-        foreach (Transform zone in enemyZones)
+        foreach (Transform zone in enemyZones) // 적 스폰 존 활성화
             zone.gameObject.SetActive(true);
 
-        isBattle = true;
-        StartCoroutine(InBattle());
+        isBattle = true; // 배틀 상태 시작
+        StartCoroutine(InBattle()); // 배틀 코루틴 시작
     }
 
-    public void StageEnd()
+    public void StageEnd() // 스테이지 끝나면
     {
         player.transform.position = Vector3.up * 0.8f;
 
-        itemShop.SetActive(true);
+        itemShop.SetActive(true);  // 상점들 활성화
         weaponShop.SetActive(true);
         potionShop.SetActive(true);
         startZone.SetActive(true);
         QuestShop.SetActive(true);
 
-        foreach (Transform zone in enemyZones)
+        foreach (Transform zone in enemyZones) // 스폰 존 비활성화
             zone.gameObject.SetActive(false);
 
-        isBattle = false;
+        isBattle = false; // 배틀 상태 꺼짐
         stage++;
     }
 
-    IEnumerator InBattle()
+    IEnumerator InBattle() // 배틀 코루틴
     {
-        if (stage % 5 == 0)
+        if (stage % 5 == 0) // 5번째 스테이지마다 보스 소환
         {
             enemyCntD++;
             GameObject instantEnemy = Instantiate(enemies[3], enemyZones[0].position, enemyZones[0].rotation);
@@ -264,7 +266,7 @@ public class GameManager : MonoBehaviour
             enemy.manager = this;
             boss = instantEnemy.GetComponent<Boss>();
         }
-        else
+        else // 아닐 시 초록, 보라, 노랑 공룡 소환
         {
             for (int index = 0; index < stage; index++)
             {
@@ -285,7 +287,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            while (enemyList.Count > 0)
+            while (enemyList.Count > 0) // 적들의 갯수 상황 0 이되면 빠져나감
             {
                 int ranZone = Random.Range(0, 4);
                 GameObject instantEnemy = Instantiate(enemies[enemyList[0]], enemyZones[ranZone].position, enemyZones[ranZone].rotation);
@@ -304,14 +306,14 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
         boss = null;
-        StageEnd();
+        StageEnd(); // 몬스터를 다 잡았다면 스테이지 엔드
     }
 
-    public void potioncontrol(int value)
+    public void potioncontrol(int value) // 포션 컨트롤 함수
     {
         if (!isitembool1)
         {
-            potion1Img.sprite = potiomimage[value];
+            potion1Img.sprite = potiomimage[value]; // 포션이미지 배열과 아이템창 소지 판별
             isitembool1 = true;
             
         }
@@ -327,7 +329,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void QuestInfo()
+    void QuestInfo() // 퀘스트창에서의 플레이어 소지 및 현황판 표시 
     {
         QAmmoText.text = player.ammo.ToString();
         QCoinText.text = player.coin.ToString();

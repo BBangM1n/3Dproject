@@ -56,7 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\help.cs" />
     <Compile Include="Assets\Script\Ice.cs" />
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\QuestManager.cs" />
@@ -66,7 +65,6 @@
     <Compile Include="Assets\Script\Gift.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\Orbit.cs" />
-    <Compile Include="Assets\Script\Exam.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\Fire.cs" />
     <Compile Include="Assets\Script\Quest.cs" />

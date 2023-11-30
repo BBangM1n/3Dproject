@@ -62,15 +62,86 @@ public class GameManager : MonoBehaviour
 
     public Sprite[] potiomimage;
     public GameObject[] tutorials;
+
+    //보스 들어오는모션
+    public Text bosscomingText;
+    public Image bosscomingImage;
     
 
     private void Awake()
     {
+        bosscomingText = bosscomingText.GetComponent<Text>();
+        bosscomingImage = bosscomingImage.GetComponent<Image>();
+
         enemyList = new List<int>(); // 몬스터 갯수를 위한 리스트 선언
         maxScoreText.text = string.Format("{0:n0}", PlayerPrefs.GetInt("MaxScore")); // 컴퓨터에 저장된 맥스스코어 가져오기
 
         if (PlayerPrefs.HasKey("MaxScore")) // 만약 없다면 0
             PlayerPrefs.SetInt("MaxScore", 0);
+
+    }
+
+    private void Start()
+    {
+
+    }
+
+    private void Update()
+    {
+        if (isBattle) // 스테이지 진입시 플레이 타임 증가
+            playTime += Time.deltaTime;
+
+        QuestInfo();
+        Pause();
+    }
+
+    private void LateUpdate()
+    {
+        //상단 UI
+        scoreText.text = string.Format("{0:n0}", player.score);
+        stageText.text = "STAGE " + stage;
+
+        int hour = (int)(playTime / 3600);
+        int min = (int)((playTime - hour * 3600) / 60);
+        int sec = (int)(playTime % 60);
+        playTimeText.text = string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", min) + ":" + string.Format("{0:00}", sec);
+
+        //플레이어 UI
+        playerHealthText.text = player.health + " / " + player.maxhealth;
+        playerCoinText.text = string.Format("{0:n0}", player.coin);
+        if (player.equipWeapon == null)
+            playerAmmoText.text = "- / " + player.ammo;
+        else if (player.equipWeapon.type == Weapon.Type.Melee)
+            playerAmmoText.text = "- / " + player.ammo;
+        else
+            playerAmmoText.text = player.equipWeapon.curammo + " / " + player.ammo;
+
+        //무기 UI
+        weapon1Img.color = new Color(1, 1, 1, player.hasWeapons[0] ? 1 : 0);
+        weapon2Img.color = new Color(1, 1, 1, player.hasWeapons[1] ? 1 : 0);
+        weapon3Img.color = new Color(1, 1, 1, player.hasWeapons[2] ? 1 : 0);
+        weaponRImg.color = new Color(1, 1, 1, player.hasGrenade > 0 ? 1 : 0);
+
+        //포션 UI
+        potion1Img.color = new Color(1, 1, 1, isitembool1 ? 1 : 0);
+        potion2Img.color = new Color(1, 1, 1, isitembool2 ? 1 : 0);
+        potion3Img.color = new Color(1, 1, 1, isitembool3 ? 1 : 0);
+
+        //몬스터 UI
+        enemyAText.text = enemyCntA.ToString();
+        enemyBText.text = enemyCntB.ToString();
+        enemyCText.text = enemyCntC.ToString();
+
+        if (boss != null)
+        {
+            bossHealthGroup.anchoredPosition = Vector3.down * 30;
+            bossHealthBar.localScale = new Vector3((float)boss.curHealth / boss.maxHealth, 1, 1);
+        }
+        else
+        {
+            bossHealthGroup.anchoredPosition = Vector3.up * 200;
+        }
+
     }
 
     public void GameStart() // 게임 스타트 버튼을 누를 시
@@ -163,64 +234,6 @@ public class GameManager : MonoBehaviour
     public void Exit() // Exit버튼
     {
         Application.Quit();
-    }
-
-    private void Update()
-    {
-        if (isBattle) // 스테이지 진입시 플레이 타임 증가
-            playTime += Time.deltaTime;
-
-        QuestInfo();
-        Pause();
-    }
-
-    private void LateUpdate()
-    {
-        //상단 UI
-        scoreText.text = string.Format("{0:n0}", player.score);
-        stageText.text = "STAGE " + stage;
-
-        int hour = (int)(playTime / 3600);
-        int min = (int)((playTime - hour * 3600) / 60);
-        int sec = (int)(playTime % 60);
-        playTimeText.text = string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", min) + ":" + string.Format("{0:00}", sec);
-
-        //플레이어 UI
-        playerHealthText.text = player.health + " / " + player.maxhealth;
-        playerCoinText.text = string.Format("{0:n0}", player.coin);
-        if (player.equipWeapon == null)
-            playerAmmoText.text = "- / " + player.ammo;
-        else if (player.equipWeapon.type == Weapon.Type.Melee)
-            playerAmmoText.text = "- / " + player.ammo;
-        else
-            playerAmmoText.text = player.equipWeapon.curammo + " / " + player.ammo;
-
-        //무기 UI
-        weapon1Img.color = new Color(1, 1, 1, player.hasWeapons[0] ? 1 : 0);
-        weapon2Img.color = new Color(1, 1, 1, player.hasWeapons[1] ? 1 : 0);
-        weapon3Img.color = new Color(1, 1, 1, player.hasWeapons[2] ? 1 : 0);
-        weaponRImg.color = new Color(1, 1, 1, player.hasGrenade > 0 ? 1 : 0);
-
-        //포션 UI
-        potion1Img.color = new Color(1, 1, 1, isitembool1 ? 1 : 0);
-        potion2Img.color = new Color(1, 1, 1, isitembool2 ? 1 : 0);
-        potion3Img.color = new Color(1, 1, 1, isitembool3 ? 1 : 0);
-
-        //몬스터 UI
-        enemyAText.text = enemyCntA.ToString();
-        enemyBText.text = enemyCntB.ToString();
-        enemyCText.text = enemyCntC.ToString();
-
-        if(boss != null)
-        {
-            bossHealthGroup.anchoredPosition = Vector3.down * 30;
-            bossHealthBar.localScale = new Vector3((float)boss.curHealth / boss.maxHealth, 1, 1);
-        }
-        else
-        {
-            bossHealthGroup.anchoredPosition = Vector3.up * 200;
-        }
-
     }
 
     public void StageStart() // 스테이지 시작할 때
@@ -334,5 +347,29 @@ public class GameManager : MonoBehaviour
         QAmmoText.text = player.ammo.ToString();
         QCoinText.text = player.coin.ToString();
         QScoreText.text = player.score.ToString();
+    }
+
+    IEnumerator BossCreateText() // 보스 출현 깜빡임 효과 횟수제한걸어야함
+    {
+        while (bosscomingText.color.a > 0)
+        {
+            bosscomingText.color = new Color(bosscomingText.color.r,bosscomingText.color.g,bosscomingText.color.b,bosscomingText.color.a - (Time.deltaTime * 1f));
+            bosscomingImage.color = new Color(bosscomingImage.color.r, bosscomingImage.color.g, bosscomingImage.color.b, bosscomingImage.color.a - (Time.deltaTime * 1f));
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        // 텍스트가 서서히 나타나도록 함
+        while (bosscomingText.color.a < 1)
+        {
+            bosscomingText.color = new Color(bosscomingText.color.r, bosscomingText.color.g, bosscomingText.color.b, bosscomingText.color.a + (Time.deltaTime * 1f));
+            bosscomingImage.color = new Color(bosscomingImage.color.r, bosscomingImage.color.g, bosscomingImage.color.b, bosscomingImage.color.a + (Time.deltaTime * 1f));
+            yield return null;
+        }
+
+        // 대기
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(BossCreateText());
     }
 }

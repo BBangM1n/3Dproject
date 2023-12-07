@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
 
         if(enemyType != Type.D)
         Invoke("ChaseStart", 2);
+
     }
 
     private void Update()
@@ -53,6 +54,19 @@ public class Enemy : MonoBehaviour
         {
             nav.SetDestination(Target.position); // SetDestination : 도착할 목표 위치 정할 함수
             nav.isStopped = !isChase;
+        }
+
+        if (Vector3.Distance(transform.position, Target.position) > 50 && !isDead)
+        {
+            nav.enabled = false;
+            if(Vector3.Distance(transform.position, new Vector3(188, 0.7f, 136)) > 5f)
+            {
+                transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(188, 1, 136), 0.1f);
+            }
+        }
+        else
+        {
+            nav.enabled = true;
         }
 
         Debuff();

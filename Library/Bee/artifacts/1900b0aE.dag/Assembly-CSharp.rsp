@@ -351,6 +351,7 @@
 "Assets/Script/BossMissile.cs"
 "Assets/Script/BossRock.cs"
 "Assets/Script/Bullet.cs"
+"Assets/Script/CameraMoving.cs"
 "Assets/Script/Enemy.cs"
 "Assets/Script/Fire.cs"
 "Assets/Script/FollowCamera.cs"
@@ -367,6 +368,7 @@
 "Assets/Script/seads.cs"
 "Assets/Script/Shop.cs"
 "Assets/Script/ShotgunBullet.cs"
+"Assets/Script/SpawnEnemy.cs"
 "Assets/Script/StartZone.cs"
 "Assets/Script/Weapon.cs"
 -langversion:9.0

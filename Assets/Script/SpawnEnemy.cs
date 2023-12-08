@@ -39,6 +39,7 @@ public class SpawnEnemy : MonoBehaviour
         int i = Random.Range(0, enemys.Length);
         GameObject instantEnemy = Instantiate(enemys[i], transform.position, transform.rotation);
         Enemy enemy = instantEnemy.GetComponent<Enemy>();
+        enemy.Spawnposition = gameObject.transform;
         enemy.Target = player.transform;
         enemy.manager = manager;
         Enemycount++;

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public int score; // 점수
     public GameManager manager;
     public Transform Target;
+    public Transform Spawnposition;
     public BoxCollider meleeArea;
     public GameObject bullet;
     public GameObject[] coins;
@@ -51,17 +52,22 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         if (nav.enabled && enemyType != Type.D) // 자동으로 플레이어 추적하기
-        {
-            nav.SetDestination(Target.position); // SetDestination : 도착할 목표 위치 정할 함수
-            nav.isStopped = !isChase;
+        {   
+            if(Vector3.Distance(transform.position, Spawnposition.position) < 70) // 몬스터와 스폰장소길이가 50보다 작을때 까지 플레이어를 추적
+            {
+                nav.SetDestination(Target.position); // SetDestination : 도착할 목표 위치 정할 함수
+                nav.isStopped = !isChase;
+            }
         }
 
-        if (Vector3.Distance(transform.position, Target.position) > 50 && !isDead)
+        // 몬스터와 플레이어 길이가 50보다 길거나 플레이어가 몬스터스폰장소의 길이차이가 70일때
+        if (Vector3.Distance(transform.position, Target.position) > 50 && !isDead || Vector3.Distance(Target.position, Spawnposition.position) > 70)
         {
             nav.enabled = false;
-            if(Vector3.Distance(transform.position, new Vector3(188, 0.7f, 136)) > 5f)
+            if (Vector3.Distance(transform.position, Spawnposition.position) > 5f)
             {
-                transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(188, 1, 136), 0.1f);
+                // 목표 방향을 바라보는 함수 호출
+                LookAtSmooth(Spawnposition.position, 0.1f);
             }
         }
         else
@@ -70,6 +76,18 @@ public class Enemy : MonoBehaviour
         }
 
         Debuff();
+    }
+
+    private void LookAtSmooth(Vector3 targetPosition, float smoothTime)
+    {
+        Vector3 direction = targetPosition - transform.position;
+        Quaternion toRotation = Quaternion.LookRotation(direction.normalized);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, smoothTime);
+
+        // 이동을 부드럽게 하기 위해 SmoothDamp 함수 사용
+        Vector3 velocity = Vector3.zero;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 
     private void FixedUpdate()

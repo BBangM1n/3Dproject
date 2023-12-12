@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
     public Animator anim;
 
     public GameObject[] Debuffeffect;
+    public SpawnEnemy spawnenemy;
 
     private void Awake()
     {
@@ -241,6 +242,7 @@ public class Enemy : MonoBehaviour
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity); // 코인 떨어트리는 기능
             player.Qenemy--;
+            spawnenemy.Enemycount--;
 
             switch (enemyType) // 타입별 퀘스트전용 조건
             {

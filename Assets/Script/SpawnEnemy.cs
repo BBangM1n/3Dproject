@@ -42,6 +42,8 @@ public class SpawnEnemy : MonoBehaviour
         enemy.Spawnposition = gameObject.transform;
         enemy.Target = player.transform;
         enemy.manager = manager;
+        enemy.spawnenemy = this;
+
         Enemycount++;
         yield return new WaitForSeconds(5f);
         isspawn = false;

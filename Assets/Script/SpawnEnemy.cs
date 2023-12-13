@@ -8,7 +8,7 @@ public class SpawnEnemy : MonoBehaviour
     // 물론 겹칠 수 있음
     // 단, 마릿수 제한 만큼만 나오기 
     public GameObject[] enemys; // 몬스터 저장
-    public int Enemycount; // 몬스터 제한 갯수
+    public int Enemycount; // 몬스터 갯수
     bool isspawn; // 스폰중이면 못나오게
 
     Player player;
@@ -36,6 +36,7 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator Spawnenemy() // 몬스터 생성 코루틴
     {
+        yield return new WaitForSeconds(10f);
         int i = Random.Range(0, enemys.Length);
         GameObject instantEnemy = Instantiate(enemys[i], transform.position, transform.rotation);
         Enemy enemy = instantEnemy.GetComponent<Enemy>();
@@ -43,7 +44,6 @@ public class SpawnEnemy : MonoBehaviour
         enemy.Target = player.transform;
         enemy.manager = manager;
         enemy.spawnenemy = this;
-
         Enemycount++;
         yield return new WaitForSeconds(5f);
         isspawn = false;

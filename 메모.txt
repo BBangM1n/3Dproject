@@ -32,3 +32,8 @@ FindObjectOfType(타입이름) : 씬 중에서 타입 이름과 일치하는 게
 FindObjectsOfType(타입이름) : 씬 중에서 타입 이름과 일치하는 게임 오브젝트를 여러 개 찾아서 반환한다. 반환값은 Object 배열이다.
 
 https://sikpang.tistory.com/7
+
+몬스터 스폰 쿨
+스폰존 스폰위치설정
+현재위치 맵변경
+게임방식변경

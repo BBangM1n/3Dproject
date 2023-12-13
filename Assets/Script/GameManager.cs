@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     public GameObject pausePanel;
     public Text maxScoreText;
     public Text scoreText;
-    public Text stageText;
+    public Text stageNameText;
     public Text playTimeText;
     public Text playerHealthText;
     public Text playerAmmoText;
@@ -88,8 +88,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (isBattle) // 스테이지 진입시 플레이 타임 증가
-            playTime += Time.deltaTime;
+        playTime += Time.deltaTime;
 
         QuestInfo();
         Pause();
@@ -99,7 +98,6 @@ public class GameManager : MonoBehaviour
     {
         //상단 UI
         scoreText.text = string.Format("{0:n0}", player.score);
-        stageText.text = "STAGE " + stage;
 
         int hour = (int)(playTime / 3600);
         int min = (int)((playTime - hour * 3600) / 60);
@@ -234,92 +232,6 @@ public class GameManager : MonoBehaviour
     public void Exit() // Exit버튼
     {
         Application.Quit();
-    }
-
-    public void StageStart() // 스테이지 시작할 때
-    {
-        itemShop.SetActive(false); // 상점들 비활성화
-        weaponShop.SetActive(false);
-        potionShop.SetActive(false);
-        startZone.SetActive(false);
-        QuestShop.SetActive(false);
-
-        foreach (Transform zone in enemyZones) // 적 스폰 존 활성화
-            zone.gameObject.SetActive(true);
-
-        isBattle = true; // 배틀 상태 시작
-        StartCoroutine(InBattle()); // 배틀 코루틴 시작
-    }
-
-    public void StageEnd() // 스테이지 끝나면
-    {
-        player.transform.position = Vector3.up * 0.8f;
-
-        itemShop.SetActive(true);  // 상점들 활성화
-        weaponShop.SetActive(true);
-        potionShop.SetActive(true);
-        startZone.SetActive(true);
-        QuestShop.SetActive(true);
-
-        foreach (Transform zone in enemyZones) // 스폰 존 비활성화
-            zone.gameObject.SetActive(false);
-
-        isBattle = false; // 배틀 상태 꺼짐
-        stage++;
-    }
-
-    IEnumerator InBattle() // 배틀 코루틴
-    {
-        if (stage % 5 == 0) // 5번째 스테이지마다 보스 소환
-        {
-            enemyCntD++;
-            GameObject instantEnemy = Instantiate(enemies[3], enemyZones[0].position, enemyZones[0].rotation);
-            Enemy enemy = instantEnemy.GetComponent<Enemy>();
-            enemy.Target = player.transform;
-            enemy.manager = this;
-            boss = instantEnemy.GetComponent<Boss>();
-        }
-        else // 아닐 시 초록, 보라, 노랑 공룡 소환
-        {
-            for (int index = 0; index < stage; index++)
-            {
-                int ran = Random.Range(0, 3);
-                enemyList.Add(ran);
-
-                switch (ran)
-                {
-                    case 0:
-                        enemyCntA++;
-                        break;
-                    case 1:
-                        enemyCntB++;
-                        break;
-                    case 2:
-                        enemyCntC++;
-                        break;
-                }
-            }
-
-            while (enemyList.Count > 0) // 적들의 갯수 상황 0 이되면 빠져나감
-            {
-                int ranZone = Random.Range(0, 4);
-                GameObject instantEnemy = Instantiate(enemies[enemyList[0]], enemyZones[ranZone].position, enemyZones[ranZone].rotation);
-                Enemy enemy = instantEnemy.GetComponent<Enemy>();
-                enemy.Target = player.transform;
-                enemy.manager = this;
-                enemyList.RemoveAt(0);
-                yield return new WaitForSeconds(5f);
-            }
-        }
-
-        while(enemyCntA + enemyCntB + enemyCntC + enemyCntD > 0)
-        {
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(4f);
-        boss = null;
-        StageEnd(); // 몬스터를 다 잡았다면 스테이지 엔드
     }
 
     public void potioncontrol(int value) // 포션 컨트롤 함수

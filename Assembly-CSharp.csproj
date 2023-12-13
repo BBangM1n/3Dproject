@@ -81,6 +81,7 @@
     <Compile Include="Assets\Script\StartZone.cs" />
     <Compile Include="Assets\Script\BossRock.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\Floor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />

@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour
     {
         if (nav.enabled && enemyType != Type.D) // 자동으로 플레이어 추적하기
         {   
-            if(Vector3.Distance(transform.position, Spawnposition.position) < 70) // 몬스터와 스폰장소길이가 50보다 작을때 까지 플레이어를 추적
+            if(Vector3.Distance(transform.position, Spawnposition.position) < 70 && !isDead) // 몬스터와 스폰장소길이가 50보다 작을때 까지 플레이어를 추적
             {
                 nav.SetDestination(Target.position); // SetDestination : 도착할 목표 위치 정할 함수
                 nav.isStopped = !isChase;

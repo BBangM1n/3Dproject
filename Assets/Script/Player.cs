@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     bool isjump;
     bool isdamage;
     bool isshop;
-    bool isDead;
+    public bool isDead;
     bool isbuff;
     bool iscbuff = false;
     
@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
 
     public int Qenemy;
     public int Qgrenade;
+
     public int enemyAcount;
     public int enemyBcount;
     public int enemyCcount;
@@ -74,7 +75,7 @@ public class Player : MonoBehaviour
 
     Color buffcolor;
 
-    Animator anim;
+    public Animator anim;
     Rigidbody rigid;
     MeshRenderer[] meshs;
 

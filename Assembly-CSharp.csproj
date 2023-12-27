@@ -67,6 +67,7 @@
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\Orbit.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\Floor.cs" />
     <Compile Include="Assets\Script\Fire.cs" />
     <Compile Include="Assets\Script\Quest.cs" />
     <Compile Include="Assets\Script\BossMissile.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\Script\StartZone.cs" />
     <Compile Include="Assets\Script\BossRock.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\Floor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />

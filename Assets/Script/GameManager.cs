@@ -14,10 +14,11 @@ public class GameManager : MonoBehaviour
     public GameObject weaponShop;
     public GameObject potionShop;
     public GameObject QuestShop;
-    public GameObject startZone;
+    //public GameObject startZone;
     public int stage;
     public float playTime;
     public bool isBattle;
+
     public int enemyCntA;
     public int enemyCntB;
     public int enemyCntC;
@@ -49,9 +50,9 @@ public class GameManager : MonoBehaviour
     public Image potion1Img;
     public Image potion2Img;
     public Image potion3Img;
-    public Text enemyAText;
+/*    public Text enemyAText;
     public Text enemyBText;
-    public Text enemyCText;
+    public Text enemyCText;*/
     public Text QCoinText;
     public Text QAmmoText;
     public Text QScoreText;
@@ -59,6 +60,9 @@ public class GameManager : MonoBehaviour
     public RectTransform bossHealthBar;
     public Text curScoreText;
     public Text bestScoreText;
+    public Text RespawnText;
+    public Button RestartBtn;
+
 
     public Sprite[] potiomimage;
     public GameObject[] tutorials;
@@ -126,9 +130,9 @@ public class GameManager : MonoBehaviour
         potion3Img.color = new Color(1, 1, 1, isitembool3 ? 1 : 0);
 
         //몬스터 UI
-        enemyAText.text = enemyCntA.ToString();
+/*        enemyAText.text = enemyCntA.ToString();
         enemyBText.text = enemyCntB.ToString();
-        enemyCText.text = enemyCntC.ToString();
+        enemyCText.text = enemyCntC.ToString();*/
 
         if (boss != null)
         {
@@ -200,19 +204,55 @@ public class GameManager : MonoBehaviour
     {
         gamePanel.SetActive(false);
         overPanel.SetActive(true);
+        RestartBtn.interactable = false;
         curScoreText.text = scoreText.text;
-
+        StartCoroutine(RespawnTexton());
         int maxScore = PlayerPrefs.GetInt("MaxScore"); // 맥스 스코어로 저장
         if(player.score > maxScore)
         {
             bestScoreText.gameObject.SetActive(true);
             PlayerPrefs.SetInt("MaxScore", player.score);
         }
+
+
+    }
+
+    IEnumerator RespawnTexton()
+    {
+        yield return new WaitForSeconds(0.3f);
+        RespawnText.text = "5초 뒤 부활 가능...";
+        yield return new WaitForSeconds(1f);
+        RespawnText.text = "4초 뒤 부활 가능...";
+        yield return new WaitForSeconds(1f);
+        RespawnText.text = "3초 뒤 부활 가능...";
+        yield return new WaitForSeconds(1f);
+        RespawnText.text = "2초 뒤 부활 가능...";
+        yield return new WaitForSeconds(1f);
+        RespawnText.text = "1초 뒤 부활 가능...";
+        yield return new WaitForSeconds(1f);
+        RespawnText.text = "부활 가능!";
+        RestartBtn.interactable = true;
+
+        StopCoroutine(RespawnTexton());
     }
 
     public void Restart() // 다시 시작버튼
     {
-        SceneManager.LoadScene(0);
+        player.anim.SetBool("Respawn", true);
+        gamePanel.SetActive(true);
+        overPanel.SetActive(false);
+        player.transform.position = new Vector3(0, 1, 0);
+        player.isDead = false;
+        player.health = 100;
+        player.coin = player.coin / 2;
+        StartCoroutine(Resetanim());
+    }
+
+    IEnumerator Resetanim()
+    {
+        yield return new WaitForSeconds(1f);
+        player.anim.SetBool("Respawn", false);
+        StopCoroutine(Resetanim());
     }
 
     public void Pause() // 일시정지 버튼

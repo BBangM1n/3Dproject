@@ -10,6 +10,8 @@ public class SpawnEnemy : MonoBehaviour
     public GameObject[] enemys; // 몬스터 저장
     public int Enemycount; // 몬스터 갯수
     bool isspawn; // 스폰중이면 못나오게
+    public bool isboss;
+    public bool iscondition;
 
     Player player;
     GameManager manager;
@@ -27,10 +29,16 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Enemycount <= 3 & !isspawn) // 일정 갯수 제한
+        if(Enemycount <= 3 && !isspawn && !isboss) // 일정 갯수 제한
         {
             isspawn = true;
             StartCoroutine(Spawnenemy());
+        }
+
+        if(isboss && iscondition)
+        {
+            //보스 시점연출 보스가 올라오고 소환완료되면 지형파괴되고 이제 나에게 온다.
+            GameObject instantEnemy = Instantiate(enemys[0], transform.position, transform.rotation);
         }
     }
 

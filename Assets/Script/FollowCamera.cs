@@ -12,7 +12,7 @@ public class FollowCamera : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     public bool Cameraon = true;
 
-    bool isbosscoming;
+    public bool isbosscoming;
     bool end = false;
 
 

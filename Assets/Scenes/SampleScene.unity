@@ -175,7 +175,8 @@ MonoBehaviour:
   - {fileID: 5581949917673669927, guid: 7a61a0196a95af94497323ea5da308ad, type: 3}
   Enemycount: 0
   isboss: 0
-  iscondition: 0
+  bosson: 0
+  TreeAndRock: {fileID: 0}
 --- !u!199 &759006
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -49738,8 +49739,10 @@ MonoBehaviour:
   - {fileID: 1740862202}
   - {fileID: 1509345300}
   - {fileID: 287939818}
+  BossComing: {fileID: 1478187362}
   bosscomingText: {fileID: 336728300}
   bosscomingImage: {fileID: 1351845940}
+  BossCounting: 0
 --- !u!4 &693596654
 Transform:
   m_ObjectHideFlags: 0
@@ -54868,6 +54871,7 @@ GameObject:
   - component: {fileID: 718670980}
   - component: {fileID: 718670982}
   - component: {fileID: 718670981}
+  - component: {fileID: 718670983}
   m_Layer: 0
   m_Name: BossSpawnZone
   m_TagString: Untagged
@@ -59669,6 +59673,23 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &718670983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718670979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7099b4bcaa543614d88668a471538e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemys: []
+  Enemycount: 0
+  isboss: 1
+  bosson: 0
+  TreeAndRock: {fileID: 0}
 --- !u!1 &726088540
 GameObject:
   m_ObjectHideFlags: 0
@@ -63345,6 +63366,7 @@ MonoBehaviour:
   BossPosition: {fileID: 606006386}
   smoothTime: 3
   Cameraon: 1
+  isbosscoming: 0
 --- !u!4 &966040936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1873072230472789115, guid: c2ec4bfd1a6491c49a0c34b8dc3a7639, type: 3}
@@ -88594,7 +88616,8 @@ MonoBehaviour:
   - {fileID: 5581949917673669927, guid: 7a61a0196a95af94497323ea5da308ad, type: 3}
   Enemycount: 0
   isboss: 0
-  iscondition: 0
+  bosson: 0
+  TreeAndRock: {fileID: 0}
 --- !u!199 &1401325262
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -108151,7 +108174,8 @@ MonoBehaviour:
   - {fileID: 5581949917673669927, guid: 7a61a0196a95af94497323ea5da308ad, type: 3}
   Enemycount: 0
   isboss: 0
-  iscondition: 0
+  bosson: 0
+  TreeAndRock: {fileID: 0}
 --- !u!1 &1841665845
 GameObject:
   m_ObjectHideFlags: 0

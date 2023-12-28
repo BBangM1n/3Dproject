@@ -68,9 +68,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] tutorials;
 
     //보스 들어오는모션
+    public GameObject BossComing;
     public Text bosscomingText;
     public Image bosscomingImage;
-    
+    public int BossCounting;
+
+
 
     private void Awake()
     {
@@ -301,7 +304,7 @@ public class GameManager : MonoBehaviour
         QScoreText.text = player.score.ToString();
     }
 
-    IEnumerator BossCreateText() // 보스 출현 깜빡임 효과 횟수제한걸어야함
+    public IEnumerator BossCreateText() // 보스 출현 깜빡임 효과 횟수제한걸어야함
     {
         while (bosscomingText.color.a > 0)
         {

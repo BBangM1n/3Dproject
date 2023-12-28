@@ -243,6 +243,7 @@ public class Enemy : MonoBehaviour
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity); // 코인 떨어트리는 기능
             player.Qenemy--;
             spawnenemy.Enemycount--;
+            manager.BossCounting++;
 
             switch (enemyType) // 타입별 퀘스트전용 조건
             {

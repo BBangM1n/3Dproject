@@ -10,11 +10,15 @@ public class SpawnEnemy : MonoBehaviour
     public GameObject[] enemys; // 몬스터 저장
     public int Enemycount; // 몬스터 갯수
     bool isspawn; // 스폰중이면 못나오게
+
+    [Header("--- 보스 ---")]
     public bool isboss;
-    public bool iscondition;
+    public bool bosson;
+    public GameObject TreeAndRock;
 
     Player player;
     GameManager manager;
+    public Coroutine thisCoroutine;
 
     private void Awake()
     {
@@ -35,11 +39,31 @@ public class SpawnEnemy : MonoBehaviour
             StartCoroutine(Spawnenemy());
         }
 
-        if(isboss && iscondition)
+        if(isboss)
         {
-            //보스 시점연출 보스가 올라오고 소환완료되면 지형파괴되고 이제 나에게 온다.
-            GameObject instantEnemy = Instantiate(enemys[0], transform.position, transform.rotation);
+            if(manager.BossCounting > 2)
+            {
+                StartCoroutine(BossSpawn());
+                //GameObject instantEnemy = Instantiate(enemys[0], transform.position, transform.rotation);
+                Debug.Log("보스나온다웨엥");
+            }
+
         }
+    }
+    IEnumerator BossSpawn()
+    {
+        manager.BossCounting = 0;
+        manager.BossComing.SetActive(true);
+        thisCoroutine = StartCoroutine(manager.BossCreateText());
+        yield return new WaitForSeconds(4f);
+        manager.BossComing.SetActive(false);
+        StopCoroutine(thisCoroutine);
+        yield return new WaitForSeconds(1f);
+        FollowCamera camera = GameObject.Find("Main Camera").gameObject.GetComponent<FollowCamera>();
+        camera.Cameraon = false;
+        camera.isbosscoming = true;
+
+        Debug.Log("보스코루틴끝났다");
     }
 
     IEnumerator Spawnenemy() // 몬스터 생성 코루틴

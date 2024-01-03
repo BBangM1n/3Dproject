@@ -13,7 +13,7 @@ public class FollowCamera : MonoBehaviour
     public bool Cameraon = true;
 
     public bool isbosscoming;
-    bool end = false;
+    public bool end = false;
 
 
     // Start is called before the first frame update
@@ -41,14 +41,7 @@ public class FollowCamera : MonoBehaviour
             else
                 transform.position = Vector3.SmoothDamp(transform.position, target.position + offset, ref velocity, smoothTime);
 
-            if (Vector3.Distance(Bosstarget, Camera.main.transform.position) < 1f)
-            {
-                end = true;
-            }
-
-            Debug.Log(Vector3.Distance(target.position + offset, Camera.main.transform.position));
-
-            if (Vector3.Distance(target.position + offset, Camera.main.transform.position) < 1f && end == true)
+            if (Vector3.Distance(target.position + offset, Camera.main.transform.position) < 2f && end == true)
             {
                 Cameraon = true;
                 isbosscoming = false;

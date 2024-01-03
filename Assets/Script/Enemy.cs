@@ -26,7 +26,6 @@ public class Enemy : MonoBehaviour
     // 상태이상 여부
     public bool isfire = false;
     public bool isice = false;
-    public bool ispoison = false;
 
     public Rigidbody rigid;
     public BoxCollider boxCollider;
@@ -52,7 +51,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (nav.enabled && enemyType != Type.D) // 자동으로 플레이어 추적하기
+        if (nav.enabled) // 자동으로 플레이어 추적하기
         {   
             if(Vector3.Distance(transform.position, Spawnposition.position) < 70 && !isDead) // 몬스터와 스폰장소길이가 50보다 작을때 까지 플레이어를 추적
             {
@@ -77,6 +76,15 @@ public class Enemy : MonoBehaviour
         }
 
         Debuff();
+
+        if(manager != null)
+        {
+            if (enemyType != Type.D && manager.isBossbattle)
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 
     private void LookAtSmooth(Vector3 targetPosition, float smoothTime)
@@ -233,6 +241,8 @@ public class Enemy : MonoBehaviour
                 mesh.material.color = Color.gray; // 회색 색깔로 변경
 
             gameObject.layer = 10;
+
+
             isDead = true;
             isChase = false;
             nav.enabled = false;
@@ -242,7 +252,12 @@ public class Enemy : MonoBehaviour
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity); // 코인 떨어트리는 기능
             player.Qenemy--;
-            spawnenemy.Enemycount--;
+            if(enemyType != Type.D)
+                spawnenemy.Enemycount--;
+            else
+            {
+                manager.boss = null;
+            }
             manager.BossCounting++;
 
             switch (enemyType) // 타입별 퀘스트전용 조건

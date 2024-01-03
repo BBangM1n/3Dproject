@@ -14,6 +14,8 @@ public class Boss : Enemy
 
     public bool isLook;
 
+    public bool notspawn;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -24,32 +26,36 @@ public class Boss : Enemy
         anim = GetComponentInChildren<Animator>();
 
         nav.isStopped = true;
-        StartCoroutine(Think()); // 패턴을 위한 코루틴 시작
+        //StartCoroutine(Think()); // 패턴을 위한 코루틴 시작
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isDead) // 죽을 시 모든 코루틴 스탑
+        if(notspawn)
         {
-            StopAllCoroutines();
-            return;
-        }
+            if (isDead) // 죽을 시 모든 코루틴 스탑
+            {
+                StopAllCoroutines();
+                return;
+            }
 
-        if (isLook) // 보스가 플레이어를 쳐다보게 만드는 함수
-        {
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
-            lookVec = new Vector3(h, 0, v) * 5f;
-            transform.LookAt(Target.position + lookVec);
-        }
-        else
-        {
-            nav.SetDestination(tauntVec);
+            if (isLook) // 보스가 플레이어를 쳐다보게 만드는 함수
+            {
+                float h = Input.GetAxisRaw("Horizontal");
+                float v = Input.GetAxisRaw("Vertical");
+                lookVec = new Vector3(h, 0, v) * 5f;
+                transform.LookAt(Target.position + lookVec);
+            }
+            else
+            {
+                nav.SetDestination(tauntVec);
+            }
+
         }
     }
 
-    IEnumerator Think() // 패턴사용을 위한 코루틴
+    public IEnumerator Think() // 패턴사용을 위한 코루틴
     {
         yield return new WaitForSeconds(0.1f);
 

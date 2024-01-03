@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     bool isdodge;
     bool isFireReady = true;
     bool isswap;
-    bool isreload;
+    public bool isreload;
     bool isborder;
     bool isjump;
     bool isdamage;

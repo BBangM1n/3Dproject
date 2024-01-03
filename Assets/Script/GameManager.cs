@@ -50,9 +50,9 @@ public class GameManager : MonoBehaviour
     public Image potion1Img;
     public Image potion2Img;
     public Image potion3Img;
-/*    public Text enemyAText;
-    public Text enemyBText;
-    public Text enemyCText;*/
+    /*    public Text enemyAText;
+        public Text enemyBText;
+        public Text enemyCText;*/
     public Text QCoinText;
     public Text QAmmoText;
     public Text QScoreText;
@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
     public Text bosscomingText;
     public Image bosscomingImage;
     public int BossCounting;
+    public bool isBossbattle;
 
 
 
@@ -133,12 +134,12 @@ public class GameManager : MonoBehaviour
         potion3Img.color = new Color(1, 1, 1, isitembool3 ? 1 : 0);
 
         //몬스터 UI
-/*        enemyAText.text = enemyCntA.ToString();
-        enemyBText.text = enemyCntB.ToString();
-        enemyCText.text = enemyCntC.ToString();*/
+        /*        enemyAText.text = enemyCntA.ToString();
+                enemyBText.text = enemyCntB.ToString();
+                enemyCText.text = enemyCntC.ToString();*/
 
         if (boss != null)
-        {
+        {   
             bossHealthGroup.anchoredPosition = Vector3.down * 30;
             bossHealthBar.localScale = new Vector3((float)boss.curHealth / boss.maxHealth, 1, 1);
         }
@@ -211,7 +212,7 @@ public class GameManager : MonoBehaviour
         curScoreText.text = scoreText.text;
         StartCoroutine(RespawnTexton());
         int maxScore = PlayerPrefs.GetInt("MaxScore"); // 맥스 스코어로 저장
-        if(player.score > maxScore)
+        if (player.score > maxScore)
         {
             bestScoreText.gameObject.SetActive(true);
             PlayerPrefs.SetInt("MaxScore", player.score);
@@ -260,7 +261,7 @@ public class GameManager : MonoBehaviour
 
     public void Pause() // 일시정지 버튼
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             pausePanel.SetActive(true);
             gamePanel.SetActive(false);
@@ -283,7 +284,7 @@ public class GameManager : MonoBehaviour
         {
             potion1Img.sprite = potiomimage[value]; // 포션이미지 배열과 아이템창 소지 판별
             isitembool1 = true;
-            
+
         }
         else if (isitembool1 && !isitembool2)
         {
@@ -308,7 +309,7 @@ public class GameManager : MonoBehaviour
     {
         while (bosscomingText.color.a > 0)
         {
-            bosscomingText.color = new Color(bosscomingText.color.r,bosscomingText.color.g,bosscomingText.color.b,bosscomingText.color.a - (Time.deltaTime * 1f));
+            bosscomingText.color = new Color(bosscomingText.color.r, bosscomingText.color.g, bosscomingText.color.b, bosscomingText.color.a - (Time.deltaTime * 1f));
             bosscomingImage.color = new Color(bosscomingImage.color.r, bosscomingImage.color.g, bosscomingImage.color.b, bosscomingImage.color.a - (Time.deltaTime * 1f));
             yield return null;
         }

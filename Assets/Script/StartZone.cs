@@ -11,7 +11,8 @@ public class StartZone : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            other.gameObject.transform.position = spawnVt;
+            if(manager.isBossbattle == false)
+                other.gameObject.transform.position = spawnVt;
         }
     }
 }

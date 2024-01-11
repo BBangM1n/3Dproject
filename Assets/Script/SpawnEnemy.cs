@@ -33,10 +33,14 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Enemycount <= 3 && !isspawn && !isboss && !manager.isBossbattle) // 일정 갯수 제한
+        if(Enemycount <= 2 && !isspawn && !isboss && !manager.isBossbattle) // 일정 갯수 제한
         {
             isspawn = true;
             StartCoroutine(Spawnenemy());
+        }
+        else
+        {
+            StopCoroutine(Spawnenemy());
         }
 
         if(isboss)
@@ -69,8 +73,7 @@ public class SpawnEnemy : MonoBehaviour
         yield return new WaitForSeconds(8f);
         TreeAndRock.SetActive(false);
         yield return new WaitForSeconds(1f);
-        FollowCamera cam = GameObject.Find("Main Camera").gameObject.GetComponent<FollowCamera>();
-        cam.end = true;
+        camera.end = true;
         yield return new WaitForSeconds(10f);
         player.isreload = false;
         Boss enemy = instantEnemy.GetComponent<Boss>();

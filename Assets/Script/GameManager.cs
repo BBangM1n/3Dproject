@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour
     public int BossCounting;
     public bool isBossbattle;
 
+    public int Clearpoint = 0;
+    public GameObject NextWolrdZone;
 
 
     private void Awake()
@@ -100,6 +102,15 @@ public class GameManager : MonoBehaviour
 
         QuestInfo();
         Pause();
+        WorldClear();
+    }
+
+    public void WorldClear()
+    {
+        if(Clearpoint == 1)
+        {
+            NextWolrdZone.SetActive(true);
+        }
     }
 
     private void LateUpdate()
@@ -245,7 +256,10 @@ public class GameManager : MonoBehaviour
         player.anim.SetBool("Respawn", true);
         gamePanel.SetActive(true);
         overPanel.SetActive(false);
-        player.transform.position = new Vector3(0, 1, 0);
+        if (isBossbattle)
+            player.transform.position = new Vector3(227, 1, -35);
+        else
+            player.transform.position = new Vector3(0, 1, 0);
         player.isDead = false;
         player.health = 100;
         player.coin = player.coin / 2;

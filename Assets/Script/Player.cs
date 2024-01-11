@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     bool isborder;
     bool isjump;
     bool isdamage;
-    bool isshop;
+    public bool isshop;
     public bool isDead;
     bool isbuff;
     bool iscbuff = false;

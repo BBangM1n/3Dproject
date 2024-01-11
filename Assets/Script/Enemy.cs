@@ -82,6 +82,7 @@ public class Enemy : MonoBehaviour
             if (enemyType != Type.D && manager.isBossbattle)
             {
                 Destroy(gameObject);
+                spawnenemy.Enemycount = 0;
             }
         }
 
@@ -257,6 +258,8 @@ public class Enemy : MonoBehaviour
             else
             {
                 manager.boss = null;
+                manager.Clearpoint = 1;
+                manager.isBossbattle = false;
             }
             manager.BossCounting++;
 

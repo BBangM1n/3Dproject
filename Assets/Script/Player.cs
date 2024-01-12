@@ -274,7 +274,6 @@ public class Player : MonoBehaviour
                 Item item = nearObject.GetComponent<Item>();
                 int weponIndex = item.value;
                 hasWeapons[weponIndex] = true;
-
                 Destroy(nearObject);
             }
             else if (nearObject.tag == "Shop")
@@ -465,8 +464,8 @@ public class Player : MonoBehaviour
                     grenades[0].transform.GetChild(item.Grenadevalue).gameObject.SetActive(true);
                     hasGrenade += item.value; // ¼ö·ùÅº °¹¼ö
                     break;
-                case Item.Type.Potion:
-                    
+                case Item.Type.Equip:
+
                     break;
             }
             Destroy(other.gameObject);

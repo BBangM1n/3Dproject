@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
 
         if (PlayerPrefs.HasKey("MaxScore")) // 만약 없다면 0
             PlayerPrefs.SetInt("MaxScore", 0);
-
+ 
     }
 
     private void Start()

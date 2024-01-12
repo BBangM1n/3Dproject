@@ -250,6 +250,7 @@ public class Enemy : MonoBehaviour
             anim.SetTrigger("Die");
             Player player = Target.GetComponent<Player>();
             player.score += score;
+
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity); // 코인 떨어트리는 기능
             player.Qenemy--;

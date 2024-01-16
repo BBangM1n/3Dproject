@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public enum Type { Melee, Range };
     public Type type;
-    public enum RangeType { nothing ,Hand, Sub, Shot };
+    public enum RangeType { nothing ,Hand, Sub };
     public RangeType rangetype;
     public int damage;
     public float rate;
@@ -19,12 +19,9 @@ public class Weapon : MonoBehaviour
     public int maxammo;
     public int curammo;
 
-    public int value;
-    public int afvalue;
-
     private void Update()
     {
-        RangeBuf();
+        Bulletdamage();
     }
     public void Use()
     {
@@ -39,12 +36,6 @@ public class Weapon : MonoBehaviour
             curammo--;
             StartCoroutine("Shot");
         }
-
-        /*if (type == Type.Range && curammo > 0 && rangetype == RangeType.Shot)
-        {
-            curammo--;
-            StartCoroutine("Shotgun");
-        }*/
     }
 
     IEnumerator Swing()
@@ -60,20 +51,6 @@ public class Weapon : MonoBehaviour
         trailEffect.enabled = false;
     }
 
-    /*IEnumerator Shotgun() //¼¦°ÇÀü¿ë ¼¦
-    {
-        GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
-        Rigidbody bulletrigid = instantBullet.GetComponent<Rigidbody>();
-        bulletrigid.velocity = bulletPos.forward * 50;
-        yield return null;
-
-        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
-        Rigidbody caserigid = instantCase.GetComponent<Rigidbody>();
-        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
-        caserigid.AddForce(caseVec, ForceMode.Impulse);
-        caserigid.AddTorque(Vector3.up * 10, ForceMode.Impulse); // È¸Àü°ª
-    }*/
-
     IEnumerator Shot()
     {
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
@@ -88,18 +65,15 @@ public class Weapon : MonoBehaviour
         caserigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
     }
 
-    void RangeBuf()
+    void Bulletdamage()
     {
         if (type == Type.Melee)
             return;
-        Bullet bul = bullet.GetComponent<Bullet>();
-        if (type == Type.Range && damage > 0)
-        {
-            bul.damage = value;
-        }
         else
         {
-            bul.damage = afvalue;
+            Bullet bul = bullet.GetComponent<Bullet>();
+            bul.damage = damage;
         }
+
     }
 }

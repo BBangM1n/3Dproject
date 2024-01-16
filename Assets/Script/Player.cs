@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
     public int coin;
     public int health;
     public int score;
+    public int defens;
     
     public int maxammo;
     public int maxcoin;
@@ -135,7 +136,6 @@ public class Player : MonoBehaviour
         sdown1 = Input.GetButtonDown("Swap1");
         sdown2 = Input.GetButtonDown("Swap2");
         sdown3 = Input.GetButtonDown("Swap3");
-        sdown4 = Input.GetButtonDown("Swap4");
         sdownf1 = Input.GetButtonDown("SlotF1");
         sdownf2 = Input.GetButtonDown("SlotF2");
         sdownf3 = Input.GetButtonDown("SlotF3");
@@ -229,10 +229,6 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        if (sdown4 && (!hasWeapons[3] || equipWeaponIndex == 3))
-        {
-            return;
-        }
 
         int weaponIndex = -1;
         if (sdown1)
@@ -241,10 +237,8 @@ public class Player : MonoBehaviour
             weaponIndex = 1;
         if (sdown3)
             weaponIndex = 2;
-        if (sdown4)
-            weaponIndex = 3;
 
-        if ((sdown1 || sdown2 || sdown3 || sdown4) && !isjump && !isdodge && !isDead)
+        if ((sdown1 || sdown2 || sdown3) && !isjump && !isdodge && !isDead)
         {
             if (equipWeapon != null)
                 equipWeapon.gameObject.SetActive(false);
@@ -464,9 +458,6 @@ public class Player : MonoBehaviour
                     grenades[0].transform.GetChild(item.Grenadevalue).gameObject.SetActive(true);
                     hasGrenade += item.value; // ¼ö·ùÅº °¹¼ö
                     break;
-                case Item.Type.Equip:
-
-                    break;
             }
             Destroy(other.gameObject);
         }
@@ -475,8 +466,11 @@ public class Player : MonoBehaviour
             if (!isdamage)
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
-                health -= enemyBullet.damage;
 
+                if(defens < enemyBullet.damage)
+                {
+                    health -= (enemyBullet.damage - defens);
+                }
                 bool isBossAtk = other.name == "Boss Melee Area";
                 StartCoroutine(OnDamage(isBossAtk));
             }
@@ -683,7 +677,6 @@ public class Player : MonoBehaviour
                 Subgun.damage -= 3;
                 break;
             case 3:
-
                 Hammer.rate = 0.7f;
                 Handgun.rate = 0.4f;
                 Subgun.rate = 0.15f;

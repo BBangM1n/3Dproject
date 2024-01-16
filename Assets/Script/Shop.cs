@@ -1,4 +1,4 @@
-using System.Collections;
+  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +19,7 @@ public class Shop : MonoBehaviour
     public bool isQuest = false;
 
     Player enterPlayer;
+
     public void Enter(Player player)
     {
         enterPlayer = player;

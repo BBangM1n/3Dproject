@@ -5,7 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     // Start is called before the first frame update
-    public enum Type { Ammo, Coin, Grenade, Heart, Weapon, Potion, Equip} //enum : 열거형 타입
+    public enum Type { Ammo, Coin, Grenade, Heart, Weapon, Potion} //enum : 열거형 타입
     public Type type;
     public int value;
     public int Grenadevalue = -1;

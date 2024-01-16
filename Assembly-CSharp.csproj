@@ -56,7 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Sprites\FantasyIconsPackFree\Demo\IconViewer.cs" />
     <Compile Include="Assets\Script\Ice.cs" />
+    <Compile Include="Assets\Script\Drag.cs" />
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\SpawnEnemy.cs" />
     <Compile Include="Assets\Script\QuestManager.cs" />
@@ -74,7 +76,7 @@
     <Compile Include="Assets\Script\Grenade.cs" />
     <Compile Include="Assets\Script\ShotgunBullet.cs" />
     <Compile Include="Assets\Script\Weapon.cs" />
-    <Compile Include="Assets\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
+    <Compile Include="Assets\Sprites\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\Missile.cs" />
     <Compile Include="Assets\Script\seads.cs" />
@@ -82,15 +84,13 @@
     <Compile Include="Assets\Script\StartZone.cs" />
     <Compile Include="Assets\Script\BossRock.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\FantasyIconsPackFree\Demo\IconViewer.cs" />
-    <Compile Include="Assets\Script\Drag.cs" />
-    <Compile Include="Assets\Script\EquipItem.cs" />
+    <Compile Include="Assets\Script\EnhanceManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />
-    <None Include="Assets\Supercyan Free Forest Sample\Shaders\SupercyanShaderLighting.cginc" />
-    <None Include="Assets\Supercyan Free Forest Sample\Shaders\SupercyanShader.shader" />
-    <None Include="Assets\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
+    <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />
+    <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\SupercyanShaderLighting.cginc" />
+    <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\SupercyanShader.shader" />
+    <None Include="Assets\Sprites\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

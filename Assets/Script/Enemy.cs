@@ -35,7 +35,6 @@ public class Enemy : MonoBehaviour
 
     public GameObject[] Debuffeffect;
     public SpawnEnemy spawnenemy;
-
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();

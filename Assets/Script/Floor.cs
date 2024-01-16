@@ -41,12 +41,12 @@ public class Floor : MonoBehaviour
     IEnumerator HPUP()
     {
         Player player = GameObject.Find("Player").gameObject.GetComponent<Player>();
-        if (player.health < 100)
+        if (player.health < player.maxhealth)
         {
             player.health += 5;
-            if(player.health > 100)
+            if(player.health > player.maxhealth)
             {
-                player.health = 100;
+                player.health = player.maxhealth;
             }
         }
         Debug.Log("ÇÇ¾÷");

@@ -346,8 +346,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/FantasyIconsPackFree/Demo/IconViewer.cs"
-"Assets/QuarterView 3D Action BE5/ReadMe/Scripts/ReadmeBE5.cs"
 "Assets/Script/Boss.cs"
 "Assets/Script/BossMissile.cs"
 "Assets/Script/BossRock.cs"
@@ -355,7 +353,7 @@
 "Assets/Script/CameraMoving.cs"
 "Assets/Script/Drag.cs"
 "Assets/Script/Enemy.cs"
-"Assets/Script/EquipItem.cs"
+"Assets/Script/EnhanceManager.cs"
 "Assets/Script/Fire.cs"
 "Assets/Script/Floor.cs"
 "Assets/Script/FollowCamera.cs"
@@ -375,6 +373,8 @@
 "Assets/Script/SpawnEnemy.cs"
 "Assets/Script/StartZone.cs"
 "Assets/Script/Weapon.cs"
+"Assets/Sprites/FantasyIconsPackFree/Demo/IconViewer.cs"
+"Assets/Sprites/QuarterView 3D Action BE5/ReadMe/Scripts/ReadmeBE5.cs"
 -langversion:9.0
 
 /deterministic

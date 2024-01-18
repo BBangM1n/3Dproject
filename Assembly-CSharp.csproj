@@ -87,9 +87,14 @@
     <Compile Include="Assets\Script\EnhanceManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Sprites\kenney_game-icons\Spritesheet\sheet_black1x.xml" />
+    <None Include="Assets\Sprites\kenney_game-icons\Spritesheet\sheet_black2x.xml" />
     <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />
+    <None Include="Assets\Sprites\kenney_game-icons\Spritesheet\sheet_white2x.xml" />
     <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\SupercyanShaderLighting.cginc" />
     <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\SupercyanShader.shader" />
+    <None Include="Assets\Sprites\kenney_game-icons\license.txt" />
+    <None Include="Assets\Sprites\kenney_game-icons\Spritesheet\sheet_white1x.xml" />
     <None Include="Assets\Sprites\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
   </ItemGroup>
   <ItemGroup>

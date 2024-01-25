@@ -101,7 +101,6 @@ public class GameManager : MonoBehaviour
         playTime += Time.deltaTime;
 
         QuestInfo();
-        Pause();
         WorldClear();
     }
 
@@ -275,17 +274,12 @@ public class GameManager : MonoBehaviour
 
     public void Pause() // 일시정지 버튼
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
             pausePanel.SetActive(true);
             gamePanel.SetActive(false);
             menuPanel.SetActive(false);
 
             gameCam.SetActive(false);
             menuCam.SetActive(true);
-
-            Time.timeScale = 0f;
-        }
     }
     public void Exit() // Exit버튼
     {

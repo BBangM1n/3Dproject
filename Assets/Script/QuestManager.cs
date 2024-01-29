@@ -41,17 +41,17 @@ public class QuestManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
 
-        path = Application.persistentDataPath + "/";
+       // path = Application.persistentDataPath + "/";
     }
 
     private void Start()
     {
-        print(path);
+        //print(path);
         QuestList();
         //LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
     }
 
-    public void SaveData()
+/*    public void SaveData()
     {
         string data = JsonUtility.ToJson(questDataList);
         File.WriteAllText(path + filename, data);
@@ -64,7 +64,7 @@ public class QuestManager : MonoBehaviour
             string data = File.ReadAllText(path + filename);
             questDataList = JsonUtility.FromJson<QuestDataList>(data);
         }
-    }
+    }*/
 
     void QuestList()
     {

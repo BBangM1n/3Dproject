@@ -362,6 +362,7 @@
 "Assets/Script/Grenade.cs"
 "Assets/Script/Ice.cs"
 "Assets/Script/Item.cs"
+"Assets/Script/MainQuest.cs"
 "Assets/Script/MenuManager.cs"
 "Assets/Script/Missile.cs"
 "Assets/Script/Orbit.cs"

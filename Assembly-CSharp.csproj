@@ -86,6 +86,7 @@
     <Compile Include="Assets\Script\BossRock.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\EnhanceManager.cs" />
+    <Compile Include="Assets\Script\MainQuest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\kenney_game-icons\Spritesheet\sheet_black1x.xml" />

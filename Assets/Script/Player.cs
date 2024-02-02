@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
     bool sdown1;
     bool sdown2;
     bool sdown3;
-    bool sdown4;
     bool sdownf1;
     bool sdownf2;
     bool sdownf3;

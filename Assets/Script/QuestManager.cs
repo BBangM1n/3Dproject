@@ -26,8 +26,8 @@ public class QuestManager : MonoBehaviour
 
     public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을 저장할 객체
 
-    string path;
-    string filename = "save";
+    //string path;
+    //string filename = "save";
 
     private void Awake()
     {

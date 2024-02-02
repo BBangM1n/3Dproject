@@ -62,6 +62,7 @@
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\SpawnEnemy.cs" />
     <Compile Include="Assets\Script\QuestManager.cs" />
+    <Compile Include="Assets\Script\MainQuest.cs" />
     <Compile Include="Assets\Script\FollowCamera.cs" />
     <Compile Include="Assets\Script\Boss.cs" />
     <Compile Include="Assets\Script\Shop.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Assets\Script\BossRock.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\EnhanceManager.cs" />
-    <Compile Include="Assets\Script\MainQuest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\kenney_game-icons\Spritesheet\sheet_black1x.xml" />

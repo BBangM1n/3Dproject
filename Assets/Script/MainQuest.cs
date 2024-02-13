@@ -59,6 +59,22 @@ public class MainQuest : MonoBehaviour
         MainQuestData newQuest2 = new MainQuestData();
         newQuest2.QuestID = 1;
         QuestList.Add(newQuest2);
+
+        MainQuestData newQuest3 = new MainQuestData();
+        newQuest3.QuestID = 2;
+        QuestList.Add(newQuest3);
+
+        MainQuestData newQuest4 = new MainQuestData();
+        newQuest4.QuestID = 3;
+        QuestList.Add(newQuest4);
+
+        MainQuestData newQuest5 = new MainQuestData();
+        newQuest5.QuestID = 4;
+        QuestList.Add(newQuest5);
+
+        MainQuestData newQuest6 = new MainQuestData();
+        newQuest6.QuestID = 5;
+        QuestList.Add(newQuest6);
     }
 
     void MainQuestContent(int id)
@@ -76,6 +92,27 @@ public class MainQuest : MonoBehaviour
                 break;
             case 1:
                 text[0] = "Q. 무기를 구해야해.";
+                text[1] = "지금 밖으로 나간다 해도 공룡들을 물리 칠 무기가 없어";
+                text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
+                text[3] = "저기서 해머 하나를 구입해 보자.";
+                endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                break;
+            case 2:
+                text[0] = "Q. 강화를 시작해보자.";
+                text[1] = "좋아 이제 무기도 구했으니 강화를 해볼까?";
+                text[2] = "강화를 하면 밖에있는 몬스터를 쉽게 잡을 수 있어!";
+                text[3] = "저기서 아무거나 강화를 한번 성공시켜서와!.";
+                endtext = "좋아. 이제 싸울 준비가 다 된거 같지?";
+                break;
+            case 3:
+                text[0] = "Q. 마을 주변 공룡들을 정리해줘.";
+                text[1] = "지금 밖으로 나간다 해도 공룡들을 물리 칠 무기가 없어";
+                text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
+                text[3] = "저기서 해머 하나를 구입해 보자.";
+                endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                break;
+            case 4:
+                text[0] = "Q. 거대한 공룡 : 보스 몬스터 처치.";
                 text[1] = "지금 밖으로 나간다 해도 공룡들을 물리 칠 무기가 없어";
                 text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
                 text[3] = "저기서 해머 하나를 구입해 보자.";
@@ -135,7 +172,8 @@ public class MainQuest : MonoBehaviour
             Cleargift(QuestList[QuestValue].QuestID);
             Count = 0;
             QuestValue++;
-
+            // 배열 대사 내용 초기화
+            
             Story.SetActive(false);
             NextBtn.SetActive(true);
             YesBtn.SetActive(false);
@@ -145,7 +183,7 @@ public class MainQuest : MonoBehaviour
         }
         else
         {
-            LudoText.text = "아직 조건을 달성하지 못했잖아!";
+            LudoText.text = "아직 조건을 달성하지 못했잖아!"; // 수정 필요
         }
     }
 

@@ -305,6 +305,11 @@ public class Player : MonoBehaviour
                     return;
             }
         }
+
+        if (hasWeapons[0] == true && MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 1)
+        {
+            MainQuest.Instance.isClear = true;
+        }
     }
 
     void Attack()

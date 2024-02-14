@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [System.Serializable]
 public class MainQuestData
@@ -11,9 +12,13 @@ public class MainQuestData
 
 public class MainQuest : MonoBehaviour
 {
+    public static MainQuest Instance { get; private set;}
+
     public List<MainQuestData> QuestList = new List<MainQuestData>();
     string[] text = new string[10];
-    string endtext;
+    string Endtext;
+    string Falsetext;
+    string Conditiontext;
 
 
     public GameObject Story;
@@ -24,19 +29,37 @@ public class MainQuest : MonoBehaviour
     public GameObject YesBtn;
     public GameObject NoBtn;
     public GameObject ClearBtn;
+    public GameObject CloseBtn;
 
     int Count = 0;
-    int QuestValue = 0;
-    bool QuestOn;
-    bool isClear;
+    public int QuestValue = 0;
+    public bool QuestOn = false;
+    public bool isClear = false;
 
     Player player;
+
+    public TMP_Text TitleText;
+    public TMP_Text QText;
+    public TextMeshProUGUI Qcolor;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         MainQuestList();
         player = GameObject.Find("Player").gameObject.GetComponent<Player>();
+
+        TitleText.text = "";
+        QText.text = "";
     }
 
     // Update is called once per frame
@@ -88,47 +111,61 @@ public class MainQuest : MonoBehaviour
                 text[3] = "지금 마을 밖에는 공룡들이 나타나서 위험해";
                 text[4] = "마을 밖으로 가고싶다면 내가 도와줄게";
                 text[5] = "마음의 준비가 되면 나에게 다시 말을 걸어줘";
-                endtext = "준비는 다 됐지?";
+                Endtext = "준비는 다 됐지?";
+                Conditiontext = "Ludo와 대화하기";
                 break;
             case 1:
                 text[0] = "Q. 무기를 구해야해.";
                 text[1] = "지금 밖으로 나간다 해도 공룡들을 물리 칠 무기가 없어";
                 text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
                 text[3] = "저기서 해머 하나를 구입해 보자.";
-                endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                Endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                Falsetext = "아직 해머를 구입 안한거 같은데?";
+                Conditiontext = "해머 구입하기";
                 break;
             case 2:
+                text[0] = "Q. 수류탄과 물약을 사용해보자.";
+                text[1] = "그래도 해머 하나만 가지고 가기 위험해";
+                text[2] = "전투를 쉽게 도와주는 수류탄과 포션이 있어";
+                text[3] = "화 수류탄은 초당 도트뎀을, 수 수류탄은 느려짐의 효과를 내지";
+                text[4] = "수류탄과 포션 하나를 구입해 사용해 보자.";
+                Endtext = "잘했어! 수류탄과 포션들은 각각의 효과가 있으니 잘 사용해봐!";
+                Falsetext = "얼른 사용해봐!";
+                break;
+            case 3:
                 text[0] = "Q. 강화를 시작해보자.";
                 text[1] = "좋아 이제 무기도 구했으니 강화를 해볼까?";
                 text[2] = "강화를 하면 밖에있는 몬스터를 쉽게 잡을 수 있어!";
                 text[3] = "저기서 아무거나 강화를 한번 성공시켜서와!.";
-                endtext = "좋아. 이제 싸울 준비가 다 된거 같지?";
-                break;
-            case 3:
-                text[0] = "Q. 마을 주변 공룡들을 정리해줘.";
-                text[1] = "지금 밖으로 나간다 해도 공룡들을 물리 칠 무기가 없어";
-                text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
-                text[3] = "저기서 해머 하나를 구입해 보자.";
-                endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                Endtext = "좋아. 이제 싸울 준비가 다 된거 같지?";
+                Falsetext = "강화를 하면 더 강해질거야 얼른 해보자";
                 break;
             case 4:
+                text[0] = "Q. 마을 주변 공룡들을 정리해줘.";
+                text[1] = "이제 실전이야 준비는 됐지?";
+                text[2] = "저기 마을 밖으로 나가면 공룡들이 있을거야";
+                text[3] = "그녀석들을 처치해줘.";
+                Endtext = "대단해! 해낼 줄 알았어";
+                Falsetext = "아직 마을 밖에는 많이 남아 있는걸..";
+                break;
+            case 5:
                 text[0] = "Q. 거대한 공룡 : 보스 몬스터 처치.";
-                text[1] = "지금 밖으로 나간다 해도 공룡들을 물리 칠 무기가 없어";
+                text[1] = "좋아 그럼 그녀석들의 우두머리를 잡아보자.";
                 text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
                 text[3] = "저기서 해머 하나를 구입해 보자.";
-                endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                Endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                Falsetext = "역시 너에겐 무리였을까?";
                 break;
         }
 
         if(isClear)
         {
-            LudoText.text = endtext;
+            Qcolor.color = new Color32(0, 255, 0, 255);
         }
         else
         {
-            LudoText.text = text[Count];
+            Qcolor.color = new Color32(255, 255, 0, 255);
         }
-
     }
 
     public void NextBtnClick()
@@ -136,6 +173,7 @@ public class MainQuest : MonoBehaviour
         if (string.IsNullOrWhiteSpace(text[Count + 1]) == false)
         {
             Count++;
+            LudoText.text = text[Count];
         }
         if(string.IsNullOrWhiteSpace(text[Count + 1]) == true)
         {
@@ -148,10 +186,12 @@ public class MainQuest : MonoBehaviour
     public void YesBtnClick()
     {
         Story.SetActive(false);
-        ClearBtn.SetActive(true);
+        ClearBtn.SetActive(false);
         YesBtn.SetActive(false);
         NoBtn.SetActive(false);
         QuestOn = true;
+        TitleText.text = text[0];
+        QText.text = Conditiontext;
     }
 
     public void NoBtnClick()
@@ -173,17 +213,15 @@ public class MainQuest : MonoBehaviour
             Count = 0;
             QuestValue++;
             // 배열 대사 내용 초기화
-            
+            System.Array.Clear(text, 0, text.Length);
+            QuestOn = false;
             Story.SetActive(false);
             NextBtn.SetActive(true);
             YesBtn.SetActive(false);
             NoBtn.SetActive(false);
             ClearBtn.SetActive(false);
-
-        }
-        else
-        {
-            LudoText.text = "아직 조건을 달성하지 못했잖아!"; // 수정 필요
+            TitleText.text = "";
+            QText.text = "";
         }
     }
 
@@ -205,6 +243,26 @@ public class MainQuest : MonoBehaviour
         if(other.tag == "Player" && Input.GetKey(KeyCode.E))
         {
             Story.SetActive(true);
+            
+            if(QuestOn)
+            {
+                if(isClear)
+                {
+                    LudoText.text = Endtext;
+                    ClearBtn.SetActive(true);
+                    CloseBtn.SetActive(false);
+                }
+                else
+                {
+                    LudoText.text = Falsetext;
+                    CloseBtn.SetActive(true);
+                    //닫기 버튼
+                }
+            }
+            else
+            {
+                LudoText.text = text[Count];
+            }
 
             if (QuestOn && QuestList[QuestValue].QuestID == 0)
             {

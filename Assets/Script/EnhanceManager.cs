@@ -53,6 +53,12 @@ public class EnhanceManager : MonoBehaviour
             {
                 TalkText.text = "축하해! 강화에 성공했어!";
                 Level++;
+
+                if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 3)
+                {
+                    MainQuest.Instance.Enhance_Count++;
+                }
+
                 switch (type)
                 {
                     case Type.Head:
@@ -80,7 +86,6 @@ public class EnhanceManager : MonoBehaviour
                 TalkText.text = "아쉽게 강화에 실패했어...";
             }
         }
-        
     }
 
     public void Enhance(int level)
@@ -92,7 +97,7 @@ public class EnhanceManager : MonoBehaviour
                 Probability = 100;
                 break;
             case 1:
-                gold = 100;
+                gold = 1000;
                 Probability = 75;
                 break;
             case 2:

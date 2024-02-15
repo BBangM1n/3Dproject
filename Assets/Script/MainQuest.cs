@@ -42,6 +42,14 @@ public class MainQuest : MonoBehaviour
     public TMP_Text QText;
     public TextMeshProUGUI Qcolor;
 
+    public GameObject[] State;
+
+    public int Potion_Count;
+    public int Grenade_Count;
+    public int Enhance_Count;
+    public int Enemy_Count;
+    public int BossEnemy_Count;
+
     private void Awake()
     {
         Instance = this;
@@ -66,10 +74,26 @@ public class MainQuest : MonoBehaviour
     void Update()
     {
         MainQuestContent(QuestList[QuestValue].QuestID);
+        Conditional_state();
     }
 
-    private void LateUpdate()
+    void Conditional_state()
     {
+        if(isClear == true)
+        {
+            State[0].SetActive(false);
+            State[1].SetActive(true);
+        }
+        else if(QuestOn == true)
+        {
+            State[0].SetActive(false);
+            State[1].SetActive(false);
+        }
+        else
+        {
+            State[0].SetActive(true);
+            State[1].SetActive(false);
+        }
 
     }
 
@@ -131,6 +155,11 @@ public class MainQuest : MonoBehaviour
                 text[4] = "수류탄과 포션 하나를 구입해 사용해 보자.";
                 Endtext = "잘했어! 수류탄과 포션들은 각각의 효과가 있으니 잘 사용해봐!";
                 Falsetext = "얼른 사용해봐!";
+                Conditiontext = "포션" + Potion_Count + " / 1, 수류탄 " + Grenade_Count +  " / 1";
+                if (QuestOn)
+                    QText.text = Conditiontext;
+                if (Potion_Count == 1 && Grenade_Count == 1)
+                    isClear = true;
                 break;
             case 3:
                 text[0] = "Q. 강화를 시작해보자.";
@@ -139,6 +168,11 @@ public class MainQuest : MonoBehaviour
                 text[3] = "저기서 아무거나 강화를 한번 성공시켜서와!.";
                 Endtext = "좋아. 이제 싸울 준비가 다 된거 같지?";
                 Falsetext = "강화를 하면 더 강해질거야 얼른 해보자";
+                Conditiontext = "강화 성공하기 " + Enhance_Count + " / 1";
+                if (QuestOn)
+                    QText.text = Conditiontext;
+                if (Enhance_Count == 1)
+                    isClear = true;
                 break;
             case 4:
                 text[0] = "Q. 마을 주변 공룡들을 정리해줘.";
@@ -147,14 +181,25 @@ public class MainQuest : MonoBehaviour
                 text[3] = "그녀석들을 처치해줘.";
                 Endtext = "대단해! 해낼 줄 알았어";
                 Falsetext = "아직 마을 밖에는 많이 남아 있는걸..";
+                Conditiontext = "공룡 몬스터 처치 " + Enemy_Count + " / 3";
+                if(QuestOn)
+                    QText.text = Conditiontext;
+                if (Enemy_Count == 3)
+                    isClear = true;
                 break;
             case 5:
                 text[0] = "Q. 거대한 공룡 : 보스 몬스터 처치.";
                 text[1] = "좋아 그럼 그녀석들의 우두머리를 잡아보자.";
-                text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
-                text[3] = "저기서 해머 하나를 구입해 보자.";
-                Endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                text[2] = "그녀석은 숲에 있는 녀석들중 가장 강력해";
+                text[3] = "돌도 굴리고 미사일도 쏴!! 엄청나지?";
+                text[4] = "그녀석을 잡을 수 있겠어?";
+                Endtext = "정말로 해냈다니! 놀라워";
                 Falsetext = "역시 너에겐 무리였을까?";
+                Conditiontext = "공룡 보스 몬스터 처치 " + BossEnemy_Count +" / 1";
+                if (QuestOn)
+                    QText.text = Conditiontext;
+                if (BossEnemy_Count == 1)
+                    isClear = true;
                 break;
         }
 

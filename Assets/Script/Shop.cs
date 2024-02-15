@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Shop : MonoBehaviour
 {
@@ -78,5 +79,18 @@ public class Shop : MonoBehaviour
             itemBtn[4].SetActive(false);
             itemBtn[5].SetActive(false);
         }
+    }
+
+    public void WeaponInteractable(int index)
+    {
+        int price = itemPrice[index];
+        if (price < enterPlayer.coin)
+        {
+            GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
+            Button BtnInfo = clickBtn.gameObject.GetComponent<Button>();
+            BtnInfo.interactable = false;
+      
+        }
+
     }
 }

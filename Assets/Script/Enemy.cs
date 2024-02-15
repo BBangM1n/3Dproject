@@ -237,6 +237,13 @@ public class Enemy : MonoBehaviour
         }
         else // 죽은 판정
         {
+            if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 4)
+            {
+                MainQuest.Instance.Enemy_Count++;
+            }
+
+            anim.SetTrigger("Die");
+
             foreach (MeshRenderer mesh in meshs)
                 mesh.material.color = Color.gray; // 회색 색깔로 변경
 
@@ -246,13 +253,13 @@ public class Enemy : MonoBehaviour
             isDead = true;
             isChase = false;
             nav.enabled = false;
-            anim.SetTrigger("Die");
             Player player = Target.GetComponent<Player>();
             player.score += score;
 
             int ranCoin = Random.Range(0, 3);
             Instantiate(coins[ranCoin], transform.position, Quaternion.identity); // 코인 떨어트리는 기능
             player.Qenemy--;
+
             if(enemyType != Type.D)
                 spawnenemy.Enemycount--;
             else
@@ -260,6 +267,10 @@ public class Enemy : MonoBehaviour
                 manager.boss = null;
                 manager.Clearpoint = 1;
                 manager.isBossbattle = false;
+                if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 5)
+                {
+                    MainQuest.Instance.BossEnemy_Count++;
+                }
             }
             manager.BossCounting++;
 
@@ -283,8 +294,6 @@ public class Enemy : MonoBehaviour
                     break;
             }
 
-
-
             if (isGrenade) // 죽을 시 시체처리 (수류탄ver)
             {
                 reactVec = reactVec.normalized;
@@ -300,7 +309,6 @@ public class Enemy : MonoBehaviour
                 reactVec += Vector3.up;
                 rigid.AddForce(reactVec * 5, ForceMode.Impulse);
             }
-
             Destroy(gameObject, 4);
         }
     }

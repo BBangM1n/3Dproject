@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject weaponShop;
     public GameObject potionShop;
     public GameObject QuestShop;
-    //public GameObject startZone;
+
     public int stage;
     public float playTime;
     public bool isBattle;
@@ -50,9 +50,7 @@ public class GameManager : MonoBehaviour
     public Image potion1Img;
     public Image potion2Img;
     public Image potion3Img;
-    /*    public Text enemyAText;
-        public Text enemyBText;
-        public Text enemyCText;*/
+
     public Text QCoinText;
     public Text QAmmoText;
     public Text QScoreText;

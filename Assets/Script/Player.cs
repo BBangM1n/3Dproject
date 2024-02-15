@@ -386,7 +386,11 @@ public class Player : MonoBehaviour
                 hasGrenade--;
                 Qgrenade--;
                 childoff(grenades[hasGrenade]);
-                //해당 수류탄 이미지 꺼지는 함수
+
+                if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 2)
+                {
+                    MainQuest.Instance.Grenade_Count++;
+                }
             }
         }
     }
@@ -601,6 +605,10 @@ public class Player : MonoBehaviour
             havef1 = false;
             manager.isitembool1 = false;
             main.startColor = buffcolor;
+            if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 2)
+            {
+                MainQuest.Instance.Potion_Count++;
+            }
         }
 
         if (havef2 && sdownf2 && !isbuff)

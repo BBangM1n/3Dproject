@@ -47,6 +47,7 @@ public class SpawnEnemy : MonoBehaviour
         {
             if(manager.BossCounting > 2)
             {
+                manager.isBossbattle = true;
                 StartCoroutine(BossSpawn());
                 Debug.Log("보스나온다웨엥");
             }
@@ -60,7 +61,6 @@ public class SpawnEnemy : MonoBehaviour
         thisCoroutine = StartCoroutine(manager.BossCreateText());
         yield return new WaitForSeconds(4f);
         manager.BossComing.SetActive(false);
-        manager.isBossbattle = true;
         StopCoroutine(thisCoroutine);
         yield return new WaitForSeconds(1f);
         player.isreload = true;

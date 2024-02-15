@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets\Sprites\FantasyIconsPackFree\Demo\IconViewer.cs" />
     <Compile Include="Assets\Script\Ice.cs" />
-    <Compile Include="Assets\Script\Drag.cs" />
     <Compile Include="Assets\Script\Item.cs" />
     <Compile Include="Assets\Script\SpawnEnemy.cs" />
     <Compile Include="Assets\Script\QuestManager.cs" />
@@ -81,7 +80,6 @@
     <Compile Include="Assets\Sprites\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\Missile.cs" />
-    <Compile Include="Assets\Script\seads.cs" />
     <Compile Include="Assets\Script\CameraMoving.cs" />
     <Compile Include="Assets\Script\StartZone.cs" />
     <Compile Include="Assets\Script\BossRock.cs" />

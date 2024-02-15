@@ -37,6 +37,7 @@ public class Boss : Enemy
             if (isDead) // 죽을 시 모든 코루틴 스탑
             {
                 StopAllCoroutines();
+                transform.position = new Vector3(transform.position.x, 0, transform.position.z);
                 return;
             }
 

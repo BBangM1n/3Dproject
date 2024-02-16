@@ -423,7 +423,6 @@ public class Player : MonoBehaviour
             if(shop != null)
             {
                 shop.Exit();
-                isshop = false;
                 nearObject = null;
             }
         }

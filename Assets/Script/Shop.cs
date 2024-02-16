@@ -33,6 +33,7 @@ public class Shop : MonoBehaviour
     {
         if(!isQuest)
             anim.SetTrigger("Hello");
+        enterPlayer.isshop = false;
         uiGroup.anchoredPosition = Vector3.down * 1000;
     }
 

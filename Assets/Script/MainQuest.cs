@@ -122,6 +122,10 @@ public class MainQuest : MonoBehaviour
         MainQuestData newQuest6 = new MainQuestData();
         newQuest6.QuestID = 5;
         QuestList.Add(newQuest6);
+
+        MainQuestData newQuest7 = new MainQuestData();
+        newQuest7.QuestID = 6;
+        QuestList.Add(newQuest7);
     }
 
     void MainQuestContent(int id)
@@ -200,6 +204,17 @@ public class MainQuest : MonoBehaviour
                     QText.text = Conditiontext;
                 if (BossEnemy_Count == 1)
                     isClear = true;
+                break;
+            case 6:
+                text[0] = "Q. 다음 여행으로";
+                text[1] = "덕분에 우리 마을에 큰 위협은 사라진거같아";
+                text[2] = "녀석이 막고있던 입구도 사라졌고";
+                text[3] = "이제 다른 마을로 이동할 수 있을거 같아";
+                text[4] = "다른 마을도 우리랑 비슷한 상황이야 더 강한 몬스터들이 길을 막고있어";
+                text[4] = "더욱 강해져서 다른 마을도 몬스터로부터 구해줘";
+                Endtext = "아직 개발 중입니다.";
+                Falsetext = "더욱 강해져서 다른 마을도 몬스터로부터 구해줘";
+                Conditiontext = "개발중입니다.";
                 break;
         }
 

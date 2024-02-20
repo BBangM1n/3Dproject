@@ -417,7 +417,7 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Weapon")
             nearObject = null;
-        else if (other.tag == "Shop" && isshop)
+        else if (other.tag == "Shop")
         {
             Shop shop = nearObject.GetComponent<Shop>();
             if(shop != null)

@@ -85,13 +85,12 @@ public class Shop : MonoBehaviour
     public void WeaponInteractable(int index)
     {
         int price = itemPrice[index];
-        if (price < enterPlayer.coin)
+        if (price > enterPlayer.coin)
         {
             GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
             Button BtnInfo = clickBtn.gameObject.GetComponent<Button>();
             BtnInfo.interactable = false;
       
         }
-
     }
 }

@@ -252,6 +252,7 @@ public class MainQuest : MonoBehaviour
         QuestOn = true;
         TitleText.text = text[0];
         QText.text = Conditiontext;
+        player.isshop = false;
     }
 
     public void NoBtnClick()
@@ -262,6 +263,7 @@ public class MainQuest : MonoBehaviour
         ClearBtn.SetActive(false);
         YesBtn.SetActive(false);
         NoBtn.SetActive(false);
+        player.isshop = false;
     }
     
     public void ClearBtnClick()
@@ -282,6 +284,7 @@ public class MainQuest : MonoBehaviour
             ClearBtn.SetActive(false);
             TitleText.text = "";
             QText.text = "";
+            player.isshop = false;
         }
     }
 
@@ -303,7 +306,7 @@ public class MainQuest : MonoBehaviour
         if(other.tag == "Player" && Input.GetKey(KeyCode.E))
         {
             Story.SetActive(true);
-            
+            player.isshop = true;
             if(QuestOn)
             {
                 if(isClear)

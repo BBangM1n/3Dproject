@@ -141,11 +141,6 @@ public class GameManager : MonoBehaviour
         potion2Img.color = new Color(1, 1, 1, isitembool2 ? 1 : 0);
         potion3Img.color = new Color(1, 1, 1, isitembool3 ? 1 : 0);
 
-        //∏ÛΩ∫≈Õ UI
-        /*        enemyAText.text = enemyCntA.ToString();
-                enemyBText.text = enemyCntB.ToString();
-                enemyCText.text = enemyCntC.ToString();*/
-
         if (boss != null)
         {   
             bossHealthGroup.anchoredPosition = Vector3.down * 30;

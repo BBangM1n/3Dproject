@@ -70,9 +70,11 @@ public class Gift : MonoBehaviour // 퀘스트 클리어 아이템 관리 함수
         {
             case GiftType.Coin:
                 player.coin += value;
+                DataManager.instance.nowPlayer.Gold += value;
                 break;
             case GiftType.Ammo:
                 player.ammo += value;
+                DataManager.instance.nowPlayer.Ammo += value;
                 break;
             case GiftType.Grenade:
                 Instantiate(Grenades[0], giftzone.position, giftzone.rotation);

@@ -21,9 +21,37 @@ public class EnhanceManager : MonoBehaviour
     public Text Consumgold;
     public Text TalkText;
 
+    Player player;
+
     void Start()
     {
-        Level = 0;
+        player = GameObject.Find("Player").gameObject.GetComponent<Player>();
+        if (type == Type.Head)
+        {
+            Level = DataManager.instance.nowPlayer.EnhanceHead;
+            PlusStat = 10 * Level;
+            player.maxhealth += PlusStat;
+        }
+        else if (type == Type.Armor)
+        {
+            Level = DataManager.instance.nowPlayer.EnhanceArmor;
+            PlusStat = 1 * Level;
+            player.defens += PlusStat;
+        }
+        else if (type == Type.Hammer)
+        {
+            Level = DataManager.instance.nowPlayer.EnhanceHammer;
+            PlusStat = 3 * Level;
+            GameObject.Find("Weapon Point").transform.GetChild(0).gameObject.GetComponent<Weapon>().damage = PlusStat;
+        }
+        else if (type == Type.Gun)
+        {
+            Level = DataManager.instance.nowPlayer.EnhanceGun;
+            PlusHand = 2 * Level;
+            PlusSub = 1 * Level;
+            GameObject.Find("Weapon Point").transform.GetChild(1).gameObject.GetComponent<Weapon>().damage = PlusHand;
+            GameObject.Find("Weapon Point").transform.GetChild(2).gameObject.GetComponent<Weapon>().damage = PlusSub;
+        }
     }
 
     // Update is called once per frame
@@ -40,7 +68,6 @@ public class EnhanceManager : MonoBehaviour
 
     public void EnhanceBtnClick()
     {
-        Player player = GameObject.Find("Player").gameObject.GetComponent<Player>();
         if(player.coin < gold)
         {
             TalkText.text = "지금 가진 돈이 부족해!";
@@ -64,20 +91,24 @@ public class EnhanceManager : MonoBehaviour
                     case Type.Head:
                         player.maxhealth += 10;
                         PlusStat += 10;
+                        DataManager.instance.nowPlayer.EnhanceHead += 1;
                         break;
                     case Type.Armor:
                         player.defens += 1;
                         PlusStat += 1;
+                        DataManager.instance.nowPlayer.EnhanceArmor += 1;
                         break;
                     case Type.Hammer:
                         GameObject.Find("Weapon Point").transform.GetChild(0).gameObject.GetComponent<Weapon>().damage += 3;
                         PlusStat += 3;
+                        DataManager.instance.nowPlayer.EnhanceHammer += 1;
                         break;
                     case Type.Gun:
                         GameObject.Find("Weapon Point").transform.GetChild(1).gameObject.GetComponent<Weapon>().damage += 2;
                         PlusHand += 2;
                         GameObject.Find("Weapon Point").transform.GetChild(2).gameObject.GetComponent<Weapon>().damage += 1;
                         PlusSub += 1;
+                        DataManager.instance.nowPlayer.EnhanceGun += 1;
                         break;
                 }
             }

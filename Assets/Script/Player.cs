@@ -95,7 +95,13 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        
+        maxhealth += DataManager.instance.nowPlayer.MaxHp;
+        health = maxhealth;
+        ammo += DataManager.instance.nowPlayer.Ammo;
+        coin += DataManager.instance.nowPlayer.Gold;
+        hasWeapons[0] = DataManager.instance.nowPlayer.Weapon1;
+        hasWeapons[1] = DataManager.instance.nowPlayer.Weapon2;
+        hasWeapons[2] = DataManager.instance.nowPlayer.Weapon3;
     }
 
     private void FixedUpdate()
@@ -267,6 +273,12 @@ public class Player : MonoBehaviour
                 Item item = nearObject.GetComponent<Item>();
                 int weponIndex = item.value;
                 hasWeapons[weponIndex] = true;
+                if (weponIndex == 0)
+                    DataManager.instance.nowPlayer.Weapon1 = true;
+                else if (weponIndex == 1)
+                    DataManager.instance.nowPlayer.Weapon2 = true;
+                else if (weponIndex == 2)
+                    DataManager.instance.nowPlayer.Weapon3 = true;
                 Destroy(nearObject);
             }
             else if (nearObject.tag == "Shop")
@@ -437,14 +449,21 @@ public class Player : MonoBehaviour
             {
                 case Item.Type.Ammo:
                     ammo += item.value;
+                    DataManager.instance.nowPlayer.Ammo += item.value;
                     if (ammo > maxammo)
                         ammo = maxammo;
                     break;
                 case Item.Type.Coin:
                     if(iscbuff)
+                    {
                         coin += item.value * 2;
+                        DataManager.instance.nowPlayer.Gold += item.value * 2;
+                    }
                     else
+                    {
                         coin += item.value;
+                        DataManager.instance.nowPlayer.Gold += item.value;
+                    }
                     if (coin > maxcoin)
                         coin = maxcoin;
                     break;
@@ -707,5 +726,12 @@ public class Player : MonoBehaviour
         manager.GameOver();
     }
 
+    public void PlayerSave()
+    {
+        DataManager.instance.nowPlayer.MaxHp = maxhealth;
+        DataManager.instance.nowPlayer.Ammo = ammo;
+        DataManager.instance.nowPlayer.Gold = coin;
+        DataManager.instance.nowPlayer.Defens = defens;
+    }
 
 }

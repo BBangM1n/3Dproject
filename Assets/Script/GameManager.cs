@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
     public GameObject overPanel;
     public GameObject pausePanel;
     public Text maxScoreText;
-    public Text scoreText;
     public Text stageNameText;
     public Text playTimeText;
     public Text playerHealthText;
@@ -57,7 +56,6 @@ public class GameManager : MonoBehaviour
     public RectTransform bossHealthGroup;
     public RectTransform bossHealthBar;
     public Text curScoreText;
-    public Text bestScoreText;
     public Text RespawnText;
     public Button RestartBtn;
 
@@ -82,21 +80,29 @@ public class GameManager : MonoBehaviour
         bosscomingImage = bosscomingImage.GetComponent<Image>();
 
         enemyList = new List<int>(); // 몬스터 갯수를 위한 리스트 선언
-        maxScoreText.text = string.Format("{0:n0}", PlayerPrefs.GetInt("MaxScore")); // 컴퓨터에 저장된 맥스스코어 가져오기
-
-        if (PlayerPrefs.HasKey("MaxScore")) // 만약 없다면 0
-            PlayerPrefs.SetInt("MaxScore", 0);
  
     }
 
     private void Start()
     {
+        playTime = DataManager.instance.nowPlayer.PlayTime;
 
+        if(DataManager.instance.Tutorial == true)
+        {
+            menuCam.SetActive(true);
+            menuPanel.SetActive(true);
+        }
+        else
+        {
+            gameCam.SetActive(true);
+            gamePanel.SetActive(true);
+        }
     }
 
     private void Update()
     {
         playTime += Time.deltaTime;
+        DataManager.instance.nowPlayer.PlayTime = playTime;
 
         QuestInfo();
         WorldClear();
@@ -113,7 +119,6 @@ public class GameManager : MonoBehaviour
     private void LateUpdate()
     {
         //상단 UI
-        scoreText.text = string.Format("{0:n0}", player.score);
 
         int hour = (int)(playTime / 3600);
         int min = (int)((playTime - hour * 3600) / 60);
@@ -212,15 +217,8 @@ public class GameManager : MonoBehaviour
         gamePanel.SetActive(false);
         overPanel.SetActive(true);
         RestartBtn.interactable = false;
-        curScoreText.text = scoreText.text;
         StartCoroutine(RespawnTexton());
         int maxScore = PlayerPrefs.GetInt("MaxScore"); // 맥스 스코어로 저장
-        if (player.score > maxScore)
-        {
-            bestScoreText.gameObject.SetActive(true);
-            PlayerPrefs.SetInt("MaxScore", player.score);
-        }
-
 
     }
 
@@ -276,6 +274,7 @@ public class GameManager : MonoBehaviour
     }
     public void Exit() // Exit버튼
     {
+        DataManager.instance.SaveData();
         Application.Quit();
     }
 

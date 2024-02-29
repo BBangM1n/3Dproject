@@ -63,6 +63,8 @@ public class MainQuest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        QuestValue = DataManager.instance.nowPlayer.MainQuestValue;
+
         MainQuestList();
         player = GameObject.Find("Player").gameObject.GetComponent<Player>();
 
@@ -274,6 +276,7 @@ public class MainQuest : MonoBehaviour
             Cleargift(QuestList[QuestValue].QuestID);
             Count = 0;
             QuestValue++;
+            DataManager.instance.nowPlayer.MainQuestValue += 1;
             // 배열 대사 내용 초기화
             System.Array.Clear(text, 0, text.Length);
             QuestOn = false;
@@ -294,9 +297,25 @@ public class MainQuest : MonoBehaviour
         {
             case 0:
                 player.coin += 500;
+                DataManager.instance.nowPlayer.Gold += 500;
                 break;
             case 1:
-
+                player.coin += 5500;
+                DataManager.instance.nowPlayer.Gold += 5500;
+                break;
+            case 2:
+                player.coin += 500;
+                DataManager.instance.nowPlayer.Gold += 500;
+                break;
+            case 3:
+                player.coin += 3000;
+                DataManager.instance.nowPlayer.Gold += 3000;
+                break;
+            case 4:
+                player.coin += 5000;
+                DataManager.instance.nowPlayer.Gold += 5000;
+                break;
+            case 5:
                 break;
         }
     }

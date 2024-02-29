@@ -33,7 +33,8 @@ public class Shop : MonoBehaviour
     {
         if(!isQuest)
             anim.SetTrigger("Hello");
-        enterPlayer.isshop = false;
+        if (enterPlayer.isshop == true)
+            enterPlayer.isshop = false;
         uiGroup.anchoredPosition = Vector3.down * 1000;
     }
 
@@ -48,6 +49,7 @@ public class Shop : MonoBehaviour
         }
 
         enterPlayer.coin -= price;
+        DataManager.instance.nowPlayer.Gold -= price;
         Vector3 ranVec = Vector3.right * Random.Range(-3, 3) + Vector3.forward * Random.Range(-3, 3);
         Instantiate(itemObj[index], itemPos[index].position + ranVec, itemPos[index].rotation);
 
@@ -82,15 +84,4 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void WeaponInteractable(int index)
-    {
-        int price = itemPrice[index];
-        if (price > enterPlayer.coin)
-        {
-            GameObject clickBtn = EventSystem.current.currentSelectedGameObject;
-            Button BtnInfo = clickBtn.gameObject.GetComponent<Button>();
-            BtnInfo.interactable = false;
-      
-        }
-    }
 }

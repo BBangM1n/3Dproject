@@ -13,6 +13,8 @@ public class TitleManager : MonoBehaviour
 
     bool[] savefile = new bool[3];	// 세이브파일 존재유무 저장
 
+
+
     void Start()
     {
         // 슬롯별로 저장된 데이터가 존재하는지 판단.
@@ -23,7 +25,10 @@ public class TitleManager : MonoBehaviour
                 savefile[i] = true;			// 해당 슬롯 번호의 bool배열 true로 변환
                 DataManager.instance.nowSlot = i;	// 선택한 슬롯 번호 저장
                 DataManager.instance.LoadData();	// 해당 슬롯 데이터 불러옴
-                slotText[i].text = "플레이 타임 : --:--:--";
+                int hour = (int)(DataManager.instance.nowPlayer.PlayTime / 3600);
+                int min = (int)((DataManager.instance.nowPlayer.PlayTime - hour * 3600) / 60);
+                int sec = (int)(DataManager.instance.nowPlayer.PlayTime % 60);
+                slotText[i].text = "플레이 타임 - " + string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", min) + ":" + string.Format("{0:00}", sec);
             }
             else	// 데이터가 없는 경우
             {
@@ -54,7 +59,12 @@ public class TitleManager : MonoBehaviour
     {
         if (!savefile[DataManager.instance.nowSlot])	// 현재 슬롯번호의 데이터가 없다면
         {
+            DataManager.instance.Tutorial = true;
             DataManager.instance.SaveData(); // 현재 정보를 저장함.
+        }
+        else
+        {
+            DataManager.instance.Tutorial = false;
         }
         SceneManager.LoadScene("GameScene"); // 게임씬으로 이동
     }

@@ -89,6 +89,7 @@ public class MenuManager : MonoBehaviour
 
     public void SaveBtnClick()
     {
-
+        DataManager.instance.SaveData();
+        Debug.Log("ºº¿Ã∫Í");
     }
 }

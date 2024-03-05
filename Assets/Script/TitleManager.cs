@@ -8,10 +8,13 @@ using System.IO;
 
 public class TitleManager : MonoBehaviour
 {
-    public GameObject creat;	// 플레이어 닉네임 입력UI
     public Text[] slotText;		// 슬롯버튼 아래에 존재하는 Text들
 
     bool[] savefile = new bool[3];	// 세이브파일 존재유무 저장
+
+    public GameObject MessagePanel;
+
+    int BtnValue;
 
 
 
@@ -67,6 +70,16 @@ public class TitleManager : MonoBehaviour
             DataManager.instance.Tutorial = false;
         }
         SceneManager.LoadScene("GameScene"); // 게임씬으로 이동
+    }
+
+    public void DeleteBtnClick(int value)
+    {
+        MessagePanel.SetActive(true);
+        BtnValue = value;
+    }
+    public void DeleteData()
+    {
+        File.Delete(DataManager.instance.path + BtnValue);
     }
 }
 

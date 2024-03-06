@@ -161,7 +161,7 @@ public class MainQuest : MonoBehaviour
                 text[4] = "수류탄과 포션 하나를 구입해 사용해 보자.";
                 Endtext = "잘했어! 수류탄과 포션들은 각각의 효과가 있으니 잘 사용해봐!";
                 Falsetext = "얼른 사용해봐!";
-                Conditiontext = "포션" + Potion_Count + " / 1, 수류탄 " + Grenade_Count +  " / 1";
+                Conditiontext = "포션 " + Potion_Count + " / 1, 수류탄 " + Grenade_Count +  " / 1";
                 if (QuestOn)
                     QText.text = Conditiontext;
                 if (Potion_Count == 1 && Grenade_Count == 1)

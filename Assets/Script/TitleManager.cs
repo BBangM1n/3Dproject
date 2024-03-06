@@ -14,7 +14,7 @@ public class TitleManager : MonoBehaviour
 
     public GameObject MessagePanel;
 
-    int BtnValue;
+    public int BtnValue;
 
 
 
@@ -80,6 +80,7 @@ public class TitleManager : MonoBehaviour
     public void DeleteData()
     {
         File.Delete(DataManager.instance.path + BtnValue);
+        slotText[BtnValue].text = "비어있음";
     }
 }
 

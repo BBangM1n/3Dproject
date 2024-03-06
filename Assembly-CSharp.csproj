@@ -97,8 +97,10 @@
     <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\Legacy\CelShader.shader" />
     <None Include="Assets\Sprites\kenney_game-icons\Spritesheet\sheet_white2x.xml" />
     <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\SupercyanShaderLighting.cginc" />
+    <None Include="Assets\Sprites\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Sprites\Fantasy Skybox FREE\ReleaseNotes.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Sprites\Supercyan Free Forest Sample\Shaders\SupercyanShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />

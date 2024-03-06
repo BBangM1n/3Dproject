@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
         //»ó´Ü UI
 
         int hour = (int)(playTime / 3600);
-        int min = (int)((playTime - hour * 3600) / 60);
+          int min = (int)((playTime - hour * 3600) / 60);
         int sec = (int)(playTime % 60);
         playTimeText.text = string.Format("{0:00}", hour) + ":" + string.Format("{0:00}", min) + ":" + string.Format("{0:00}", sec);
 

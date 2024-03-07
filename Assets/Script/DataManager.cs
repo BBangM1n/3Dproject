@@ -11,7 +11,7 @@ public class PlayerData
     public int Gold = 0;           // 플레이어 골드
     public int Defens = 0;        // 플레이어 방어력
     public float PlayTime;     // 플레이 타임
-    //public float SoundVolume;  // 사운드 볼륨
+    public float SoundVolume = 0.5f;  // 사운드 볼륨
     public bool Weapon1 = false;       // 무기1
     public bool Weapon2 = false;       // 무기2
     public bool Weapon3 = false;       // 무기3
@@ -71,5 +71,5 @@ public class DataManager : MonoBehaviour
     public void DeleteData(int value)
     {
         File.Delete(path + value);
-    }
+    } 
 }

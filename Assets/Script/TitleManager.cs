@@ -81,6 +81,7 @@ public class TitleManager : MonoBehaviour
     {
         File.Delete(DataManager.instance.path + BtnValue);
         slotText[BtnValue].text = "비어있음";
+        savefile[BtnValue] = false;
     }
 }
 

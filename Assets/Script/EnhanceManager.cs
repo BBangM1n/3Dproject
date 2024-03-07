@@ -42,15 +42,15 @@ public class EnhanceManager : MonoBehaviour
         {
             Level = DataManager.instance.nowPlayer.EnhanceHammer;
             PlusStat = 3 * Level;
-            GameObject.Find("Weapon Point").transform.GetChild(0).gameObject.GetComponent<Weapon>().damage = PlusStat;
+            GameObject.Find("Weapon Point").transform.GetChild(0).gameObject.GetComponent<Weapon>().damage += PlusStat;
         }
         else if (type == Type.Gun)
         {
             Level = DataManager.instance.nowPlayer.EnhanceGun;
             PlusHand = 2 * Level;
             PlusSub = 1 * Level;
-            GameObject.Find("Weapon Point").transform.GetChild(1).gameObject.GetComponent<Weapon>().damage = PlusHand;
-            GameObject.Find("Weapon Point").transform.GetChild(2).gameObject.GetComponent<Weapon>().damage = PlusSub;
+            GameObject.Find("Weapon Point").transform.GetChild(1).gameObject.GetComponent<Weapon>().damage += PlusHand;
+            GameObject.Find("Weapon Point").transform.GetChild(2).gameObject.GetComponent<Weapon>().damage += PlusSub;
         }
     }
 

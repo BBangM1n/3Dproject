@@ -26,7 +26,7 @@ public class MenuManager : MonoBehaviour
     }
     void Start()
     {
-        
+        Volume.value = DataManager.instance.nowPlayer.SoundVolume;
     }
 
 
@@ -58,6 +58,7 @@ public class MenuManager : MonoBehaviour
     public void VolumeUpBtnClick() // 0~1
     {
         Volume.value += 0.1f;
+        DataManager.instance.nowPlayer.SoundVolume = Volume.value;
         if (Volume.value >= 0.1f)
         {
             Muteimage.SetActive(false);
@@ -68,7 +69,8 @@ public class MenuManager : MonoBehaviour
     public void VolumeDownBtnClick()
     {
         Volume.value -= 0.1f;
-        if(Volume.value <= 0f)
+        DataManager.instance.nowPlayer.SoundVolume = Volume.value;
+        if (Volume.value <= 0f)
         {
             Volume.value = 0;
             Muteimage.SetActive(true);

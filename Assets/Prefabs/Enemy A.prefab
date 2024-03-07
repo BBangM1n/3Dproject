@@ -118,6 +118,7 @@ MonoBehaviour:
   score: 100
   manager: {fileID: 0}
   Target: {fileID: 0}
+  Spawnposition: {fileID: 0}
   meleeArea: {fileID: 6065249668642173414}
   bullet: {fileID: 0}
   coins:
@@ -130,7 +131,6 @@ MonoBehaviour:
   isdamage: 0
   isfire: 0
   isice: 0
-  ispoison: 0
   rigid: {fileID: 0}
   boxCollider: {fileID: 0}
   meshs: []
@@ -139,6 +139,7 @@ MonoBehaviour:
   Debuffeffect:
   - {fileID: 2587351138147705025}
   - {fileID: 1138263670882320320}
+  spawnenemy: {fileID: 0}
 --- !u!195 &6065249667882350617
 NavMeshAgent:
   m_ObjectHideFlags: 0

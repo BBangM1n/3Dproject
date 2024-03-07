@@ -202,8 +202,9 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Melee") // 플레이어의 망치에 당할 때 함수
+        if(other.tag == "Melee" && gameObject.tag == "Enemy") // 플레이어의 망치에 당할 때 함수
         {
+            gameObject.tag = "Hit";
             Weapon weapon = other.GetComponent<Weapon>();
             curHealth -= weapon.damage;
             Vector3 reactVec = transform.position - other.transform.position;
@@ -211,7 +212,7 @@ public class Enemy : MonoBehaviour
             if (!isDead)
                 StartCoroutine(OnDamage(reactVec, false));
         }
-        else if(other.tag == "Bullet") // 플레이어의 총에 당할 때 함수
+        else if(other.tag == "Bullet" && gameObject.tag == "Enemy") // 플레이어의 총에 당할 때 함수
         {
             Bullet bullet = other.GetComponent<Bullet>();
             curHealth -= bullet.damage;
@@ -233,7 +234,7 @@ public class Enemy : MonoBehaviour
         {
             foreach (MeshRenderer mesh in meshs)
                 mesh.material.color = Color.white; // 다시 원래 색깔로 돌아간다.
-
+            gameObject.tag = "Enemy";
         }
         else // 죽은 판정
         {

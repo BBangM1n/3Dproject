@@ -15,6 +15,7 @@ TagManager:
   - Shop
   - Potion
   - Quest
+  - Hit
   layers:
   - Default
   - TransparentFX

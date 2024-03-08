@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Floor : MonoBehaviour
 {
     public bool isVillage;
     public string FloorName;
+
+    public Text FloorText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        FloorText = GameObject.Find("FloorUIText").gameObject.GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,9 +30,45 @@ public class Floor : MonoBehaviour
 
             GameManager manager = GameObject.Find("Game Manager").gameObject.GetComponent<GameManager>();
             manager.stageNameText.text = FloorName;
+
+            if(manager.menuCam.activeSelf == false)
+            {
+                FloorText.text = FloorName;
+                StartCoroutine(FloorTextCoroutin());
+            }
+
         }
 
+    }
+    
+    public IEnumerator FloorTextCoroutin()
+    {
+        while (FloorText.color.a > 0)
+        {
+            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
+            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
+            yield return null;
+        }
 
+        yield return new WaitForSeconds(0.1f);
+
+        // 텍스트가 서서히 나타나도록 함
+        while (FloorText.color.a < 1)
+        {
+            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a + (Time.deltaTime * 0.5f));
+            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a + (Time.deltaTime * 0.5f));
+            yield return null;
+        }
+
+        // 대기
+        yield return new WaitForSeconds(0.5f);
+
+        while (FloorText.color.a > 0)
+        {
+            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
+            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
+            yield return null;
+        }
     }
 
     private void OnCollisionExit(Collision collision)

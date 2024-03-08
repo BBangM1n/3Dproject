@@ -45,7 +45,7 @@ public class SpawnEnemy : MonoBehaviour
 
         if(isboss)
         {
-            if(manager.BossCounting > 9)
+            if(manager.BossCounting > 4)
             {
                 manager.isBossbattle = true;
                 StartCoroutine(BossSpawn());

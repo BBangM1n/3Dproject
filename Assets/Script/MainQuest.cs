@@ -149,7 +149,7 @@ public class MainQuest : MonoBehaviour
                 text[1] = "지금 밖으로 나간다 해도 공룡들을 물리 칠 무기가 없어";
                 text[2] = "저기 좋은 무기를 파는 곳이 있는걸?";
                 text[3] = "저기서 해머 하나를 구입해 보자.";
-                Endtext = "잘했어! 해머는 근접공격이지만 데미지가 강해!";
+                Endtext = "잘했어! 해머말고도 다른 무기들도 구입해서 더 강해져봐!";
                 Falsetext = "아직 해머를 구입 안한거 같은데?";
                 Conditiontext = "해머 구입하기";
                 break;

@@ -182,10 +182,12 @@ public class GameManager : MonoBehaviour
 
         player.gameObject.SetActive(true);
         StartCoroutine(turorial()); // 튜토리얼 코루틴 시작
+        SoundManager.instance.SoundChange(0);
     }
 
     IEnumerator turorial() // 튜토리얼 코루틴
     {
+        DataManager.instance.Tutorial = false;
         // 일정 시간초마다 설정해둔 Ui들이 켜지고 꺼졌다 반복.
         yield return new WaitForSeconds(1f);
         tutorials[0].gameObject.SetActive(true);
@@ -209,7 +211,7 @@ public class GameManager : MonoBehaviour
         tutorials[6].gameObject.SetActive(true);
         yield return new WaitForSeconds(5f);
         tutorials[6].gameObject.SetActive(false);
-        DataManager.instance.Tutorial = false;
+        
         StopCoroutine(turorial());
     }
 

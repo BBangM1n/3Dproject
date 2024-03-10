@@ -47,7 +47,8 @@ public class Shop : MonoBehaviour
             StartCoroutine(Talk());
             return;
         }
-
+        SoundManager.instance.Effect_Sound_2.clip = SoundManager.instance.EffectGroup[0];
+        SoundManager.instance.Effect_Sound_2.Play();
         enterPlayer.coin -= price;
         DataManager.instance.nowPlayer.Gold -= price;
         Vector3 ranVec = Vector3.right * Random.Range(-3, 3) + Vector3.forward * Random.Range(-3, 3);

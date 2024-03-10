@@ -243,6 +243,9 @@ public class MainQuest : MonoBehaviour
             YesBtn.SetActive(true);
             NoBtn.SetActive(true);
         }
+
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[12];
+        SoundManager.instance.Effect_Sound.Play();
     }
 
     public void YesBtnClick()

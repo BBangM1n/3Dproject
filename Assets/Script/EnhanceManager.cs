@@ -80,6 +80,8 @@ public class EnhanceManager : MonoBehaviour
             {
                 TalkText.text = "축하해! 강화에 성공했어!";
                 Level++;
+                SoundManager.instance.Effect_Sound_2.clip = SoundManager.instance.EffectGroup[9];
+                SoundManager.instance.Effect_Sound_2.Play();
 
                 if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 3)
                 {
@@ -115,6 +117,8 @@ public class EnhanceManager : MonoBehaviour
             else
             {
                 TalkText.text = "아쉽게 강화에 실패했어...";
+                SoundManager.instance.Effect_Sound_2.clip = SoundManager.instance.EffectGroup[10];
+                SoundManager.instance.Effect_Sound_2.Play();
             }
         }
     }

@@ -33,7 +33,6 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         BgmSound.volume = Volume.value;
-        EffectSound.volume = Volume.value;
     }
 
     public void MenuBtnClick()

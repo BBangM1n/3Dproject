@@ -227,7 +227,10 @@ public class Enemy : MonoBehaviour
     {
         foreach (MeshRenderer mesh in meshs) // 피격 시 몸 색깔 변경 (빨강)
             mesh.material.color = Color.red;
- 
+
+        SoundManager.instance.Effect_Sound_3.clip = SoundManager.instance.EffectGroup[4];
+        SoundManager.instance.Effect_Sound_3.Play();
+
         yield return new WaitForSeconds(0.1f);
 
         if(curHealth > 0) // 피격 시 Hp여부에 따른 함수
@@ -238,6 +241,9 @@ public class Enemy : MonoBehaviour
         }
         else // 죽은 판정
         {
+            SoundManager.instance.Effect_Sound_3.clip = SoundManager.instance.EffectGroup[4];
+            SoundManager.instance.Effect_Sound_3.Play();
+
             if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 4)
             {
                 MainQuest.Instance.Enemy_Count++;
@@ -272,6 +278,8 @@ public class Enemy : MonoBehaviour
                 {
                     MainQuest.Instance.BossEnemy_Count++;
                 }
+                SoundManager.instance.isboss = false;
+                SoundManager.instance.SoundChange(1);
             }
             manager.BossCounting++;
 

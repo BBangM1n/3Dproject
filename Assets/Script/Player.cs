@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
         GetInput();
         Move();
         Turn();
-        Jump();
+        //Jump();
         Dodge();
         Interation();
         Swap();
@@ -355,7 +355,8 @@ public class Player : MonoBehaviour
         {
             anim.SetTrigger("Reload");
             isreload = true;
-
+            SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[5];
+            SoundManager.instance.Effect_Sound.Play();
             Invoke("ReloadOut", 3f);
 
         }
@@ -466,6 +467,8 @@ public class Player : MonoBehaviour
                     }
                     if (coin > maxcoin)
                         coin = maxcoin;
+                    SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[11];
+                    SoundManager.instance.Effect_Sound.Play();
                     break;
                 case Item.Type.Heart:
                     health += item.value;
@@ -570,6 +573,9 @@ public class Player : MonoBehaviour
 
     IEnumerator OnDamage(bool isBossAtk)
     {
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[4];
+        SoundManager.instance.Effect_Sound.Play();
+
         isdamage = true;
         foreach(MeshRenderer mesh in meshs)
         {
@@ -627,6 +633,9 @@ public class Player : MonoBehaviour
             {
                 MainQuest.Instance.Potion_Count++;
             }
+
+            SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[13];
+            SoundManager.instance.Effect_Sound.Play();
         }
 
         if (havef2 && sdownf2 && !isbuff)
@@ -635,6 +644,9 @@ public class Player : MonoBehaviour
             havef2 = false;
             manager.isitembool2 = false;
             main.startColor = buffcolor;
+
+            SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[13];
+            SoundManager.instance.Effect_Sound.Play();
         }
 
         if (havef3 && sdownf3 && !isbuff)
@@ -643,6 +655,9 @@ public class Player : MonoBehaviour
             havef3 = false;
             manager.isitembool3 = false;
             main.startColor = buffcolor;
+
+            SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[13];
+            SoundManager.instance.Effect_Sound.Play();
         }
     }
 

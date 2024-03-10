@@ -19,6 +19,8 @@ public class Grenade : MonoBehaviour
     IEnumerator Explosion() // 코루틴
     {
         yield return new WaitForSeconds(3f); // 3초뒤 발동
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[7];
+        SoundManager.instance.Effect_Sound.Play();
         rigid.velocity = Vector3.zero;
         rigid.angularVelocity = Vector3.zero;
         meshObj.SetActive(false);

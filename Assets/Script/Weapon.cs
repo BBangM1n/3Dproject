@@ -43,7 +43,9 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(0.45f);
         meleeArea.enabled = true;
         trailEffect.enabled = true;
-
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[1];
+        SoundManager.instance.Effect_Sound.Play();
+        Debug.Log("½ºÀ®»ç¿îµå");
         yield return new WaitForSeconds(0.1f);
         meleeArea.enabled = false;
 
@@ -56,6 +58,16 @@ public class Weapon : MonoBehaviour
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         Rigidbody bulletrigid = instantBullet.GetComponent<Rigidbody>();
         bulletrigid.velocity = bulletPos.forward * 50;
+        if(RangeType.Hand == rangetype)
+        {
+            SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[2];
+            SoundManager.instance.Effect_Sound.Play();
+        }
+        else
+        {
+            SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[3];
+            SoundManager.instance.Effect_Sound.Play();
+        }
         yield return null;
 
         GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);

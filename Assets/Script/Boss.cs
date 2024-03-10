@@ -85,7 +85,8 @@ public class Boss : Enemy
         GameObject instantMissileA = Instantiate(missile, missilePortA.position, missilePortA.rotation);
         BossMissile bossMissileA = instantMissileA.GetComponent<BossMissile>();
         bossMissileA.target = Target; // 미사일이 플레이어를 따라가게 유도
-        
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[6];
+        SoundManager.instance.Effect_Sound.Play();
 
         yield return new WaitForSeconds(0.3f);
         GameObject instantMissileB = Instantiate(missile, missilePortB.position, missilePortB.rotation);

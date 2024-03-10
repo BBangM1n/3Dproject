@@ -30,19 +30,42 @@ public class Floor : MonoBehaviour
 
             GameManager manager = GameObject.Find("Game Manager").gameObject.GetComponent<GameManager>();
             manager.stageNameText.text = FloorName;
+            FloorText.text = FloorName;
 
-            if(manager.menuCam.activeSelf == false)
+            if(DataManager.instance.Tutorial == false)
+                FieldValue();
+
+            if (manager.gameCam.activeSelf == true)
             {
-                FloorText.text = FloorName;
+
                 StartCoroutine(FloorTextCoroutin());
             }
+            else
+                return;
 
         }
-
     }
-    
+
+    public void FieldValue()
+    {
+        if(SoundManager.instance.isboss == false)
+        {
+            switch(FloorName)
+            {
+                case "초보자의 마을":
+                    SoundManager.instance.SoundChange(0);
+                    break;
+                case "공룡들의 숲":
+                    SoundManager.instance.SoundChange(1);
+                    break;
+            }
+        }
+    }
+ 
     public IEnumerator FloorTextCoroutin()
     {
+        FloorText.gameObject.SetActive(true);
+
         while (FloorText.color.a > 0)
         {
             FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
@@ -69,6 +92,9 @@ public class Floor : MonoBehaviour
             FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
             yield return null;
         }
+
+        FloorText.gameObject.SetActive(false);
+
     }
 
     private void OnCollisionExit(Collision collision)

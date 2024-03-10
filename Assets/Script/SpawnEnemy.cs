@@ -50,6 +50,8 @@ public class SpawnEnemy : MonoBehaviour
                 manager.isBossbattle = true;
                 StartCoroutine(BossSpawn());
                 Debug.Log("보스나온다웨엥");
+                SoundManager.instance.SoundChange(2);
+                SoundManager.instance.isboss = true;
             }
 
         }

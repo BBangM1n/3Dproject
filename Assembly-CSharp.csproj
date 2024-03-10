@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{33E08A5C-87FF-7466-7309-E79737B8FF3E}</ProjectGuid>
+    <ProjectGuid>{9059B57E-91D4-F7C7-3AF7-31E4A51F1298}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -79,6 +79,7 @@
     <Compile Include="Assets\Script\Grenade.cs" />
     <Compile Include="Assets\Script\ShotgunBullet.cs" />
     <Compile Include="Assets\Script\Weapon.cs" />
+    <Compile Include="Assets\Script\SoundManager.cs" />
     <Compile Include="Assets\Sprites\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\Missile.cs" />
@@ -374,6 +375,12 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

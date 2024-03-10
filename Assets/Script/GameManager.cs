@@ -209,6 +209,7 @@ public class GameManager : MonoBehaviour
         tutorials[6].gameObject.SetActive(true);
         yield return new WaitForSeconds(5f);
         tutorials[6].gameObject.SetActive(false);
+        DataManager.instance.Tutorial = false;
         StopCoroutine(turorial());
     }
 

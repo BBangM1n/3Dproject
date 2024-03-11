@@ -167,28 +167,28 @@ public class Quest : MonoBehaviour
                 ConditionText.text = "조건 : 총알 100개 기부";
                 break;
             case 2:
-                ConditionText.text = "조건 : 몬스터 5마리 처치 " + player.Qenemy + "/ 0";
+                ConditionText.text = "조건 : 몬스터 5마리 처치 " + "0 / " + player.Qenemy;
                 break;
             case 3:
-                ConditionText.text = "조건 : 수류탄 사용 " + player.Qgrenade + "/ 0";
+                ConditionText.text = "조건 : 수류탄 사용 " + "0 / " + player.Qgrenade;
                 break;
             case 4:
-                ConditionText.text = "조건 : 초록색 공룡 처치 " + player.enemyAcount + "/ 0";
+                ConditionText.text = "조건 : 초록색 공룡 처치 " + "0 / " + player.enemyAcount;
                 break;
             case 5:
-                ConditionText.text = "조건 : 보라색 공룡 처치 " + player.enemyBcount + "/ 0";
+                ConditionText.text = "조건 : 보라색 공룡 처치 " + "0 / " + player.enemyBcount;
                 break;
             case 6:
-                ConditionText.text = "조건 : 노란색 공룡 처치 " + player.enemyCcount + "/ 0";
+                ConditionText.text = "조건 : 노란색 공룡 처치 " + "0 / " + player.enemyCcount;
                 break;
             case 7:
-                ConditionText.text = "조건 : 빨간 공룡 처치" + player.enemyDcount + "/ 0";
+                ConditionText.text = "조건 : 빨간 공룡 처치" + "0 / " + player.enemyDcount;
                 break;
             case 8:
-                ConditionText.text = "조건 : 체력 나눠주기" + player.health + "/ 30";
+                ConditionText.text = "조건 : 체력 나눠주기" + "30 / " + player.health;
                 break;
             case 9:
-                ConditionText.text = "조건 : 돈 나눠주기" + player.coin + "/ 3000";
+                ConditionText.text = "조건 : 돈 나눠주기" + "3000 / " + player.coin;
                 break;
         }
     }

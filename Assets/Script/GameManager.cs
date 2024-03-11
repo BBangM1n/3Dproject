@@ -61,7 +61,14 @@ public class GameManager : MonoBehaviour
 
 
     public Sprite[] potiomimage;
-    public GameObject[] tutorials;
+
+    public GameObject tutorialsPanel;
+    public Sprite[] TutorialImageGroup;
+    public string[] TutorialTextGroup;
+    public Image TutorialImage;
+    public Text TutorialText;
+    public int TutorialCount = 0;
+    public Button EndBtn;
 
     //보스 들어오는모션
     public GameObject BossComing;
@@ -86,8 +93,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         playTime = DataManager.instance.nowPlayer.PlayTime;
-
-        if(DataManager.instance.Tutorial == true)
+        TutorialCount = 0;
+        if (DataManager.instance.Tutorial == true)
         {
             menuCam.SetActive(true);
             menuPanel.SetActive(true);
@@ -106,6 +113,23 @@ public class GameManager : MonoBehaviour
 
         QuestInfo();
         WorldClear();
+
+        if (tutorialsPanel.activeSelf == true)
+        {
+            TutorialImage.sprite = TutorialImageGroup[TutorialCount];
+            TutorialText.text = TutorialTextGroup[TutorialCount];
+
+            if (TutorialImageGroup.Length == TutorialCount + 1)
+            {
+                EndBtn.gameObject.SetActive(true);
+            }
+            else
+                EndBtn.gameObject.SetActive(false);
+
+            Debug.Log(TutorialImageGroup.Length);
+        }
+        else
+            return;
     }
 
     public void WorldClear()
@@ -179,40 +203,32 @@ public class GameManager : MonoBehaviour
 
         menuPanel.SetActive(false);
         gamePanel.SetActive(true);
-
         player.gameObject.SetActive(true);
-        StartCoroutine(turorial()); // 튜토리얼 코루틴 시작
+
+        //튜토리얼 판넬 활성화
+        tutorialsPanel.SetActive(true);
         SoundManager.instance.SoundChange(0);
+        DataManager.instance.Tutorial = false;
+        player.isstop = true;
+
     }
 
-    IEnumerator turorial() // 튜토리얼 코루틴
+    public void TutorialLeftBtnClick()
     {
-        DataManager.instance.Tutorial = false;
-        // 일정 시간초마다 설정해둔 Ui들이 켜지고 꺼졌다 반복.
-        yield return new WaitForSeconds(1f);
-        tutorials[0].gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        tutorials[0].gameObject.SetActive(false);
-        tutorials[1].gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        tutorials[1].gameObject.SetActive(false);
-        tutorials[2].gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        tutorials[2].gameObject.SetActive(false);
-        tutorials[3].gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        tutorials[3].gameObject.SetActive(false);
-        tutorials[4].gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        tutorials[4].gameObject.SetActive(false);
-        tutorials[5].gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        tutorials[5].gameObject.SetActive(false);
-        tutorials[6].gameObject.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        tutorials[6].gameObject.SetActive(false);
-        
-        StopCoroutine(turorial());
+        if(TutorialCount > 0)
+            TutorialCount--;
+    }
+
+    public void TutorialRightBtnClick()
+    {
+        if(TutorialImageGroup.Length > TutorialCount + 1)
+            TutorialCount++;
+    }
+
+    public void TutorialEndBtnClick()
+    {
+        tutorialsPanel.SetActive(false);
+        player.isstop = false;
     }
 
     public void GameOver() // 게임 오버가 되면
@@ -221,7 +237,6 @@ public class GameManager : MonoBehaviour
         overPanel.SetActive(true);
         RestartBtn.interactable = false;
         StartCoroutine(RespawnTexton());
-        int maxScore = PlayerPrefs.GetInt("MaxScore"); // 맥스 스코어로 저장
 
     }
 

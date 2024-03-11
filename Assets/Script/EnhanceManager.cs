@@ -75,6 +75,7 @@ public class EnhanceManager : MonoBehaviour
         else
         {
             player.coin -= gold;
+            DataManager.instance.nowPlayer.Gold -= gold;
             int random = Random.Range(0, 101);
             if (Probability > random)
             {

@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  value: 1500
+  value: 2000
   Grenadevalue: -1
 --- !u!1 &8429609098954398336
 GameObject:

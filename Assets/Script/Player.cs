@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     public bool isDead;
     bool isbuff;
     bool iscbuff = false;
+    public bool isstop;
     
 
     public float speed;
@@ -156,7 +157,7 @@ public class Player : MonoBehaviour
         if (isdodge)
             moveVec = dodgeVec;
 
-        if (isswap || !isFireReady || isreload || isDead)
+        if (isswap || !isFireReady || isreload || isDead || isstop)
             moveVec = Vector3.zero;
 
         if(!isborder)
@@ -367,6 +368,7 @@ public class Player : MonoBehaviour
         int reAmmo = ammo < equipWeapon.maxammo ? ammo : equipWeapon.maxammo;
         equipWeapon.curammo = reAmmo;
         ammo -= reAmmo;
+        DataManager.instance.nowPlayer.Ammo -= reAmmo;
         isreload = false;
     }
 

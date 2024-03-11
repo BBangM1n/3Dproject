@@ -17,12 +17,14 @@ public class MenuManager : MonoBehaviour
 
     public GameObject Exit;
     GameManager manager;
+    Player player;
 
     private void Awake()
     {
         BgmSound = GameObject.Find("Bgm_Sound").gameObject.GetComponent<AudioSource>();
         EffectSound = GameObject.Find("Effect_Sound").gameObject.GetComponent<AudioSource>();
         manager = GameObject.Find("Game Manager").gameObject.GetComponent<GameManager>();
+        player = GameObject.Find("Player").gameObject.GetComponent<Player>();
     }
     void Start()
     {
@@ -38,6 +40,7 @@ public class MenuManager : MonoBehaviour
     public void MenuBtnClick()
     {
         Menu.SetActive(true);
+        player.isstop = true;
     }
 
     public void MuteBtnClick()
@@ -80,6 +83,7 @@ public class MenuManager : MonoBehaviour
     public void CloseMenuBtnClick()
     {
         Menu.SetActive(false);
+        player.isstop = false;
     }
 
     public void ExitBtnClick()

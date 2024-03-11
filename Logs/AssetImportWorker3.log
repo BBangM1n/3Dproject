@@ -1,0 +1,2307 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.22f1 (b6c551784ba3) revision 11978065'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 16318 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/ABKOCLASS/Unity_PMJ/프로젝트/3Dproject
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+61220
+Successfully changed project path to: C:/Users/ABKOCLASS/Unity_PMJ/프로젝트/3Dproject
+C:/Users/ABKOCLASS/Unity_PMJ/프로젝트/3Dproject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [6064] Host "[IP] 192.168.5.143 [Port] 0 [Flags] 2 [Guid] 194386284 [EditorId] 194386284 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6JPJANS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [6064] Host "[IP] 192.168.5.143 [Port] 0 [Flags] 2 [Guid] 194386284 [EditorId] 194386284 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-6JPJANS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 112.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.22f1 (b6c551784ba3)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/ABKOCLASS/Unity_PMJ/프로젝트/3Dproject/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Vendor:   NVIDIA
+    VRAM:     5981 MB
+    Driver:   31.0.15.4601
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56272
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006479 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 81.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.565 seconds
+Domain Reload Profiling:
+	ReloadAssembly (565ms)
+		BeginReloadAssembly (76ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (399ms)
+			LoadAssemblies (74ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (92ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (238ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (81ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (107ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004833 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.869 seconds
+Domain Reload Profiling:
+	ReloadAssembly (870ms)
+		BeginReloadAssembly (103ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (674ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (235ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (297ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (193ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3132 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 21 unused Assets / (30.2 KB). Loaded Objects now: 3631.
+Memory consumption went from 136.8 MB to 136.8 MB.
+Total: 2.576500 ms (FindLiveObjects: 0.246200 ms CreateObjectMapping: 0.164100 ms MarkObjects: 2.143800 ms  DeleteObjects: 0.021600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2075071.671488 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS017/FS017_Sunrise.mat
+  artifactKey: Guid(39d27e80110a983468075fd1868610d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS017/FS017_Sunrise.mat using Guid(39d27e80110a983468075fd1868610d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2a32aa5bb395090e21cb348ceba7a75') in 0.228723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Missile Boss.obj
+  artifactKey: Guid(24081170c36b3b047a3f1bed303ff010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Missile Boss.obj using Guid(24081170c36b3b047a3f1bed303ff010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe322e1081f069751c1af3aa330b0736') in 0.061308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Weapon Grenade.mat
+  artifactKey: Guid(e3a61e3a9dd7bca4aade965978ad038e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Weapon Grenade.mat using Guid(e3a61e3a9dd7bca4aade965978ad038e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7576f052d32266337e94d0420fc96d1e') in 0.014177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9199d62434720ca66001d8766151cdae') in 0.045390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/MagicCircle.mat
+  artifactKey: Guid(ddac23d301cbfca45bcbe217c05f0141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/MagicCircle.mat using Guid(ddac23d301cbfca45bcbe217c05f0141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8eb8e854611e1c124283b0676d35ead') in 0.028393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Item Ammo.mat
+  artifactKey: Guid(584a9a6b9a1a96d4392bcb73a01b3b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Item Ammo.mat using Guid(584a9a6b9a1a96d4392bcb73a01b3b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e7b43c2363d1cc0511b50a41066d72') in 0.014314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Item Handgun.obj
+  artifactKey: Guid(7d65416a0aa9b164c8b8ad5e8699ddc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Item Handgun.obj using Guid(7d65416a0aa9b164c8b8ad5e8699ddc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57acc88c6edc5a5f09520aa9ae811dcf') in 0.026607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Materials/Shop Table.mat
+  artifactKey: Guid(3065b2d82a8a3f240aa70b3392c00da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Shop Table.mat using Guid(3065b2d82a8a3f240aa70b3392c00da7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f3f1535fa6d3063357967c55c5de05e') in 0.017157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Slash.mat
+  artifactKey: Guid(8b3cc142b0783eb40be02cde5b31ca6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Slash.mat using Guid(8b3cc142b0783eb40be02cde5b31ca6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9d01c49807a7c029d8309d1e596617') in 0.021058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Heart.mat
+  artifactKey: Guid(e97a79db1dd66ad4d8f70932abe94b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Heart.mat using Guid(e97a79db1dd66ad4d8f70932abe94b73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8549bc655909f3c276fda187d17cc2b') in 0.012940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Gradient.mat
+  artifactKey: Guid(2ae196836e3f6ce438e93e246a6ab900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Gradient.mat using Guid(2ae196836e3f6ce438e93e246a6ab900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a505a4a785932d1bbd293c7c4a8abc3') in 0.020621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Missile.obj
+  artifactKey: Guid(3f4b6ef2f16ee844997e218b60394c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Missile.obj using Guid(3f4b6ef2f16ee844997e218b60394c68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54ec4955842fdd25ccd779caa5a5d2e0') in 0.025160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Player.mat
+  artifactKey: Guid(9aed8e613167e4340b625e15add095e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Player.mat using Guid(9aed8e613167e4340b625e15add095e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96760621190e795d4216e4c4bfc1090c') in 0.012930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Simple Player.fbx
+  artifactKey: Guid(cae3f9537776dea41855a724b56dd2c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Simple Player.fbx using Guid(cae3f9537776dea41855a724b56dd2c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd31d2aa5b976638b06a535d7670f8f1d') in 0.061169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Item SubMachinegun.obj
+  artifactKey: Guid(1ad176e55baf0174bafd5feb5f88b667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Item SubMachinegun.obj using Guid(1ad176e55baf0174bafd5feb5f88b667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d448a89155211fd5347709ca5eb1fae') in 0.024649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Item Hammer.obj
+  artifactKey: Guid(c004007a28c1f534e859da99f6c890fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Item Hammer.obj using Guid(c004007a28c1f534e859da99f6c890fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c97a43cb4df267151bad1fbf85d706') in 0.024420 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.635865 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS017/FS017_Day_Sunless.mat
+  artifactKey: Guid(416ee80c6a09f9b4fb43d9aa43f4a057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS017/FS017_Day_Sunless.mat using Guid(416ee80c6a09f9b4fb43d9aa43f4a057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e12c066e9ffeb51d58eba1721789ea9b') in 0.019989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS017/FS017_Night.mat
+  artifactKey: Guid(d3823126980dd98479f7761e6d47338a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS017/FS017_Night.mat using Guid(d3823126980dd98479f7761e6d47338a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '126fe5d0d061e30102efd8a259639131') in 0.017384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Sunset_Cubemap.mat
+  artifactKey: Guid(2b0ee035e6c540241b0977a4f54c7425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Sunset_Cubemap.mat using Guid(2b0ee035e6c540241b0977a4f54c7425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fd4e023f453753197e7c37e0e879228') in 0.025707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Rainy_Cubemap.mat
+  artifactKey: Guid(d1894fa42f07f3a4c928395a7b849410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Rainy_Cubemap.mat using Guid(d1894fa42f07f3a4c928395a7b849410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c22aaf3b5d9684d456918858bc661c6a') in 0.021686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Snowy_Cubemap.mat
+  artifactKey: Guid(87567e7d36a377546a61db55aebf554c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Snowy_Cubemap.mat using Guid(87567e7d36a377546a61db55aebf554c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'febb29f8592e952165f713499b3abd13') in 0.019886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Sunrise.mat
+  artifactKey: Guid(023808db2bfa00d44929aa2176d29c76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Sunrise.mat using Guid(023808db2bfa00d44929aa2176d29c76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17dc5a250e64eb403c1909279297ca3f') in 0.016250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS013/FS013_Day_Sunless.mat
+  artifactKey: Guid(97fca95f33987e548be9dd7c03cb1a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS013/FS013_Day_Sunless.mat using Guid(97fca95f33987e548be9dd7c03cb1a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82bed0ece692f7b19a89caffb86d768e') in 0.015185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS013/FS013_Sunrise.mat
+  artifactKey: Guid(3a253cab252a165478338fba0f03e63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS013/FS013_Sunrise.mat using Guid(3a253cab252a165478338fba0f03e63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f98e6b171b5e4fa52fbf3efede2cd565') in 0.016400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Night_Moonless_Cubemap.mat
+  artifactKey: Guid(52b6d30a38a2c844dbd84eb9828b22b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Night_Moonless_Cubemap.mat using Guid(52b6d30a38a2c844dbd84eb9828b22b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e928d7410daf6e914eff8211b2ce297c') in 0.018599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Day_Cubemap.mat
+  artifactKey: Guid(20e1111adc6498e499e72f734cde4793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/FS013_Day_Cubemap.mat using Guid(20e1111adc6498e499e72f734cde4793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e820deb97344f1a5a7e432707f4478') in 0.021106 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.002171 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Night.mat
+  artifactKey: Guid(80fa4f34db87aad4d93c45188b19bfd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Night.mat using Guid(80fa4f34db87aad4d93c45188b19bfd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09c13c37074b8573c1d5d04878f4f4a') in 0.016635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Snowy.mat
+  artifactKey: Guid(b141c8e4f6387ef45b13a68b10c88b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Snowy.mat using Guid(b141c8e4f6387ef45b13a68b10c88b7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '419813ef97817471397e32a240e4396d') in 0.015892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/FS003_Snowy_Cubemap.mat
+  artifactKey: Guid(4f0579e073abe59409641925c6e53e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/FS003_Snowy_Cubemap.mat using Guid(4f0579e073abe59409641925c6e53e31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a6b5a1639cefc23c9f5c0e5297ea5e4') in 0.020192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/FS003_Rainy_Cubemap.mat
+  artifactKey: Guid(85bdd529a7fbcc344b810462de0c2b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/FS003_Rainy_Cubemap.mat using Guid(85bdd529a7fbcc344b810462de0c2b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b73d1f425b114cb58bac249e61c6a652') in 0.024023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.217603 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/FS002_Sunrise_Cubemap.mat
+  artifactKey: Guid(eb8fd6bd252589744b602770b09ccbd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/FS002_Sunrise_Cubemap.mat using Guid(eb8fd6bd252589744b602770b09ccbd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1e98b0e1bbf41a4f69ef89332ae41db') in 0.017488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Day.mat
+  artifactKey: Guid(c051fe5a20f72814f9643eb10ebbd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Day.mat using Guid(c051fe5a20f72814f9643eb10ebbd2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb84b936acfb3a19135dd2e682c757fc') in 0.018287 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004921 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.939 seconds
+Domain Reload Profiling:
+	ReloadAssembly (940ms)
+		BeginReloadAssembly (143ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (699ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (279ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (183ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (24.7 KB). Loaded Objects now: 3681.
+Memory consumption went from 139.3 MB to 139.3 MB.
+Total: 4.152300 ms (FindLiveObjects: 0.415300 ms CreateObjectMapping: 0.265800 ms MarkObjects: 3.414300 ms  DeleteObjects: 0.055400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 26.887392 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/FS002_Day_Cubemap.mat
+  artifactKey: Guid(94d852a7748a347489661febea5eafc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/FS002_Day_Cubemap.mat using Guid(94d852a7748a347489661febea5eafc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f870d41a0d36b46065fd0e067e87f18e') in 0.084688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/FS002_Night_Moonless_Cubemap.mat
+  artifactKey: Guid(9c94282089393fd4dba21f9f9b72149e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/FS002_Night_Moonless_Cubemap.mat using Guid(9c94282089393fd4dba21f9f9b72149e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '124031975476fd30632613adcd68c300') in 0.024357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.074017 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Night.png
+  artifactKey: Guid(323f1ea1bce78fe4c90b2286fa1997e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Night.png using Guid(323f1ea1bce78fe4c90b2286fa1997e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c115cf9ef2d4e1ad94ca2330c500d3a7') in 0.021077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Sunset.png
+  artifactKey: Guid(846cce7d90ad21b4b80fcb937193081e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Sunset.png using Guid(846cce7d90ad21b4b80fcb937193081e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9644844e4c5eed760563c6470776603') in 0.015762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Snowy.png
+  artifactKey: Guid(f4d685236ef56ef41a4ddef00508a2c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Panoramics/FS003/FS003_Snowy.png using Guid(f4d685236ef56ef41a4ddef00508a2c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50e3d8f7d558809dc6f0b62e07582160') in 0.092508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.999084 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Day_Sunless_Cubemap_left.png
+  artifactKey: Guid(511b7abba6c662c40a0db075afdeeba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Day_Sunless_Cubemap_left.png using Guid(511b7abba6c662c40a0db075afdeeba7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '078bc02c9191769e159cff713ccf09dc') in 0.016048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Day_Sunless_Cubemap_right.png
+  artifactKey: Guid(06d134190fa2eb846bea51f451f1787e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Day_Sunless_Cubemap_right.png using Guid(06d134190fa2eb846bea51f451f1787e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fbf75d4999e6e71c318a904a85c6f14') in 0.016777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.129834 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Day_Cubemap_down.png
+  artifactKey: Guid(3eba882489794394480a0e3fc9f25117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Day_Cubemap_down.png using Guid(3eba882489794394480a0e3fc9f25117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac1b3b822b8712df78f50a6d4d3c49df') in 0.013246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Cubemap_back.png
+  artifactKey: Guid(e0542c8851c689547bb3a6f78e9b5845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Cubemap_back.png using Guid(e0542c8851c689547bb3a6f78e9b5845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e3304ecffe5cab03c93a5f1988d931c') in 0.014313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Cubemap_left.png
+  artifactKey: Guid(32755347f2e8a44479cdb0df5bbed6d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Cubemap_left.png using Guid(32755347f2e8a44479cdb0df5bbed6d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '624f5d1dd176903f2544b03726fa5329') in 0.012202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Moonless_Cubemap_back.png
+  artifactKey: Guid(e0cda858e7f614546971d51ec208b338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Moonless_Cubemap_back.png using Guid(e0cda858e7f614546971d51ec208b338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fce1e4008d5af0bfb0c1c1a4fe42d58') in 0.016571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Moonless_Cubemap_down.png
+  artifactKey: Guid(230df26ff15142840883397265e2086f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Moonless_Cubemap_down.png using Guid(230df26ff15142840883397265e2086f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b8cec74de9639d25cb28c232730c06') in 0.017995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Snowy_Cubemap_back.png
+  artifactKey: Guid(6a627b1974e621b4d89e686530a0e0af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Snowy_Cubemap_back.png using Guid(6a627b1974e621b4d89e686530a0e0af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ca3c3748aaec1be49a8fbebd627731d') in 0.014198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Sunrise_Cubemap_up.png
+  artifactKey: Guid(a57336ddba2109247a7fed12c7449da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Sunrise_Cubemap_up.png using Guid(a57336ddba2109247a7fed12c7449da0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04c936b1e02a79878c67ef868629144a') in 0.015382 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Cubemap.cubemap
+  artifactKey: Guid(8acbf1c188095b44d8c979cb34200fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Night_Cubemap.cubemap using Guid(8acbf1c188095b44d8c979cb34200fb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de327bf5b7286a89f1ebc71aa1775a6') in 0.334312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Snowy_Cubemap.cubemap
+  artifactKey: Guid(11bb3351408b2884d877a7a887f4fa7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Snowy_Cubemap.cubemap using Guid(11bb3351408b2884d877a7a887f4fa7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd31d63da038a638c4f1cf7bc9f530a32') in 0.284912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Rainy_Cubemap.cubemap
+  artifactKey: Guid(a9bd8d292f8929a478a9836caf48c3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Rainy_Cubemap.cubemap using Guid(a9bd8d292f8929a478a9836caf48c3d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa842de7a68386835f768972aba991dc') in 0.274436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Rainy_Cubemap_back.png
+  artifactKey: Guid(f6ac85863725c724494103bfc8dc111c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Rainy_Cubemap_back.png using Guid(f6ac85863725c724494103bfc8dc111c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '263eb33ac4278ed0573e588ab772ec6d') in 0.014213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Sunset_Cubemap_up.png
+  artifactKey: Guid(13c455289785d924bbcd1bdf63676307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS003/Images/FS003_Sunset_Cubemap_up.png using Guid(13c455289785d924bbcd1bdf63676307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c86670d9bfa31ca481f1b8092cec361') in 0.010814 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005071 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.122 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1122ms)
+		BeginReloadAssembly (223ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (113ms)
+		EndReloadAssembly (798ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (283ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (326ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (215ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (24.7 KB). Loaded Objects now: 3689.
+Memory consumption went from 139.4 MB to 139.4 MB.
+Total: 2.476300 ms (FindLiveObjects: 0.246900 ms CreateObjectMapping: 0.151700 ms MarkObjects: 2.055300 ms  DeleteObjects: 0.021600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 65.498321 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_04_Sunless.mat
+  artifactKey: Guid(e1ec0e2320d2d4fb9a393769378ce0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_04_Sunless.mat using Guid(e1ec0e2320d2d4fb9a393769378ce0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f8ff004e33088c3c7e4e5cc5e172bc') in 0.068644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_01_Moonless.mat
+  artifactKey: Guid(1065b432639a84123a07ea43fe5ba4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_01_Moonless.mat using Guid(1065b432639a84123a07ea43fe5ba4c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d8cb50718e5f9c9452c9956b773f578') in 0.028379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003011 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_06.mat
+  artifactKey: Guid(123caa41e84e041d0bd65bb3ae888dd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_06.mat using Guid(123caa41e84e041d0bd65bb3ae888dd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27ad2dfdbe24f6eba81f2c2495b28792') in 0.016552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02.mat
+  artifactKey: Guid(8202c457dff32486ba5ae1f2f548d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02.mat using Guid(8202c457dff32486ba5ae1f2f548d983) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3244bb8c803f51b6f84b213ee6f1712') in 0.023014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02_Moonless.mat
+  artifactKey: Guid(94caf2ba4ca5e46bfaba53afcc8778dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02_Moonless.mat using Guid(94caf2ba4ca5e46bfaba53afcc8778dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa1a7b9c890919c85645934ce70f41bb') in 0.015309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.059738 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Tree/forestpack_tree_leaf_low.mat
+  artifactKey: Guid(6530d89581085964cb783dcaa6b94725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Tree/forestpack_tree_leaf_low.mat using Guid(6530d89581085964cb783dcaa6b94725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e754d915287e453d9df3e6974274bdc') in 0.020882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Materials/High Quality/Skybox/forestpack_skybox_night.mat
+  artifactKey: Guid(6de3b18bb00cc1b4a8edb47f4eb9f643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Materials/High Quality/Skybox/forestpack_skybox_night.mat using Guid(6de3b18bb00cc1b4a8edb47f4eb9f643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f9e09c9f1afe6a36b579490f3268f8') in 0.027251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Materials/High Quality/Foliage/forestpack_foliage.mat
+  artifactKey: Guid(7a8b02b78b9ba2b46bf67cddab7b9947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Materials/High Quality/Foliage/forestpack_foliage.mat using Guid(7a8b02b78b9ba2b46bf67cddab7b9947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a04295754a47bb63ad010f60d6bd1eb3') in 0.024019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_03.mat
+  artifactKey: Guid(33ab377b49aa14f6fae6e5bac230a5d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_03.mat using Guid(33ab377b49aa14f6fae6e5bac230a5d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f3a403df9ef64ec6f63179f794ef9a5') in 0.015419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Foliage/forestpack_foliage_low.mat
+  artifactKey: Guid(c4d3add090c4d9a4b9166270167cc035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Foliage/forestpack_foliage_low.mat using Guid(c4d3add090c4d9a4b9166270167cc035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e64ed564b4b351fa7644ca3caf1bd222') in 0.014260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_02_Sunless.mat
+  artifactKey: Guid(99a400087584f4263b1a8979d6007ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_02_Sunless.mat using Guid(99a400087584f4263b1a8979d6007ad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cee9ba89048cd6c318dde28f04f7e56') in 0.015295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Tree/forestpack_treeStumpAndRoot_low.mat
+  artifactKey: Guid(afa31e083c38f8b42aa842d0ff23a5d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Tree/forestpack_treeStumpAndRoot_low.mat using Guid(afa31e083c38f8b42aa842d0ff23a5d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7558093fd40763c69be8d45eec25b6') in 0.017031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/SignAndBridge/forestpack_roadSignAndBridge_low.mat
+  artifactKey: Guid(fcb4a5e1255d29f47ba16e73b60ab527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/SignAndBridge/forestpack_roadSignAndBridge_low.mat using Guid(fcb4a5e1255d29f47ba16e73b60ab527) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6cab9f24e92afb6d468138edf99acc') in 0.016492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_01.mat
+  artifactKey: Guid(12ccb828343c3405fb94289774b51aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_01.mat using Guid(12ccb828343c3405fb94289774b51aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '259acdd586d54aee37552411fd9676a5') in 0.015303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Stone/forestpack_stone_low.mat
+  artifactKey: Guid(ce6cfc015fea75b40b0ffd1ef6cef222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Materials/Mobile/Stone/forestpack_stone_low.mat using Guid(ce6cfc015fea75b40b0ffd1ef6cef222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df5639bf00bd8532219b523309fdc1cf') in 0.016661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_01_Sunless.mat
+  artifactKey: Guid(d48a7646f5d0547e889733d84b50cb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_01_Sunless.mat using Guid(d48a7646f5d0547e889733d84b50cb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9527b8b6591121cceeaaeb48bd6b7541') in 0.012979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.497440 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Flash.mat
+  artifactKey: Guid(db3488de871721d4f83250ff2af716b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Flash.mat using Guid(db3488de871721d4f83250ff2af716b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7af843da16e0b6405699fc0ebe6421c9') in 0.020698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy B.mat
+  artifactKey: Guid(5084a2898f8f55840931eb7419d779e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy B.mat using Guid(5084a2898f8f55840931eb7419d779e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb2461b757f87facadde7709f544a01e') in 0.017102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy A.mat
+  artifactKey: Guid(0d17d5c2eb217944499e9ec56d818e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy A.mat using Guid(0d17d5c2eb217944499e9ec56d818e63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7ff49773486a395382ca387d0146128') in 0.014408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Font/DNFBitBitv2.otf
+  artifactKey: Guid(e6e0a0ddbc12d0340b3458b527c5b59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/DNFBitBitv2.otf using Guid(e6e0a0ddbc12d0340b3458b527c5b59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b598cbfe3c00c3a2ae815ca9682e83b') in 0.027203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy C.mat
+  artifactKey: Guid(1dcf18599fec3384ab8214aa036c77d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy C.mat using Guid(1dcf18599fec3384ab8214aa036c77d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '286b32e5141f7f72f6436cc9b2c63b58') in 0.011156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/Floor 1.mat
+  artifactKey: Guid(c47503a7085d3e64e8380c576415e084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Floor 1.mat using Guid(c47503a7085d3e64e8380c576415e084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a617522377c8baa4a7c5fda473852f6') in 0.013291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Font/NanumGothic.otf
+  artifactKey: Guid(4d24d324f1da09f41aec0f73d60de17a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/NanumGothic.otf using Guid(4d24d324f1da09f41aec0f73d60de17a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d1c7617debce008066d250fa7e5e29') in 0.019724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Font/Maplestory Bold.ttf
+  artifactKey: Guid(69968e336617e504ab081d69ec0e4419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Maplestory Bold.ttf using Guid(69968e336617e504ab081d69ec0e4419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69d73eb5f2a7b3bdf103f6e2b3f019ac') in 0.015607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy D.mat
+  artifactKey: Guid(4d8215369ad2c9a47a74206a883a73c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Enemy D.mat using Guid(4d8215369ad2c9a47a74206a883a73c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666ebd23628af9ee3a07df5775f67d3e') in 0.013196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/BulletCase.mat
+  artifactKey: Guid(7b09f65079094eb44b167491c6c28a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/BulletCase.mat using Guid(7b09f65079094eb44b167491c6c28a3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adca0193402a7b514fe4afd5e410d6e8') in 0.016145 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Floor3.mat
+  artifactKey: Guid(ca6fd35d7de69cb449d560ab9228d502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Floor3.mat using Guid(ca6fd35d7de69cb449d560ab9228d502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b46763bf392eafcef6f54b9357f60f2') in 0.113752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Item Coin.obj
+  artifactKey: Guid(21c163042a84aed4cbafda1dd699f30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Item Coin.obj using Guid(21c163042a84aed4cbafda1dd699f30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b922232d6ef00fecdb7774fac84e022') in 0.046527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Models/Item Ammo.obj
+  artifactKey: Guid(7bc41bfe0ef22904b860c9c9b16d5d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Models/Item Ammo.obj using Guid(7bc41bfe0ef22904b860c9c9b16d5d38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4331c8bffb08c4522296b225087abdb') in 0.022668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Materials/BossComingImage.mat
+  artifactKey: Guid(57728fb138e173541bfbad324e4756b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/BossComingImage.mat using Guid(57728fb138e173541bfbad324e4756b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53a419007834a512646ce6b6e818167d') in 0.011509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Materials/Floor.mat
+  artifactKey: Guid(f81b51adecb09254e8ab3c5eb63458eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Floor.mat using Guid(f81b51adecb09254e8ab3c5eb63458eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65d1cfb7f895520c0981b0f27db4036') in 0.013762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Circle.mat
+  artifactKey: Guid(4bab0f95134663b4c9c3dd73939c0ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Circle.mat using Guid(4bab0f95134663b4c9c3dd73939c0ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3351b7954ac0cbacbc05de6f9c56ec3d') in 0.018853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Coin Silver.mat
+  artifactKey: Guid(985dd20c386137b49b1edeb864f32d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Coin Silver.mat using Guid(985dd20c386137b49b1edeb864f32d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eac57d8e02cc3821aab565e1a8fe2bb2') in 0.014165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Materials/Coin Bronze.mat
+  artifactKey: Guid(861050de6f02cec41815636190c34624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Materials/Coin Bronze.mat using Guid(861050de6f02cec41815636190c34624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65b56fefdcfd257c33bc4bd5c8ba8ec') in 0.011050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Arrow1.mat
+  artifactKey: Guid(00b2a55319476cf40b84578eb2f8c2df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hovl Studio/Magic effects pack/Materials/Arrow1.mat using Guid(00b2a55319476cf40b84578eb2f8c2df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da49096cd45449d85678f05792cc676') in 0.012732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 48.642234 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/Images/FS002_Sunrise_Cubemap_front.png
+  artifactKey: Guid(3af64c6c8b148e742a850fa606a286b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/Images/FS002_Sunrise_Cubemap_front.png using Guid(3af64c6c8b148e742a850fa606a286b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f5b06983f31a2a2a088ad29c5a4a4ac') in 0.019503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/Images/FS002_Sunset_Cubemap_back.png
+  artifactKey: Guid(6dc4d65bb368d574d9270d589e1fbcf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS002/Images/FS002_Sunset_Cubemap_back.png using Guid(6dc4d65bb368d574d9270d589e1fbcf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5886472bfeaf8f5786b0de9daec49ecf') in 0.016111 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/Images/FS013_Day_Cubemap_back.png
+  artifactKey: Guid(a338e8b256622b94d8c8503e7d7091b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/Images/FS013_Day_Cubemap_back.png using Guid(a338e8b256622b94d8c8503e7d7091b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49fdc9996497ec90040817af8c25cacb') in 0.011268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/Images/FS013_Day_Cubemap.cubemap
+  artifactKey: Guid(bb40da361e28bea40b8bd5b31d99cf52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/FS013/Images/FS013_Day_Cubemap.cubemap using Guid(bb40da361e28bea40b8bd5b31d99cf52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c416fed0bd6b994668d894366ae3fdd7') in 0.313576 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004588 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.033 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1034ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (776ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (268ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (325ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (220ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (24.8 KB). Loaded Objects now: 3693.
+Memory consumption went from 139.7 MB to 139.7 MB.
+Total: 3.120100 ms (FindLiveObjects: 0.295000 ms CreateObjectMapping: 0.230800 ms MarkObjects: 2.564000 ms  DeleteObjects: 0.029200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 96.017854 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_01_Sunless.png
+  artifactKey: Guid(d6a64d96999aec647a489f7d73c1a4c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_01_Sunless.png using Guid(d6a64d96999aec647a489f7d73c1a4c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8180089cd32976fda32a5a43390c9d9') in 0.110411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_03.png
+  artifactKey: Guid(df8d1504e61fa6046bbb3b99bf96da1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_03.png using Guid(df8d1504e61fa6046bbb3b99bf96da1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c6f8c407323a8e29ec6ca4f0cf5d061') in 0.044051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_04.png
+  artifactKey: Guid(599e20092e3297247ad7ecc4ba9caf00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_04.png using Guid(599e20092e3297247ad7ecc4ba9caf00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ce6dbbc7770733642265be128670fd2') in 0.040039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02_Moonless.png
+  artifactKey: Guid(6b1d9786203d21246bc448213b0f9aed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02_Moonless.png using Guid(6b1d9786203d21246bc448213b0f9aed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86191782e8ae13523852b72ac6936f46') in 0.040657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_02.png
+  artifactKey: Guid(88c467166db994146961f1ecc5fc214e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_02.png using Guid(88c467166db994146961f1ecc5fc214e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2874882e3a55e0a7033c95104168b55') in 0.039819 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_04_Sunless.png
+  artifactKey: Guid(0e981c5218a661d479182696be5f084f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_04_Sunless.png using Guid(0e981c5218a661d479182696be5f084f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40ad08f169a57d9c927b9192337e7332') in 0.040988 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_01_Moonless.png
+  artifactKey: Guid(ac8a32e5107b67a47939926c52798a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_01_Moonless.png using Guid(ac8a32e5107b67a47939926c52798a2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e49fa4d2fc648ee5061728945d4ab97d') in 0.038207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_06.png
+  artifactKey: Guid(5dd1dab73acb80a4ca4a200b35ea95e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Day_06.png using Guid(5dd1dab73acb80a4ca4a200b35ea95e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e67e2628546ecac1db2d1ea16c6f25f9') in 0.042023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02.png
+  artifactKey: Guid(e60c8653c33d3da4d8f660c15214d3ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Fantasy Skybox FREE/Cubemaps/Classic/FS000_Night_02.png using Guid(e60c8653c33d3da4d8f660c15214d3ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15dad20caa354d3230a33f06b77d1e22') in 0.037629 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004267 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.031 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1032ms)
+		BeginReloadAssembly (211ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (733ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (257ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (313ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (208ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (24.7 KB). Loaded Objects now: 3696.
+Memory consumption went from 139.7 MB to 139.7 MB.
+Total: 2.386300 ms (FindLiveObjects: 0.238500 ms CreateObjectMapping: 0.135300 ms MarkObjects: 1.993400 ms  DeleteObjects: 0.018500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004328 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.952 seconds
+Domain Reload Profiling:
+	ReloadAssembly (953ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (735ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (253ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (314ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (210ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (24.7 KB). Loaded Objects now: 3699.
+Memory consumption went from 139.7 MB to 139.7 MB.
+Total: 3.657200 ms (FindLiveObjects: 0.325100 ms CreateObjectMapping: 0.215400 ms MarkObjects: 3.081700 ms  DeleteObjects: 0.033700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004662 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.939 seconds
+Domain Reload Profiling:
+	ReloadAssembly (939ms)
+		BeginReloadAssembly (134ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (700ms)
+			LoadAssemblies (82ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (244ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (295ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (196ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (24.7 KB). Loaded Objects now: 3702.
+Memory consumption went from 139.7 MB to 139.7 MB.
+Total: 3.261500 ms (FindLiveObjects: 0.363700 ms CreateObjectMapping: 0.207100 ms MarkObjects: 2.666200 ms  DeleteObjects: 0.023500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004999 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.968 seconds
+Domain Reload Profiling:
+	ReloadAssembly (968ms)
+		BeginReloadAssembly (125ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (749ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (282ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (301ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (200ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 15 unused Assets / (24.7 KB). Loaded Objects now: 3705.
+Memory consumption went from 139.7 MB to 139.7 MB.
+Total: 2.491700 ms (FindLiveObjects: 0.308500 ms CreateObjectMapping: 0.225900 ms MarkObjects: 1.930900 ms  DeleteObjects: 0.025200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1861.839247 seconds.
+  path: Assets/Scenes/SampleScene/NavMesh.asset
+  artifactKey: Guid(c49730da2ae50554382361ed8b5d2f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene/NavMesh.asset using Guid(c49730da2ae50554382361ed8b5d2f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117ef9248089f5ac8da3c91d3e245020') in 0.022067 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.651668 seconds.
+  path: Assets/Scenes/GameScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ed02ccb87b933b6a2c589ec41c778d9') in 0.006039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 86.943449 seconds.
+  path: Assets/Sound/Effect/BossRoket.mp3
+  artifactKey: Guid(234b677154dbf5b43901b41460460502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/BossRoket.mp3 using Guid(234b677154dbf5b43901b41460460502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a33b59ed89044fcf6509e42fba2e80fc') in 0.163790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sound/Effect/구르기.wav
+  artifactKey: Guid(470f8caaebf38dd4ba192d5baa1e2fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/구르기.wav using Guid(470f8caaebf38dd4ba192d5baa1e2fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc36ae88f726679d4e4f5586337b1ba9') in 0.033510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Sound/Effect/swing.wav
+  artifactKey: Guid(42507552a8079ff498f213c876a2657b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/swing.wav using Guid(42507552a8079ff498f213c876a2657b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f89cdd7eadd3de801b6639431a0b6604') in 0.013618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sound/Effect/reload.mp3
+  artifactKey: Guid(1b75a9a31e9b33344aa323ef98600c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/reload.mp3 using Guid(1b75a9a31e9b33344aa323ef98600c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95e2d50b551388161639f4f19cf53ddb') in 0.012057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sound/Effect/Potion.wav
+  artifactKey: Guid(0fa0b03e2922efd4992696760e544c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/Potion.wav using Guid(0fa0b03e2922efd4992696760e544c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4ba02c434be73711cf8262f23592841') in 0.012329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sound/Effect/Grenade.wav
+  artifactKey: Guid(f01c623f724825e44a923d1ae50256f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/Grenade.wav using Guid(f01c623f724825e44a923d1ae50256f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dc8076080e405e671bee0dbd499dfd3') in 0.012896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sound/Effect/magnum.mp3
+  artifactKey: Guid(90860a952fd6d0a46850e536c1eaf573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/magnum.mp3 using Guid(90860a952fd6d0a46850e536c1eaf573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f79e169eafd456186a24d2d26a9ee4b8') in 0.011392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sound/Effect/Handgun.mp3
+  artifactKey: Guid(c79f2d3590d80d2439fa7be96b0208ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sound/Effect/Handgun.mp3 using Guid(c79f2d3590d80d2439fa7be96b0208ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f54d64003b0ab783374d5f1e2f66aba') in 0.012269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 134.124553 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac EnemyB.overrideController
+  artifactKey: Guid(8c09e8cbeb811b443905cb02b2ec8238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac EnemyB.overrideController using Guid(8c09e8cbeb811b443905cb02b2ec8238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b49ad632378c5a5829613a8bcff4295') in 0.014648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac EnemyC.overrideController
+  artifactKey: Guid(91e804a69142e3e4782132955f2b6846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac EnemyC.overrideController using Guid(91e804a69142e3e4782132955f2b6846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02db7008a9e9490f0bad8b7710d39442') in 0.008572 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac EnemyD.overrideController
+  artifactKey: Guid(20b0472eebcfd7143845b13e3bececf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac EnemyD.overrideController using Guid(20b0472eebcfd7143845b13e3bececf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed9f3036254f78f9a5f6fee6b7c37c42') in 0.009449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac Ludo.overrideController
+  artifactKey: Guid(e5ac3212b225d4f43a698aa45185735d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/Ac Ludo.overrideController using Guid(e5ac3212b225d4f43a698aa45185735d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae18ed5d49289d70f39174e2bfe667a') in 0.008023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/LightingData.asset
+  artifactKey: Guid(05df42316d133af4f9bd01f1ff94d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Demo/Demo/LightingData.asset using Guid(05df42316d133af4f9bd01f1ff94d84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea13850f76e115d30b32696830328929') in 0.008102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.170924 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Particles/Grenade Explosion.prefab
+  artifactKey: Guid(46ffadbb188f9ab498b623c4290ef656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Particles/Grenade Explosion.prefab using Guid(46ffadbb188f9ab498b623c4290ef656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9997ddcfb20431288449b93aabca1f31') in 0.030400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.796753 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Bullet Case.prefab
+  artifactKey: Guid(dbf1e72266b94cc4c913b3b6216363d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Bullet Case.prefab using Guid(dbf1e72266b94cc4c913b3b6216363d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb67286bb5b2c76b82df623cdf9715ef') in 0.022383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Enemy A.prefab
+  artifactKey: Guid(464cc7c4f7ea10b47a36d7848aa9ca9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Enemy A.prefab using Guid(464cc7c4f7ea10b47a36d7848aa9ca9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73b234c6ffd298b79a69aadd79977c8d') in 0.012997 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Luna.prefab
+  artifactKey: Guid(6f5cb1003ab50aa4b9bc26bc9ca47159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Luna.prefab using Guid(6f5cb1003ab50aa4b9bc26bc9ca47159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff093c17d9750fd9c110d9ae20308993') in 0.016087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Weapon Grenade.prefab
+  artifactKey: Guid(10653eccf6b69fd47938a227b4bf3863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Weapon Grenade.prefab using Guid(10653eccf6b69fd47938a227b4bf3863) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a6e2ab0dcbb8a059639c6410ed9629') in 0.014634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Ludo.prefab
+  artifactKey: Guid(cd8e3c00b0f28f0419943b46a579c6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Ludo.prefab using Guid(cd8e3c00b0f28f0419943b46a579c6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03b4cd05602ecfd4cda5d44eeb7aca1a') in 0.016309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Missile Boss.prefab
+  artifactKey: Guid(50e7f7cd6a4e20544803ae9978a43ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Missile Boss.prefab using Guid(50e7f7cd6a4e20544803ae9978a43ec5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07be7c33b0d1a2aa52bde5c1bfa95794') in 0.012079 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Player.prefab
+  artifactKey: Guid(8f5e135a19626f544908fc8f156144b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Player.prefab using Guid(8f5e135a19626f544908fc8f156144b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f130b618dbaf5f8dc720144a91cf24') in 0.016529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Enemy D.prefab
+  artifactKey: Guid(83dab506297948d4d8d34c4fe12431ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Enemy D.prefab using Guid(83dab506297948d4d8d34c4fe12431ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80389c0445aa1acc74c9b739316352bd') in 0.012960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Weapon SubMachineGun.prefab
+  artifactKey: Guid(203326381d9b54d489646c6c2f61f53a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Weapon SubMachineGun.prefab using Guid(203326381d9b54d489646c6c2f61f53a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35239b0d5b16a6aa8444ac2f6410baa3') in 0.014307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Enemy C.prefab
+  artifactKey: Guid(06d503bba93001142b96e3510906db62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Prefabs/Enemy C.prefab using Guid(06d503bba93001142b96e3510906db62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f6878e5a09519746cafb0b5ef9477d0') in 0.014463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.142643 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/_Tile.png
+  artifactKey: Guid(6ac9503792aec6948bc963e33d6b5525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/_Tile.png using Guid(6ac9503792aec6948bc963e33d6b5525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f32c967c7d3c71761341e79ba159511') in 0.019980 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Weapon HandGun.png
+  artifactKey: Guid(cf39d8981b4e7954190666615eb23444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Weapon HandGun.png using Guid(cf39d8981b4e7954190666615eb23444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e68666073d0b9918e82089618e448dd') in 0.012013 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Item Heart.png
+  artifactKey: Guid(16275289ba2d55a43a644d78223fb657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Item Heart.png using Guid(16275289ba2d55a43a644d78223fb657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '125ea78e6b1bcb04ebf55afe182bf9a2') in 0.010873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Luna.png
+  artifactKey: Guid(b7b98188b70816845b50ec0b7bcaf1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Luna.png using Guid(b7b98188b70816845b50ec0b7bcaf1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd59abe4229c7e57046b9c27741450be') in 0.011323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Coin Bronze.png
+  artifactKey: Guid(3b1769091f98c304bb39610f0f6642c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Coin Bronze.png using Guid(3b1769091f98c304bb39610f0f6642c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47280c0fedf625e7986e02cc9176d42e') in 0.010238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Coin Silver.png
+  artifactKey: Guid(4d326d723433e364a84a0db839113fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Coin Silver.png using Guid(4d326d723433e364a84a0db839113fe3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e2ac83b162a10dac5b6f0a420ab772f') in 0.011192 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Weapon ShotGUn.png
+  artifactKey: Guid(33efd68ba8c5b3940852c15b65b20611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Weapon ShotGUn.png using Guid(33efd68ba8c5b3940852c15b65b20611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07ca631be035f81b0a6fe3f3fca25ffc') in 0.012426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Wapon Hammer.png
+  artifactKey: Guid(051f2ad9bc946e04fa39d743ab1b38e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Wapon Hammer.png using Guid(051f2ad9bc946e04fa39d743ab1b38e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5971b94a6748c4e4f4319fdf2ff22d3e') in 0.011225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/QuarterView 3D Action BE5/Textures/Player.png
+  artifactKey: Guid(944377592ab6e2a41ace5352861ff84c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/QuarterView 3D Action BE5/Textures/Player.png using Guid(944377592ab6e2a41ace5352861ff84c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a23e0b34977f51fa2d148c4cf15a0f') in 0.010854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.724412 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Prefabs/High Quality/Foliage/Grass/forestpack_foliage_grassPatch_small_2.prefab
+  artifactKey: Guid(b3425777f1700b249a15eea0ea8f0bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Prefabs/High Quality/Foliage/Grass/forestpack_foliage_grassPatch_small_2.prefab using Guid(b3425777f1700b249a15eea0ea8f0bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd16101fc8c62d0c990179b6d983aebe9') in 0.021341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.244749 seconds.
+  path: Assets/Sprites/Supercyan Free Forest Sample/Prefabs/High Quality/Foliage/Mushroom/forestpack_foliage_mushroom_red_small.prefab
+  artifactKey: Guid(da33a1bfeaaabaa4597896ca7003b785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Supercyan Free Forest Sample/Prefabs/High Quality/Foliage/Mushroom/forestpack_foliage_mushroom_red_small.prefab using Guid(da33a1bfeaaabaa4597896ca7003b785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0c62fbf1cd6d6d59443ccad2b16ab5') in 0.020273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.828643 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/arrowLeft.png
+  artifactKey: Guid(7963253b4e7200f4296b1b7739538c9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/arrowLeft.png using Guid(7963253b4e7200f4296b1b7739538c9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89a675246cd80254f21dd1efacaa5dff') in 0.023116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/exclamation.png
+  artifactKey: Guid(d971238f9efd0c94abed0da050808f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/exclamation.png using Guid(d971238f9efd0c94abed0da050808f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd434430dfd9a51ae8b29a3d43d2d45') in 0.037614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonY.png
+  artifactKey: Guid(fa68a38a35f275947894973d06887297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonY.png using Guid(fa68a38a35f275947894973d06887297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858a1ebbba3cd5cea50ba7b605101ba3') in 0.026077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/joystickLeft.png
+  artifactKey: Guid(f423c153ed5a10c499d3e69b8a0464a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/joystickLeft.png using Guid(f423c153ed5a10c499d3e69b8a0464a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b92e1466973327a7a274cf1037db208e') in 0.024720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/door.png
+  artifactKey: Guid(a00f5d68c5d76c34ca6157e369391ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/door.png using Guid(a00f5d68c5d76c34ca6157e369391ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f00f952468a15e372f336fd4bf3313b9') in 0.022592 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/cross.png
+  artifactKey: Guid(5588e23ea11064b41be729c890dbd288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/cross.png using Guid(5588e23ea11064b41be729c890dbd288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6603b145fa9c85fd22f9019b338734a5') in 0.023114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonR1.png
+  artifactKey: Guid(707a41d619802b840ad56c3653092b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonR1.png using Guid(707a41d619802b840ad56c3653092b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb5dc97e6de4f809a386b4b9483811c5') in 0.023774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/next.png
+  artifactKey: Guid(8a86dec86a2da644986f56c848643013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/next.png using Guid(8a86dec86a2da644986f56c848643013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d9ddd90c1c1f6a37171daa09f2c45bc') in 0.012903 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/musicOff.png
+  artifactKey: Guid(3927064d7c85d2d419757429af76feae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/musicOff.png using Guid(3927064d7c85d2d419757429af76feae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a12b4072a3979c3d42523c5bc7d7f17') in 0.013798 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/downRight.png
+  artifactKey: Guid(4e043759ad1a6fe4786e6cd4828df929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/downRight.png using Guid(4e043759ad1a6fe4786e6cd4828df929) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6d3cf66f24d5283d880a0737da32ae1') in 0.012823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonX.png
+  artifactKey: Guid(d3cde1a564aff9148ba1f183f41ecf41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonX.png using Guid(d3cde1a564aff9148ba1f183f41ecf41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcbd051d5992b1ef57985ba600719d2b') in 0.014599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/return.png
+  artifactKey: Guid(fdb97f0fcc6e80b43b2b6de6e89f6525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/return.png using Guid(fdb97f0fcc6e80b43b2b6de6e89f6525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7670d4cc9ea062f22d2f8004ddf64005') in 0.012733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/audioOn.png
+  artifactKey: Guid(1f0c2f18508145945afd261f9a34f117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/audioOn.png using Guid(1f0c2f18508145945afd261f9a34f117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21671390c67e647af4156b92b9998026') in 0.014693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/phone.png
+  artifactKey: Guid(e079cf45b999f3d459b5ace752417a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/phone.png using Guid(e079cf45b999f3d459b5ace752417a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c7e4ec878ec63d51285e6bbd2eb7a2') in 0.013178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/joystick.png
+  artifactKey: Guid(2aa9a8e3a9c2d5c4b886febf3e46ce80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/joystick.png using Guid(2aa9a8e3a9c2d5c4b886febf3e46ce80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0be1c8639e96bcf3a9979e937bdcaba1') in 0.014429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/rewind.png
+  artifactKey: Guid(f2874882d88fe554ea2ef5020a14fb10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/rewind.png using Guid(f2874882d88fe554ea2ef5020a14fb10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1600a69852892cde1704801ead68b3f6') in 0.014392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/scrollHorizontal.png
+  artifactKey: Guid(9770ff50d5218654cacc0e3638a00952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/scrollHorizontal.png using Guid(9770ff50d5218654cacc0e3638a00952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2acfe4eed70e4c05d1546a605612e8e4') in 0.012552 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/leaderboardsSimple.png
+  artifactKey: Guid(4b9bd4a9b2d454d48bafb6ceecd536a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/leaderboardsSimple.png using Guid(4b9bd4a9b2d454d48bafb6ceecd536a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eab1e37974e0e17a4c237de45002533') in 0.014405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/home.png
+  artifactKey: Guid(cfde582ef4f4c0e4db6a579a5168a6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/home.png using Guid(cfde582ef4f4c0e4db6a579a5168a6f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c543e60d3c37dad3456a13a89b31fa0') in 0.014723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonL.png
+  artifactKey: Guid(5cc1b29cb5b11f2469e995c831502aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/buttonL.png using Guid(5cc1b29cb5b11f2469e995c831502aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8199812b09291596b06f258abfa151cc') in 0.012758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/musicOn.png
+  artifactKey: Guid(208206daab52651488e40bd333e1f4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/musicOn.png using Guid(208206daab52651488e40bd333e1f4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919648e44dcae19e808186a6515a1c29') in 0.014413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/downLeft.png
+  artifactKey: Guid(5af50dcdbacafee4ba5096940487ec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/downLeft.png using Guid(5af50dcdbacafee4ba5096940487ec6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bd200ab71b4998d4591e30b931e3b3a') in 0.013172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/barsHorizontal.png
+  artifactKey: Guid(0a86f5a4b27e1e74fbe0d55efa6c7ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/barsHorizontal.png using Guid(0a86f5a4b27e1e74fbe0d55efa6c7ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56954e8a0e297766c54be1e49178549b') in 0.015032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/checkmark.png
+  artifactKey: Guid(1df54f0a440de2941aedf95dbde588ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/checkmark.png using Guid(1df54f0a440de2941aedf95dbde588ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c87c923ef6f1204556cf9a2ef2b66c1') in 0.015621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/button1.png
+  artifactKey: Guid(366d288715ecdac43a5605ff065a69ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/button1.png using Guid(366d288715ecdac43a5605ff065a69ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa3b5f0f5c2e6fd73bae53d7f45926e') in 0.013610 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/buttonR.png
+  artifactKey: Guid(48615030718ec4744beac05c961a1304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/buttonR.png using Guid(48615030718ec4744beac05c961a1304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2074a3e9788856aafbcf9509422fabc') in 0.014545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/multiplayer.png
+  artifactKey: Guid(1a778364ccd39854987b1932e6d20767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/multiplayer.png using Guid(1a778364ccd39854987b1932e6d20767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dcf9020bacd4a9fa5dd76840200452e') in 0.013875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/cross.png
+  artifactKey: Guid(8130733e6d7d8a04592bfbf4c062320c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/cross.png using Guid(8130733e6d7d8a04592bfbf4c062320c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fcb7b4e82b25a47ceb57badfd065907') in 0.016515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/gear.png
+  artifactKey: Guid(01e215bb0b89e394c80756b27b20c762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/gear.png using Guid(01e215bb0b89e394c80756b27b20c762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6c68d06076b214a2ea630ea2ad1ee57') in 0.014701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/audioOn.png
+  artifactKey: Guid(39ac1508ae4fe034684384a6f05bd6f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/audioOn.png using Guid(39ac1508ae4fe034684384a6f05bd6f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb858803d66a7424d0cc0603f1686b2') in 0.012625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/contrast.png
+  artifactKey: Guid(99a0a2b43d79b08418982d9792f54280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/contrast.png using Guid(99a0a2b43d79b08418982d9792f54280) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5a8a7df5a8d7a92a07e8f2b175f3619') in 0.016875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/plus.png
+  artifactKey: Guid(60f83d71e95780f4eb89489aa8f04739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/plus.png using Guid(60f83d71e95780f4eb89489aa8f04739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eb77b23f200c16bb0509ae7ff25c871') in 0.013150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/arrowRight.png
+  artifactKey: Guid(f272d94a329a1fd48aa738ad4f2bd2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/arrowRight.png using Guid(f272d94a329a1fd48aa738ad4f2bd2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bda22f1e54136d236b23a08b1fe5f1c7') in 0.016089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/medal2.png
+  artifactKey: Guid(c79a3790ba34ae54ba4ef143a3844308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/medal2.png using Guid(c79a3790ba34ae54ba4ef143a3844308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42b5fbf782b3e06357867bdb7bbc39e2') in 0.013167 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/buttonY.png
+  artifactKey: Guid(68033015481b1294799d74764598f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/buttonY.png using Guid(68033015481b1294799d74764598f061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2cd62fe9f2217a87a719d877722fe3') in 0.014235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/musicOn.png
+  artifactKey: Guid(48f919522bcefad428d17e35b1643bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/musicOn.png using Guid(48f919522bcefad428d17e35b1643bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbbf068eaec241449406e963c41cbcea') in 0.012685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/arrowDown.png
+  artifactKey: Guid(36a2c27971bd2c743a07c0304ded08bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/arrowDown.png using Guid(36a2c27971bd2c743a07c0304ded08bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cdc8abe6f3295a306cfcd63c2e80f72') in 0.013260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/export.png
+  artifactKey: Guid(e3fa6c3a8ef941a4797e67988ba24d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/export.png using Guid(e3fa6c3a8ef941a4797e67988ba24d8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d25f9da5bbef1ebc6bdf89d823eac8') in 0.015376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/barsHorizontal.png
+  artifactKey: Guid(69147dce2fc76b540ba964d8a8e1d955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/barsHorizontal.png using Guid(69147dce2fc76b540ba964d8a8e1d955) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '895726d65945ce35e207fa6cb8086ce7') in 0.014062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/musicOff.png
+  artifactKey: Guid(8aecc70061a6beb4f89b7476b3aa055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/musicOff.png using Guid(8aecc70061a6beb4f89b7476b3aa055d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b884248e5006eee19cdabc9da7fab8d') in 0.012981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/buttonB.png
+  artifactKey: Guid(17d44d2daf15937438fe861b9985a238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/buttonB.png using Guid(17d44d2daf15937438fe861b9985a238) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7276a30fd33b4c880c319cdaa27280fd') in 0.014784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/button3.png
+  artifactKey: Guid(5610ac4b7e2c9624eafec34da09f0c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/button3.png using Guid(5610ac4b7e2c9624eafec34da09f0c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbe470d452767b3a73efe188629f90bf') in 0.014634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/home.png
+  artifactKey: Guid(4b6e752d192dbcc42a0d31cadc9ab0b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/home.png using Guid(4b6e752d192dbcc42a0d31cadc9ab0b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e9ca0802b0092d4c27e954fd1ade8e') in 0.014726 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/right.png
+  artifactKey: Guid(84eb70c8c6c69d948afecbef42dce4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/right.png using Guid(84eb70c8c6c69d948afecbef42dce4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '295c89a8849c36ec4bd0dce50aa38ba9') in 0.017562 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/locked.png
+  artifactKey: Guid(43ea82b6b39ee0f42a3b4d7fb293c654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/locked.png using Guid(43ea82b6b39ee0f42a3b4d7fb293c654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f57b2563d96779e63f8da8d05bf94999') in 0.015218 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/minus.png
+  artifactKey: Guid(8b15e51c21c6ff942bf4295d9210ab52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/minus.png using Guid(8b15e51c21c6ff942bf4295d9210ab52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fbe50ef1230a23f0b0dbc909e1ec385') in 0.014399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/barsVertical.png
+  artifactKey: Guid(f4e452501f6177b4d9ba22d1c08159f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/barsVertical.png using Guid(f4e452501f6177b4d9ba22d1c08159f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b95050472e3392392c347a67c3a6ac6') in 0.015766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/information.png
+  artifactKey: Guid(bb2288e580920ec408e85eae73ce0e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/information.png using Guid(bb2288e580920ec408e85eae73ce0e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e635486180b2cf861d3f4bc5a3d862a5') in 0.015179 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/barsVertical.png
+  artifactKey: Guid(68b86f078cc1ca541bea037de87bb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/barsVertical.png using Guid(68b86f078cc1ca541bea037de87bb87e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e536a189d0601ffda8706bc2560d80b') in 0.013461 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/audioOff.png
+  artifactKey: Guid(d1fbbfb86644f404d88522a5bf6a0a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/audioOff.png using Guid(d1fbbfb86644f404d88522a5bf6a0a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9661dbecd5a18ef7c71fd7f2b4287ba5') in 0.013894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/power.png
+  artifactKey: Guid(6cc2fd154465a604baabfbefab78c225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/power.png using Guid(6cc2fd154465a604baabfbefab78c225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb4bcb24521f94cb84a412c032b71e6') in 0.015476 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/larger.png
+  artifactKey: Guid(de26f9bbd764c8843bf0c62f930a8c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/larger.png using Guid(de26f9bbd764c8843bf0c62f930a8c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608c8aa54eb45e9b991c961244ebe812') in 0.013075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/return.png
+  artifactKey: Guid(69d590b993ad4a24eae6526b7eccd743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/return.png using Guid(69d590b993ad4a24eae6526b7eccd743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40697617c32fd5a546d1083050a2aedb') in 0.017918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/1x/leaderboardsComplex.png
+  artifactKey: Guid(dd152199794d0ed47a37a65954beb320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/1x/leaderboardsComplex.png using Guid(dd152199794d0ed47a37a65954beb320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '767c382202bd90c567c17e6a539a9fe3') in 0.013617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.340742 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/arrowLeft.png
+  artifactKey: Guid(33aea742810354e4d813ac3c185d3e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/arrowLeft.png using Guid(33aea742810354e4d813ac3c185d3e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82a190dce25e707f268b739d058b6b79') in 0.046025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/buttonA.png
+  artifactKey: Guid(857ec0d62f437fd41863dd9d35cebc09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/buttonA.png using Guid(857ec0d62f437fd41863dd9d35cebc09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '655073fc656456d9f756238d7767b991') in 0.010981 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/audioOn.png
+  artifactKey: Guid(49a0734a260e50e4e9953f7efb4aa9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/audioOn.png using Guid(49a0734a260e50e4e9953f7efb4aa9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '443ec5391fbb773cd283f55f8171a48d') in 0.018447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/right.png
+  artifactKey: Guid(da192315b2612134d827ed12385607df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/right.png using Guid(da192315b2612134d827ed12385607df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90a71a8b67cd712e679e41cdb8f6c7a') in 0.006556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/export.png
+  artifactKey: Guid(fbbc42ce3e2e4aa43879ea237a57b938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/export.png using Guid(fbbc42ce3e2e4aa43879ea237a57b938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ff5e03b67a5ab51a4d71b6c34e73093') in 0.010171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/gear.png
+  artifactKey: Guid(c00fd10d699da9f489b1ea1909db6ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/gear.png using Guid(c00fd10d699da9f489b1ea1909db6ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38b332c7a34629cb6a1e24da474a23a3') in 0.015074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad.png
+  artifactKey: Guid(471056a2c15a2b94d82727e9919c2a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad.png using Guid(471056a2c15a2b94d82727e9919c2a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e1e9d7a2c60e4ffe160c43a606d938') in 0.007577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/buttonR2.png
+  artifactKey: Guid(d7b7ca78b056c764097772e80299c169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/buttonR2.png using Guid(d7b7ca78b056c764097772e80299c169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b06705c659ac444dd05a954ffaa3fe9a') in 0.012088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/minus.png
+  artifactKey: Guid(ce54638a924482440a304079f7206796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/minus.png using Guid(ce54638a924482440a304079f7206796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70c917248a73d967f6eed302f4fa05de') in 0.011965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/arrowUp.png
+  artifactKey: Guid(b36eb20bd0deea64da49eeb406923fd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/arrowUp.png using Guid(b36eb20bd0deea64da49eeb406923fd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '101d63631da6614850c3cc31c559bf25') in 0.022191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/checkmark.png
+  artifactKey: Guid(ff69f0250ad0d31418fe1817c8bef82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/checkmark.png using Guid(ff69f0250ad0d31418fe1817c8bef82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47b4d16597bfcb543168ae44e3e20ede') in 0.010965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/exit.png
+  artifactKey: Guid(e1737df1fcb6e6c4c9c7dbb4d02e9f7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/exit.png using Guid(e1737df1fcb6e6c4c9c7dbb4d02e9f7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae9b87a96b686150351d416832a76686') in 0.010067 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/buttonL1.png
+  artifactKey: Guid(147a6afe14a505d46a3a4f3a300ab74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/buttonL1.png using Guid(147a6afe14a505d46a3a4f3a300ab74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca400045e58e44fc2528e0e05adefde9') in 0.013449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/fastForward.png
+  artifactKey: Guid(0cec59c02c20bb44c8aec24cdf38453f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/fastForward.png using Guid(0cec59c02c20bb44c8aec24cdf38453f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6113a8160f483bbd3a8d4d6207ac370a') in 0.008766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/joystickUp.png
+  artifactKey: Guid(ed2f96d41b5243745b309fe7f9866ac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/joystickUp.png using Guid(ed2f96d41b5243745b309fe7f9866ac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ca381919e5ed517133ea187067553e') in 0.012728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/scrollVertical.png
+  artifactKey: Guid(783b47523ee9a8b4c8fbdf3dcb272dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/scrollVertical.png using Guid(783b47523ee9a8b4c8fbdf3dcb272dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caf3711019ea12251954f97c9de95207') in 0.018810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/cross.png
+  artifactKey: Guid(9adb772b6faeefb4ca39fcf2df9c0b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/cross.png using Guid(9adb772b6faeefb4ca39fcf2df9c0b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67a5651480c7bc9c43149442a981b2a8') in 0.007155 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/medal1.png
+  artifactKey: Guid(b62a092445e979545bc9b8faaaaeddd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/medal1.png using Guid(b62a092445e979545bc9b8faaaaeddd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c660663ec327b63ea5499e379993a8e9') in 0.007761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/menuList.png
+  artifactKey: Guid(beced1e17c658504e99de23be9aec174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/menuList.png using Guid(beced1e17c658504e99de23be9aec174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '062fbbda1aa293d0105341d1519fb51b') in 0.006960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/mouse.png
+  artifactKey: Guid(36d796c65da1b4f4fa78971ae3d1bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/mouse.png using Guid(36d796c65da1b4f4fa78971ae3d1bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2112b6d16faf3e32e7d0296a13f0804b') in 0.007071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad4.png
+  artifactKey: Guid(76c041e5e8bc52d42b5b93923a119f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad4.png using Guid(76c041e5e8bc52d42b5b93923a119f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14a94394a4df71dfd3fe1e60ed5801a9') in 0.008709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/larger.png
+  artifactKey: Guid(1787e3addd3e7174e9f393bbd029b3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/larger.png using Guid(1787e3addd3e7174e9f393bbd029b3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8fbf9f8cd38590eb6ba2834feae473e') in 0.006782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/barsHorizontal.png
+  artifactKey: Guid(407dc3b4dea855c478f9eda2b25cf957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/barsHorizontal.png using Guid(407dc3b4dea855c478f9eda2b25cf957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79778f202d0d55980f92fe65e5d2e92b') in 0.007942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/exclamation.png
+  artifactKey: Guid(1e9e4375b5f48674e8382e295123a98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/exclamation.png using Guid(1e9e4375b5f48674e8382e295123a98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20bce1feccde4678c10c1d8f333aca0e') in 0.006745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/movie.png
+  artifactKey: Guid(dcdc09418dd8b824e84bc975f7bdb57e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/movie.png using Guid(dcdc09418dd8b824e84bc975f7bdb57e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d74080dfafbe6741a8af4a70b0633f0') in 0.006825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/save.png
+  artifactKey: Guid(b4433082e87f36c4289bc2ebb0355763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/save.png using Guid(b4433082e87f36c4289bc2ebb0355763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '724f0cab23c1417935e707393358a154') in 0.014257 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/audioOff.png
+  artifactKey: Guid(34093f7a3dd688541878d00000f5b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/audioOff.png using Guid(34093f7a3dd688541878d00000f5b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f78035dcafaa67b3865c69a61748233') in 0.006899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.240039 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/arrowLeft.png
+  artifactKey: Guid(32e20dcaed80b174abd95e29da49ec54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/arrowLeft.png using Guid(32e20dcaed80b174abd95e29da49ec54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8404a76ab3a2388c4a02ade3300430a6') in 0.012077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/audioOn.png
+  artifactKey: Guid(d2d40cf319ddfb54a885fe631600d237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/audioOn.png using Guid(d2d40cf319ddfb54a885fe631600d237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba370d16e7e3621f6381280dac55d03a') in 0.013582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/musicOn.png
+  artifactKey: Guid(61d2d929a26fdf24eba7db9d12933295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/musicOn.png using Guid(61d2d929a26fdf24eba7db9d12933295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9317d788dfb0aee302297b2ee240dec1') in 0.012087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/save.png
+  artifactKey: Guid(2014e7b5202c33446b99c9a505c1a200) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/save.png using Guid(2014e7b5202c33446b99c9a505c1a200) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b71270e217ca8595969d8b1c33730d1') in 0.012488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/contrast.png
+  artifactKey: Guid(3e912bb781f95ba4691e2cb5f200d59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/contrast.png using Guid(3e912bb781f95ba4691e2cb5f200d59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18889cf017753087f7a346de804a3fe5') in 0.012810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/gamepad.png
+  artifactKey: Guid(a0b46762215ccd74584f9bee2ea31553) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/gamepad.png using Guid(a0b46762215ccd74584f9bee2ea31553) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd310d166c2c316a5f0b21d1f0251001d') in 0.011858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/cross.png
+  artifactKey: Guid(231a5169c6fb75348bb616fc7b298e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/cross.png using Guid(231a5169c6fb75348bb616fc7b298e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2088182a2ab2409c8b7e447f79435708') in 0.012828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/barsHorizontal.png
+  artifactKey: Guid(d8381df119f07124dbbe9ba39a85831b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/barsHorizontal.png using Guid(d8381df119f07124dbbe9ba39a85831b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f62d1e6c9c5e6f3ac0e3a6c904345cd') in 0.010569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/gamepad3.png
+  artifactKey: Guid(00ccf5b00d7585a479e6b6e5ba3fb9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/gamepad3.png using Guid(00ccf5b00d7585a479e6b6e5ba3fb9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8005d7b3394b3962b90f3b0817e517b9') in 0.015574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/leaderboardsSimple.png
+  artifactKey: Guid(94009b700a17dc24c99c489ebe2d9dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/leaderboardsSimple.png using Guid(94009b700a17dc24c99c489ebe2d9dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7a1452a27d510202c64560dccc77ee1') in 0.011825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/massiveMultiplayer.png
+  artifactKey: Guid(51f386e1d4c390d44961b3c8ed9ea24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/massiveMultiplayer.png using Guid(51f386e1d4c390d44961b3c8ed9ea24e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a573ada438fec0d4aa80bbd06597d633') in 0.014956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/return.png
+  artifactKey: Guid(36c8b1e390eaacd49b0ee8c36b751968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/return.png using Guid(36c8b1e390eaacd49b0ee8c36b751968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c6040f62275e0f4cee917846df17dac') in 0.013367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/joystick.png
+  artifactKey: Guid(a3bfc085f3fb1e446a96cccc29757c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/joystick.png using Guid(a3bfc085f3fb1e446a96cccc29757c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd477100a35ad8b4f6f9bc2af3ba96202') in 0.012953 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/buttonX.png
+  artifactKey: Guid(1f27800791af5ee41bcedded00927b89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/buttonX.png using Guid(1f27800791af5ee41bcedded00927b89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60e04300d6ecf82e4d5bf90e51211b2f') in 0.013286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/larger.png
+  artifactKey: Guid(e94ec298dbc339442a796a9a473d29ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/larger.png using Guid(e94ec298dbc339442a796a9a473d29ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4881c7f84a19b223d37dbf797c3a3b17') in 0.013986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/gear.png
+  artifactKey: Guid(f4ca1abceceb8a540925e44e4a28d85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/gear.png using Guid(f4ca1abceceb8a540925e44e4a28d85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd42fcf305b1199b39785e414ebec751') in 0.013299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/previous.png
+  artifactKey: Guid(e088ff5723582234ca443a8aef6bee0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/previous.png using Guid(e088ff5723582234ca443a8aef6bee0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b36c064d8ae5329ecf010a078a93733') in 0.012535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/plus.png
+  artifactKey: Guid(ff3c56c6234cb6b4a994ecda01465fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/plus.png using Guid(ff3c56c6234cb6b4a994ecda01465fa8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '790588d6ecd44d71227c5d3a41d54c7f') in 0.016860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/joystickRight.png
+  artifactKey: Guid(8084610d17a9529418de61888c853a43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/joystickRight.png using Guid(8084610d17a9529418de61888c853a43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '340bb8e538fbc56eda931857e849608e') in 0.012050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/import.png
+  artifactKey: Guid(5f56bec3aa946ed46b2a08dc078b1396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/import.png using Guid(5f56bec3aa946ed46b2a08dc078b1396) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c106107d7f8de84ad3548830409e9c17') in 0.013204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/joystickUp.png
+  artifactKey: Guid(d8182f07a9980bf4c96e7011e6da576a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/joystickUp.png using Guid(d8182f07a9980bf4c96e7011e6da576a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '863590565ca1ea8a29ef228b0ca7bc28') in 0.014043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/question.png
+  artifactKey: Guid(c04bba310db61884a8857dba8a10101a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/question.png using Guid(c04bba310db61884a8857dba8a10101a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b2984e7b1a309222c3f6d71fd06cf8a') in 0.013670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/checkmark.png
+  artifactKey: Guid(fb3bbdf38f7212f439c31966299898a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/checkmark.png using Guid(fb3bbdf38f7212f439c31966299898a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9c5cd00c63deb9aade32adb7b42cb5a') in 0.015952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/button2.png
+  artifactKey: Guid(82900a04a3b566848890b4e04031547c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/button2.png using Guid(82900a04a3b566848890b4e04031547c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd26ac8c2b0c861a3f2f5ae772140219') in 0.015891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/menuList.png
+  artifactKey: Guid(e4124b28ab786cb40b54f3c45b7bc2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/menuList.png using Guid(e4124b28ab786cb40b54f3c45b7bc2a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e04a615bd1525bb255bba752f3fbd4f') in 0.016081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/button1.png
+  artifactKey: Guid(78efaa1e7018569449758fa006903348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/button1.png using Guid(78efaa1e7018569449758fa006903348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '504adf4c3df22e932b9c3ee4bafc9edb') in 0.017925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/1x/cart.png
+  artifactKey: Guid(e9ffa5e8ef71da942848087fdf2e9d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/1x/cart.png using Guid(e9ffa5e8ef71da942848087fdf2e9d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58b6abfa226347db59ffd76277a78a44') in 0.013430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.549273 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/shoppingCart.png
+  artifactKey: Guid(6de9484b2b1f93b43bcc503544989360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/shoppingCart.png using Guid(6de9484b2b1f93b43bcc503544989360) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8cd43b6e9803974d1f81dcf780826fe') in 0.029800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/trashcan.png
+  artifactKey: Guid(b4c322cfbce49c340b485469d9052620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/trashcan.png using Guid(b4c322cfbce49c340b485469d9052620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07afe959a7ba5fb3b0e527a9e1974ce4') in 0.029283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/smaller.png
+  artifactKey: Guid(13138dc52f8280d4cb75662bdb57b3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/smaller.png using Guid(13138dc52f8280d4cb75662bdb57b3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b33b2adea00635e839d26fbc7e5d5c5d') in 0.108954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/Black/2x/signal2.png
+  artifactKey: Guid(273c41e5520317b44a7397e4e50f0857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/Black/2x/signal2.png using Guid(273c41e5520317b44a7397e4e50f0857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af12ff5bfe98947042cd5eff549b7f8') in 0.064786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.978375 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/siganl1.png
+  artifactKey: Guid(a6a838741b28b064f80a5b0b231731df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/siganl1.png using Guid(a6a838741b28b064f80a5b0b231731df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91cbdbf56be4644b3fcd7f0a92163ea3') in 0.008682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/up.png
+  artifactKey: Guid(111592c2fae76a84db000371de31ead1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/up.png using Guid(111592c2fae76a84db000371de31ead1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae92cc7484002460a8ca1778308d2116') in 0.037477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/signal3.png
+  artifactKey: Guid(c496d660e47a8874b8c7cfa67a563a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/signal3.png using Guid(c496d660e47a8874b8c7cfa67a563a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7b0f8b1bb07c4466223e58812cf300') in 0.023169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/upLeft.png
+  artifactKey: Guid(7b0aef811725dad43896d9d76eba4f07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/upLeft.png using Guid(7b0aef811725dad43896d9d76eba4f07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca0762f38fb58f87ff4ee3866a1f608') in 0.063682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/zoomIn.png
+  artifactKey: Guid(cd6bcbf12eada114ea5427ad940a15f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/zoomIn.png using Guid(cd6bcbf12eada114ea5427ad940a15f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21df655e5c141094fdaadfe3e8b3d35') in 0.050906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/smaller.png
+  artifactKey: Guid(7cfe6d8ba6879464a8c58cc2a5c1ecb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/smaller.png using Guid(7cfe6d8ba6879464a8c58cc2a5c1ecb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac0b25c44c73beea96b1a5456c0e8b32') in 0.007208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/star.png
+  artifactKey: Guid(bffe92d237598874a959b64df71f3580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/star.png using Guid(bffe92d237598874a959b64df71f3580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee64cf789494ec49c25ed4142360150') in 0.006426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.029605 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/leaderboardsComplex.png
+  artifactKey: Guid(27d4eb75f7b63384a88966c0e8c5354e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/leaderboardsComplex.png using Guid(27d4eb75f7b63384a88966c0e8c5354e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031cc0b6ca58557f66b95fc3c5ee7825') in 0.042578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/warning.png
+  artifactKey: Guid(423dcbcbaeae8bb45b37ff3cd438f38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/warning.png using Guid(423dcbcbaeae8bb45b37ff3cd438f38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78948b005feb187d5c0a42b267354947') in 0.014485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/multiplayer.png
+  artifactKey: Guid(d9be21edfef7e3344b3a716eb508d030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/multiplayer.png using Guid(d9be21edfef7e3344b3a716eb508d030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1baceff6b1f78cca92d9c5261a1812ea') in 0.027801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/video.png
+  artifactKey: Guid(3a15bdd182ab49942be91c26ef9fd4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/video.png using Guid(3a15bdd182ab49942be91c26ef9fd4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a1b765b143bd8e54c523be76f3095e0') in 0.010791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/unlocked.png
+  artifactKey: Guid(0835c40e79e69f04bb171fc148fc18f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/unlocked.png using Guid(0835c40e79e69f04bb171fc148fc18f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d080ed445ab5d5bd6aa728018e75a2d') in 0.014651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/rewind.png
+  artifactKey: Guid(71ebc4cafd8298246916d520a1a719da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/rewind.png using Guid(71ebc4cafd8298246916d520a1a719da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b316541a589bd215b6bb14b3a52df0e') in 0.014753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/signal3.png
+  artifactKey: Guid(c496d660e47a8874b8c7cfa67a563a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/signal3.png using Guid(c496d660e47a8874b8c7cfa67a563a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ca68c2c6e37351829a5e7abece467ef') in 0.012856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/phone.png
+  artifactKey: Guid(851ad35788e98974baef5e1ff63b1c7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/phone.png using Guid(851ad35788e98974baef5e1ff63b1c7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edbb62eca3a0fb0aa45558a0226b48f5') in 0.013867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/minus.png
+  artifactKey: Guid(ce54638a924482440a304079f7206796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/minus.png using Guid(ce54638a924482440a304079f7206796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0a481fdc6f0bcc6e814ac28f3ebf237') in 0.015927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/pause.png
+  artifactKey: Guid(03521c5c163a0bd4182e11da568ca95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/pause.png using Guid(03521c5c163a0bd4182e11da568ca95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a946178da4d817d5f09ca71672c35eb') in 0.012385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/zoomDefault.png
+  artifactKey: Guid(4a5c3ca84079f4e4ab787809302b7bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/zoomDefault.png using Guid(4a5c3ca84079f4e4ab787809302b7bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e47c658b0e1c42ec37b6c65f621a009') in 0.013877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/smaller.png
+  artifactKey: Guid(7cfe6d8ba6879464a8c58cc2a5c1ecb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/smaller.png using Guid(7cfe6d8ba6879464a8c58cc2a5c1ecb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e94c54760e354a24f2a618a8f4b1285d') in 0.013307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/scrollVertical.png
+  artifactKey: Guid(783b47523ee9a8b4c8fbdf3dcb272dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/scrollVertical.png using Guid(783b47523ee9a8b4c8fbdf3dcb272dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e45bd3c09d8c2250765a5c1676e6b8f') in 0.011269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/locked.png
+  artifactKey: Guid(9114ab02bc82739448cbe1378c9c84fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/locked.png using Guid(9114ab02bc82739448cbe1378c9c84fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c564ee04d2e8c0f3ee40561081a31d1b') in 0.014187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/siganl1.png
+  artifactKey: Guid(a6a838741b28b064f80a5b0b231731df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/siganl1.png using Guid(a6a838741b28b064f80a5b0b231731df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926052222fde6d33b45b81c4a56c8b2d') in 0.011702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/stop.png
+  artifactKey: Guid(9a570b7f5088f4947b559c94bbe689fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/stop.png using Guid(9a570b7f5088f4947b559c94bbe689fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85e25203800828fce8d7f28af9519a28') in 0.011078 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/mouse.png
+  artifactKey: Guid(36d796c65da1b4f4fa78971ae3d1bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/mouse.png using Guid(36d796c65da1b4f4fa78971ae3d1bb01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d810006b2524e67e544eef8f9df0e63') in 0.014004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/save.png
+  artifactKey: Guid(b4433082e87f36c4289bc2ebb0355763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/save.png using Guid(b4433082e87f36c4289bc2ebb0355763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c52a65af461322c40ac6a21923d132') in 0.013430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/musicOff.png
+  artifactKey: Guid(b0878cd4f74159b428112f02163ebbb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/musicOff.png using Guid(b0878cd4f74159b428112f02163ebbb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb2470d14097902667dec029aa3bca94') in 0.012397 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005025 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ABKOCLASS\Unity_PMJ\프로젝트\3Dproject\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Domain Reload Profiling:
+	ReloadAssembly (884ms)
+		BeginReloadAssembly (128ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (673ms)
+			LoadAssemblies (82ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (243ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (288ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (196ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (25.4 KB). Loaded Objects now: 3716.
+Memory consumption went from 140.1 MB to 140.1 MB.
+Total: 2.952100 ms (FindLiveObjects: 0.363500 ms CreateObjectMapping: 0.312300 ms MarkObjects: 2.250500 ms  DeleteObjects: 0.025100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 101.539861 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/exitRight.png
+  artifactKey: Guid(8945128bcb2e6de4eaaf08c5d3c017c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/exitRight.png using Guid(8945128bcb2e6de4eaaf08c5d3c017c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '926acb87fd1f8c8cfb4f25250e2a1a3b') in 0.067073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/home.png
+  artifactKey: Guid(d37fa250b5a218f4ea37f9a498440880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/home.png using Guid(d37fa250b5a218f4ea37f9a498440880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b877f8d2db19f516fc3dd98d12721ad7') in 0.030045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad2.png
+  artifactKey: Guid(bb2c6885fe7e201408e2c11fe69edf53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad2.png using Guid(bb2c6885fe7e201408e2c11fe69edf53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e685019cc2a7f0801278a7afb51fb0') in 0.013033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/joystick.png
+  artifactKey: Guid(ca740a3ebc3e80e4987e9f2bde86b69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/joystick.png using Guid(ca740a3ebc3e80e4987e9f2bde86b69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78bdce879ecb141730c76d18ea63b16f') in 0.014463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/fastForward.png
+  artifactKey: Guid(0cec59c02c20bb44c8aec24cdf38453f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/fastForward.png using Guid(0cec59c02c20bb44c8aec24cdf38453f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5df92917436428682e3b9708e7d519b') in 0.014675 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/joystickLeft.png
+  artifactKey: Guid(48ff67afef30957488a8cb5e2003ca96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/joystickLeft.png using Guid(48ff67afef30957488a8cb5e2003ca96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d100d563d3c563ab0814faeaaac4d4') in 0.014233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad4.png
+  artifactKey: Guid(76c041e5e8bc52d42b5b93923a119f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/gamepad4.png using Guid(76c041e5e8bc52d42b5b93923a119f86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ea06f6c54d40940be5bf974263a14cc') in 0.011722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprites/kenney_game-icons/PNG/White/2x/information.png
+  artifactKey: Guid(275d074dafc6706489d22011dad2da6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/kenney_game-icons/PNG/White/2x/information.png using Guid(275d074dafc6706489d22011dad2da6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbbd5680ed8710b0ed84bcef311c733d') in 0.012998 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

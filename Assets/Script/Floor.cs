@@ -34,15 +34,6 @@ public class Floor : MonoBehaviour
 
             if(DataManager.instance.Tutorial == false)
                 FieldValue();
-
-            if (manager.gameCam.activeSelf == true)
-            {
-
-                StartCoroutine(FloorTextCoroutin());
-            }
-            else
-                return;
-
         }
     }
 
@@ -60,41 +51,6 @@ public class Floor : MonoBehaviour
                     break;
             }
         }
-    }
- 
-    public IEnumerator FloorTextCoroutin()
-    {
-        FloorText.gameObject.SetActive(true);
-
-        while (FloorText.color.a > 0)
-        {
-            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
-            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(0.1f);
-
-        // 텍스트가 서서히 나타나도록 함
-        while (FloorText.color.a < 1)
-        {
-            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a + (Time.deltaTime * 0.5f));
-            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a + (Time.deltaTime * 0.5f));
-            yield return null;
-        }
-
-        // 대기
-        yield return new WaitForSeconds(0.5f);
-
-        while (FloorText.color.a > 0)
-        {
-            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
-            FloorText.color = new Color(FloorText.color.r, FloorText.color.g, FloorText.color.b, FloorText.color.a - (Time.deltaTime * 0.5f));
-            yield return null;
-        }
-
-        FloorText.gameObject.SetActive(false);
-
     }
 
     private void OnCollisionExit(Collision collision)
@@ -115,7 +71,7 @@ public class Floor : MonoBehaviour
             }
         }
         Debug.Log("피업");
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(5f);
         StartCoroutine(HPUP());
     }
 }

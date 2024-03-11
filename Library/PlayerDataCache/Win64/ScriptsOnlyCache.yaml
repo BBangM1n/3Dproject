@@ -40,8 +40,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -155,6 +157,9 @@ ScriptsOnlyBuild:
     fullTypeName: SoundManager
     methodName: BtnClickSound
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: TutorialRightBtnClick
+  - assembly: Assembly-CSharp
     fullTypeName: MenuManager
     methodName: VolumeUpBtnClick
   - assembly: Assembly-CSharp
@@ -203,6 +208,9 @@ ScriptsOnlyBuild:
     fullTypeName: MenuManager
     methodName: MenuBtnClick
   - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: TutorialLeftBtnClick
+  - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Buy
   - assembly: Assembly-CSharp
@@ -211,6 +219,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Next
+  - assembly: Assembly-CSharp
+    fullTypeName: MenuManager
+    methodName: CloseMenuBtnClick
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Next
@@ -229,6 +243,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MenuManager
     methodName: SaveBtnClick
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Buy
@@ -262,6 +279,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Shop
     methodName: Buy
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: TutorialEndBtnClick
   - assembly: Assembly-CSharp
     fullTypeName: EnhanceManager
     methodName: EnhanceBtnClick
@@ -408,81 +428,81 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1588}
+      Script: {instanceID: 1694}
     - Class: 114
-      Script: {instanceID: 2294}
+      Script: {instanceID: 2400}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2780}
+      Script: {instanceID: 2886}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2980}
     - Class: 114
-      Script: {instanceID: 3056}
+      Script: {instanceID: 3162}
     - Class: 114
-      Script: {instanceID: 3140}
+      Script: {instanceID: 3246}
     - Class: 114
-      Script: {instanceID: 3146}
+      Script: {instanceID: 3252}
     - Class: 114
-      Script: {instanceID: 3216}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 3592}
+      Script: {instanceID: 3698}
     - Class: 114
-      Script: {instanceID: 3658}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 3810}
+      Script: {instanceID: 3916}
     - Class: 114
-      Script: {instanceID: 4238}
+      Script: {instanceID: 4344}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4434}
     - Class: 114
-      Script: {instanceID: 4422}
+      Script: {instanceID: 4528}
     - Class: 114
-      Script: {instanceID: 4464}
+      Script: {instanceID: 4570}
     - Class: 114
-      Script: {instanceID: 4514}
+      Script: {instanceID: 4620}
     - Class: 114
-      Script: {instanceID: 4688}
+      Script: {instanceID: 4794}
     - Class: 114
-      Script: {instanceID: 4924}
+      Script: {instanceID: 5030}
     - Class: 114
-      Script: {instanceID: 4950}
+      Script: {instanceID: 5056}
     - Class: 114
-      Script: {instanceID: 4970}
+      Script: {instanceID: 5076}
     - Class: 114
-      Script: {instanceID: 5000}
+      Script: {instanceID: 5106}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 5154}
     - Class: 114
-      Script: {instanceID: 5186}
+      Script: {instanceID: 5292}
     - Class: 114
-      Script: {instanceID: 5248}
+      Script: {instanceID: 5354}
     - Class: 114
-      Script: {instanceID: 5542}
+      Script: {instanceID: 5648}
     - Class: 114
-      Script: {instanceID: 5690}
+      Script: {instanceID: 5796}
     - Class: 114
-      Script: {instanceID: 5746}
+      Script: {instanceID: 5852}
     - Class: 114
-      Script: {instanceID: 5810}
+      Script: {instanceID: 5916}
     - Class: 114
-      Script: {instanceID: 6012}
+      Script: {instanceID: 6118}
     - Class: 114
-      Script: {instanceID: 6196}
+      Script: {instanceID: 6302}
     - Class: 114
-      Script: {instanceID: 6342}
+      Script: {instanceID: 6448}
     - Class: 114
-      Script: {instanceID: 7030}
+      Script: {instanceID: 7136}
     - Class: 114
-      Script: {instanceID: 7098}
+      Script: {instanceID: 7204}
     - Class: 114
-      Script: {instanceID: 7490}
+      Script: {instanceID: 7596}
     - Class: 114
-      Script: {instanceID: 7572}
+      Script: {instanceID: 7678}
     - Class: 114
-      Script: {instanceID: 7640}
+      Script: {instanceID: 7746}
     - Class: 114
-      Script: {instanceID: 7786}
+      Script: {instanceID: 7892}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -563,45 +583,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1588}
+      Script: {instanceID: 1694}
     - Class: 114
-      Script: {instanceID: 2162}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2780}
+      Script: {instanceID: 2886}
     - Class: 114
-      Script: {instanceID: 3056}
+      Script: {instanceID: 3162}
     - Class: 114
-      Script: {instanceID: 3338}
+      Script: {instanceID: 3444}
     - Class: 114
-      Script: {instanceID: 3524}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 3658}
+      Script: {instanceID: 3764}
     - Class: 114
-      Script: {instanceID: 4052}
+      Script: {instanceID: 4158}
     - Class: 114
-      Script: {instanceID: 4302}
+      Script: {instanceID: 4408}
     - Class: 114
-      Script: {instanceID: 4970}
+      Script: {instanceID: 5106}
     - Class: 114
-      Script: {instanceID: 5000}
+      Script: {instanceID: 5354}
     - Class: 114
-      Script: {instanceID: 5248}
+      Script: {instanceID: 5648}
     - Class: 114
-      Script: {instanceID: 5542}
+      Script: {instanceID: 6118}
     - Class: 114
-      Script: {instanceID: 6012}
+      Script: {instanceID: 6330}
     - Class: 114
-      Script: {instanceID: 6224}
+      Script: {instanceID: 228902}
     - Class: 114
-      Script: {instanceID: 50226}
+      Script: {instanceID: 228910}
     - Class: 114
-      Script: {instanceID: 50234}
+      Script: {instanceID: 228912}
     - Class: 114
-      Script: {instanceID: 50236}
-    - Class: 114
-      Script: {instanceID: 50238}
+      Script: {instanceID: 228914}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1107,7 +1125,7 @@ ScriptsOnlyBuild:
     className: Gift
   - hash:
       serializedVersion: 2
-      Hash: b44e297d504196225251953902992aad
+      Hash: 43e64eb0ed604a15273395e55ed4549f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1545,7 +1563,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: ad89f51d249850806811880f3789ef7f
+      Hash: 07e7d2057d2c4fc537570d7ce4b610d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartZone
@@ -1563,7 +1581,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 11482be177c7cd6552760f30b7368ec5
+      Hash: eec86f03485ff57390f15bd8dc1fd54e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1601,4 +1619,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/TitleScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: "C:/Users/alswn/OneDrive/\uBC14\uD0D5 \uD654\uBA74/Build/3Dproject.exe"
+  playerPath: C:/Users/ABKOCLASS/Desktop/Build/3Dproject.exe

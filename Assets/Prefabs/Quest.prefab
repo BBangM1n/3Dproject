@@ -370,6 +370,12 @@ MonoBehaviour:
   Gifttype: 0
   grenadetype: 0
   Potiontype: 0
+  Grenades: []
+  Potions: []
+  giftimg: {fileID: 0}
+  GiftTypeimg: []
+  giftzone: {fileID: 0}
+  itemcode: 0
   value: 1000
 --- !u!1 &7963598303031673498
 GameObject:
@@ -653,11 +659,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e6e0a0ddbc12d0340b3458b527c5b59d, type: 3}
-    m_FontSize: 60
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 59
-    m_MaxSize: 60
+    m_MinSize: 4
+    m_MaxSize: 93
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -818,14 +824,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: {fileID: 7963598303264323680}
   gift: {fileID: 7963598303002960860}
+  questsobj: []
   QuestTitleText: {fileID: 7963598303136778693}
   ContentText: {fileID: 7963598303199993607}
+  ConditionText: {fileID: 0}
+  ClearGiftText: {fileID: 0}
   nobtnText: {fileID: 7963598303888464114}
   Yesbtn: {fileID: 7963598303989798652}
   Nobtn: {fileID: 7963598304092410842}
   Clearbtn: {fileID: 7963598303031673496}
   Questicon: {fileID: 7963598302249529909}
+  ClearGiftImg: {fileID: 0}
   isclear: 0
+  isyes: 0
+  Qvalue: 0
+  QenemyCnt: 0
+  QgrenadeCnt: 0
+  qmgr: {fileID: 0}
+  player: {fileID: 0}
+  SetTransform: 0
 --- !u!1 &7963598303352736927
 GameObject:
   m_ObjectHideFlags: 0

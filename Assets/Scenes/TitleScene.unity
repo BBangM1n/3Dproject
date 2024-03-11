@@ -442,6 +442,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ddca0c66426d19443911bbe0ce74ea12, type: 3}
   - {fileID: 8300000, guid: 0fa0b03e2922efd4992696760e544c78, type: 3}
   - {fileID: 8300000, guid: 7835ce9baa78a7f469c3aa4eccb5d6f3, type: 3}
+  - {fileID: 8300000, guid: 7c71360b59e9dd043b2a0b883a9000d4, type: 3}
+  - {fileID: 8300000, guid: b2878241fdf8c5449bcd270e26433a78, type: 3}
   Bgm_Sound: {fileID: 1778582112}
   Effect_Sound: {fileID: 735450661}
   Effect_Sound_2: {fileID: 3695413}

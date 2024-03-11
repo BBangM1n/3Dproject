@@ -99,6 +99,8 @@ public class Boss : Enemy
 
     IEnumerator RockShot() // 돌 굴리기 패턴
     {
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[16];
+        SoundManager.instance.Effect_Sound.Play();
         isLook = false;
         anim.SetTrigger("BigShot");
         Instantiate(bullet, transform.position, transform.rotation);
@@ -118,7 +120,8 @@ public class Boss : Enemy
         anim.SetTrigger("Taunt");
         yield return new WaitForSeconds(1.5f); // 점프해서 내려 올때 공격범위 활성화
         meleeArea.enabled = true;
-
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[15];
+        SoundManager.instance.Effect_Sound.Play();
         yield return new WaitForSeconds(0.5f);
         meleeArea.enabled = false;
 

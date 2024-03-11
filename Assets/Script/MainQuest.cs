@@ -291,6 +291,8 @@ public class MainQuest : MonoBehaviour
             TitleText.text = "";
             QText.text = "";
             player.isshop = false;
+            SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[9];
+            SoundManager.instance.Effect_Sound.Play();
         }
     }
 

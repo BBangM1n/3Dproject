@@ -209,7 +209,7 @@ public class GameManager : MonoBehaviour
         tutorialsPanel.SetActive(true);
         SoundManager.instance.SoundChange(0);
         DataManager.instance.Tutorial = false;
-        player.isstop = true;
+        player.isstop = true; 
 
     }
 

@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 148263400}
   - component: {fileID: 148263399}
   - component: {fileID: 148263398}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zone
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -7560,7 +7560,7 @@ GameObject:
   - component: {fileID: 493468057}
   - component: {fileID: 493468056}
   - component: {fileID: 493468060}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zone
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -12568,7 +12568,7 @@ GameObject:
   - component: {fileID: 571208386}
   - component: {fileID: 571208385}
   - component: {fileID: 571208384}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zone
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -19644,7 +19644,7 @@ GameObject:
   - component: {fileID: 1179400775}
   - component: {fileID: 1179400774}
   - component: {fileID: 1179400773}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zone
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -26271,7 +26271,7 @@ GameObject:
   - component: {fileID: 1641339374}
   - component: {fileID: 1641339373}
   - component: {fileID: 1641339372}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zone
   m_TagString: Shop
   m_Icon: {fileID: 0}

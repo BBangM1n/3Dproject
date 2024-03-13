@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
     Vector3 moveVec;
     Vector3 dodgeVec;
 
-    GameObject nearObject;
+    public GameObject nearObject;
     public Weapon equipWeapon;
 
     private List<int> GrenadeList = new List<int> { };
@@ -421,7 +421,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Weapon" || other.tag == "Shop" || other.tag == "Potion")
+        if (other.tag == "Weapon" || other.tag == "Potion")
             nearObject = other.gameObject;
     }
 
@@ -432,7 +432,7 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Weapon")
             nearObject = null;
-        else if (other.tag == "Shop")
+        /*if (other.tag == "Shop")
         {
             Shop shop = nearObject.GetComponent<Shop>();
             if(shop != null)
@@ -440,7 +440,7 @@ public class Player : MonoBehaviour
                 shop.Exit();
                 nearObject = null;
             }
-        }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)

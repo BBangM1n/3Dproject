@@ -20,7 +20,31 @@ public class Shop : MonoBehaviour
     public bool isQuest = false;
 
     Player enterPlayer;
+    bool FindPlayer = false;
 
+    private void Start()
+    {
+
+    }
+    private void Update()
+    {
+        RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, 3, Vector3.up, 0f, LayerMask.GetMask("Player"));
+        foreach (RaycastHit hit in rayHits)
+        {
+            enterPlayer = hit.transform.gameObject.GetComponent<Player>();
+            enterPlayer.nearObject = this.gameObject;
+            FindPlayer = true;
+            Debug.Log("플레이어가 왔습니다");
+        }
+
+        if(FindPlayer == true && rayHits.Length == 0)
+        {
+            FindPlayer = false;
+            enterPlayer.nearObject = null;
+            Exit();
+            Debug.Log("플레이어가 떠낫습니다");
+        }
+    }
     public void Enter(Player player)
     {
         enterPlayer = player;

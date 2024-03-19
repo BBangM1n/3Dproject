@@ -1,9 +1,57 @@
-# 도트 히어로즈
-## 게임 장르 : 2D 턴제 RPG
-## 게임 소개 : 영웅을 뽑아 진형을 갖추고 마지막 던전까지 클리어하는것이 목적인 게임입니다.
-## 개발 목적 : 즐겨 했던 턴제 RPG 게임 기능 직접 구현
-## 사용 엔진 : UNITY 2021.3.25f1
-## 개발 기간 : 10주 (2023.05.12 ~ 2023.07.23)
+# StonAge(스톤에이지)
+## 게임 장르 : 3D 슈팅 액션 RPG
+## 게임 소개 : 캐릭터 강화와 아이템을 사용하여 필드별 보스를 격파하는 챕터형식의 RPG
+## 개발 목적 : RPG를 좋아하여 3D RPG 제작 기획
+## 사용 엔진 : UNITY 2022.3.15f1
+## 개발 기간 : 2023.10.31 ~ 2024.03.10
 ## 포트폴리오 빌드 파일 
+-
 ## 유튜브 영상 링크
+-
 ## 주요 활용 기술
+- #01)(스크립트) Json 직렬화 사용한 데이터 저장 및 불러오기
+<details>
+<summary>적용 코드</summary>
+  
+```
+      public void SaveData()
+    {
+        string data = JsonUtility.ToJson(nowPlayer); // JsonUtility.ToJson 메서드를 사용하여 JSON 포맷으로 직렬화(전환)
+        File.WriteAllText(path + nowSlot.ToString(), data);
+    }
+
+    public void LoadData()
+    {
+        string data = File.ReadAllText(path + nowSlot.ToString());
+        nowPlayer = JsonUtility.FromJson<PlayerData>(data); // JSON을 다시 오브젝트로 전환하려면 JsonUtility.FromJson을 사용
+    }
+```
+
+</details>
+
+***
+
+- #02)(스크립트) 싱글톤 패턴 활용
+<details>
+<summary>적용 코드</summary>
+  
+```
+    public static DataManager instance; // 싱글톤패턴
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(instance.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
+```
+
+</details>
+
+***

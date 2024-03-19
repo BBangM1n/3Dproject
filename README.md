@@ -55,3 +55,37 @@
 </details>
 
 ***
+
+- #02)(스크립트) NavMeshAgent 활용한 자동 추적 및 복귀
+<details>
+<summary>적용 코드</summary>
+  
+```
+        if (nav.enabled) // 자동으로 플레이어 추적하기
+        {   
+            if(Vector3.Distance(transform.position, Spawnposition.position) < 70 && !isDead) // 몬스터와 스폰장소길이가 50보다 작을때 까지 플레이어를 추적
+            {
+                nav.SetDestination(Target.position); // SetDestination : 도착할 목표 위치 정할 함수
+                nav.isStopped = !isChase;
+            }
+        }
+
+        // 몬스터와 플레이어 길이가 50보다 길거나 플레이어가 몬스터스폰장소의 길이차이가 70일때
+        if (Vector3.Distance(transform.position, Target.position) > 50 && !isDead || Vector3.Distance(Target.position, Spawnposition.position) > 70)
+        {
+            nav.enabled = false;
+            if (Vector3.Distance(transform.position, Spawnposition.position) > 5f)
+            {
+                // 목표 방향을 바라보는 함수 호출
+                LookAtSmooth(Spawnposition.position, 0.1f);
+            }
+        }
+        else
+        {
+            nav.enabled = true;
+        }
+```
+
+</details>
+
+***

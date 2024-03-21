@@ -61,10 +61,14 @@ public class SpawnEnemy : MonoBehaviour
         manager.BossCounting = 0;
         manager.BossComing.SetActive(true);
         thisCoroutine = StartCoroutine(manager.BossCreateText());
+
         yield return new WaitForSeconds(4f);
+
         manager.BossComing.SetActive(false);
         StopCoroutine(thisCoroutine);
+
         yield return new WaitForSeconds(1f);
+
         player.isreload = true;
         FollowCamera camera = GameObject.Find("Main Camera").gameObject.GetComponent<FollowCamera>();
         camera.Cameraon = false;
@@ -72,11 +76,17 @@ public class SpawnEnemy : MonoBehaviour
         Vector3 BossVt = transform.position;
         BossVt = new Vector3(BossVt.x, BossVt.y -20 , BossVt.z);
         GameObject instantEnemy = Instantiate(enemys[0], BossVt, transform.rotation);
+
         yield return new WaitForSeconds(8f);
+
         TreeAndRock.SetActive(false);
+
         yield return new WaitForSeconds(1f);
+
         camera.end = true;
+
         yield return new WaitForSeconds(10f);
+
         player.isreload = false;
         Boss enemy = instantEnemy.GetComponent<Boss>();
         enemy.Target = player.transform;
@@ -84,7 +94,6 @@ public class SpawnEnemy : MonoBehaviour
         manager.boss = enemy;
         StartCoroutine(enemy.Think());
         enemy.notspawn = true;
-        Debug.Log("焊胶内风凭场车促");
     }
 
     IEnumerator Spawnenemy() // 阁胶磐 积己 内风凭

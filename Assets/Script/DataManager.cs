@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-
+[SerializeField]
 public class PlayerData
 {
     public int MaxHp = 100;          // 플레이어 최대 HP
@@ -34,7 +34,6 @@ public class DataManager : MonoBehaviour
 
     private void Awake()
     {
-        #region 싱글톤
         if (instance == null)
         {
             instance = this;
@@ -44,7 +43,6 @@ public class DataManager : MonoBehaviour
             Destroy(instance.gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
-        #endregion
 
         path = Application.persistentDataPath + "/save";	// 경로 지정
         print(path);
@@ -52,23 +50,23 @@ public class DataManager : MonoBehaviour
 
     public void SaveData()
     {
-        string data = JsonUtility.ToJson(nowPlayer);
+        string data = JsonUtility.ToJson(nowPlayer); // JsonUtility.ToJson 메서드를 사용하여 JSON 포맷으로 직렬화(전환)
         File.WriteAllText(path + nowSlot.ToString(), data);
     }
 
     public void LoadData()
     {
         string data = File.ReadAllText(path + nowSlot.ToString());
-        nowPlayer = JsonUtility.FromJson<PlayerData>(data);
+        nowPlayer = JsonUtility.FromJson<PlayerData>(data); // JSON을 다시 오브젝트로 전환하려면 JsonUtility.FromJson을 사용
     }
 
-    public void DataClear()
+    public void DataClear() // 데이터 삭제를 위한 클리어 함수
     {
         nowSlot = -1;
         nowPlayer = new PlayerData();
     }
 
-    public void DeleteData(int value)
+    public void DeleteData(int value) // 경로에있는 데이터 지우기
     {
         File.Delete(path + value);
     } 

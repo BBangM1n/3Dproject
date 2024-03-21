@@ -6,11 +6,11 @@ using UnityEngine.AI;
 public class Boss : Enemy
 {
     public GameObject missile; // 보스 미사일
-    public Transform missilePortA; // 보스 미사일 입구
-    public Transform missilePortB; // 보스 미사일 입구
+    public Transform missilePortA; // 보스 미사일 위치A
+    public Transform missilePortB; // 보스 미사일 위치B
 
-    Vector3 lookVec; //
-    Vector3 tauntVec;
+    Vector3 lookVec; // 방향 벡터
+    Vector3 tauntVec; // 플레이어 위치 - 방향 벡터
 
     public bool isLook;
 
@@ -26,7 +26,6 @@ public class Boss : Enemy
         anim = GetComponentInChildren<Animator>();
 
         nav.isStopped = true;
-        //StartCoroutine(Think()); // 패턴을 위한 코루틴 시작
     }
 
     // Update is called once per frame

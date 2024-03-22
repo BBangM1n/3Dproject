@@ -16,6 +16,7 @@ TagManager:
   - Potion
   - Quest
   - Hit
+  - House
   layers:
   - Default
   - TransparentFX

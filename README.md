@@ -89,3 +89,36 @@
 </details>
 
 ***
+
+- #03)(스크립트) Enemy스크립트를 이용한 상속
+<details>
+<summary>적용 코드</summary>
+  
+```
+    public class Boss : Enemy
+{
+    public GameObject missile; // 보스 미사일
+    public Transform missilePortA; // 보스 미사일 위치A
+    public Transform missilePortB; // 보스 미사일 위치B
+
+    Vector3 lookVec; // 방향 벡터
+    Vector3 tauntVec; // 플레이어 위치 - 방향 벡터
+
+    public bool isLook;
+
+    public bool notspawn;
+```
+
+</details>
+
+***
+
+- #04)(스크립트) 
+<details>
+<summary>적용 코드</summary>
+  
+```
+
+```
+
+</details>

@@ -28,8 +28,8 @@ public class Shop : MonoBehaviour
     }
     private void Update()
     {
-        RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, 3, Vector3.up, 0f, LayerMask.GetMask("Player"));
-        foreach (RaycastHit hit in rayHits)
+        RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, 3, Vector3.up, 0f, LayerMask.GetMask("Player")); // 플레이어 감지
+        foreach (RaycastHit hit in rayHits) // 플레이어가 감지됐다면
         {
             enterPlayer = hit.transform.gameObject.GetComponent<Player>();
             enterPlayer.nearObject = this.gameObject;
@@ -37,7 +37,7 @@ public class Shop : MonoBehaviour
             Debug.Log("플레이어가 왔습니다");
         }
 
-        if(FindPlayer == true && rayHits.Length == 0)
+        if(FindPlayer == true && rayHits.Length == 0) // 감지된 플레이어 배열이 0개라면,
         {
             FindPlayer = false;
             enterPlayer.nearObject = null;

@@ -323,9 +323,9 @@ public class GameManager : MonoBehaviour
         QScoreText.text = player.score.ToString();
     }
 
-    public IEnumerator BossCreateText() // 보스 출현 깜빡임 효과 횟수제한걸어야함
+    public IEnumerator BossCreateText() // UI 보스 출현 깜빡임효과
     {
-        while (bosscomingText.color.a > 0)
+        while (bosscomingText.color.a > 0) // 알파 값 감소
         {
             bosscomingText.color = new Color(bosscomingText.color.r, bosscomingText.color.g, bosscomingText.color.b, bosscomingText.color.a - (Time.deltaTime * 1f));
             bosscomingImage.color = new Color(bosscomingImage.color.r, bosscomingImage.color.g, bosscomingImage.color.b, bosscomingImage.color.a - (Time.deltaTime * 1f));
@@ -335,7 +335,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         // 텍스트가 서서히 나타나도록 함
-        while (bosscomingText.color.a < 1)
+        while (bosscomingText.color.a < 1) // 알파 값 다시 증가
         {
             bosscomingText.color = new Color(bosscomingText.color.r, bosscomingText.color.g, bosscomingText.color.b, bosscomingText.color.a + (Time.deltaTime * 1f));
             bosscomingImage.color = new Color(bosscomingImage.color.r, bosscomingImage.color.g, bosscomingImage.color.b, bosscomingImage.color.a + (Time.deltaTime * 1f));

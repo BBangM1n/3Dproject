@@ -432,15 +432,6 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Weapon")
             nearObject = null;
-        /*if (other.tag == "Shop")
-        {
-            Shop shop = nearObject.GetComponent<Shop>();
-            if(shop != null)
-            {
-                shop.Exit();
-                nearObject = null;
-            }
-        }*/
     }
 
     private void OnTriggerEnter(Collider other)
@@ -483,9 +474,8 @@ public class Player : MonoBehaviour
                     //수류탄 종류 판별 후 넣기
                     GrenadeList.Add(item.Grenadevalue);
                     //위치 grenades에 0, 1, 2, 3 0이 켜지고 item.value값으로 차일드 키기
-                    //아마 hasgrenade가 1이상일때 미루는방식 고안해야할듯
                     grenades[hasGrenade].SetActive(true);
-                    grenadeargorizm();//함수자리
+                    grenadeargorizm();
                     grenades[0].transform.GetChild(item.Grenadevalue).gameObject.SetActive(true);
                     hasGrenade += item.value; // 수류탄 갯수
                     break;

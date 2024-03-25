@@ -372,7 +372,6 @@
 "Assets/Script/Quest.cs"
 "Assets/Script/QuestManager.cs"
 "Assets/Script/Shop.cs"
-"Assets/Script/ShotgunBullet.cs"
 "Assets/Script/SoundManager.cs"
 "Assets/Script/SpawnEnemy.cs"
 "Assets/Script/StartZone.cs"

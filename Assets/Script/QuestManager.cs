@@ -26,9 +26,6 @@ public class QuestManager : MonoBehaviour
 
     public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을 저장할 객체
 
-    //string path;
-    //string filename = "save";
-
     private void Awake()
     {
         if (instance == null)
@@ -41,30 +38,13 @@ public class QuestManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
 
-       // path = Application.persistentDataPath + "/";
     }
 
     private void Start()
     {
-        //print(path);
         QuestList();
-        //LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
     }
 
-/*    public void SaveData()
-    {
-        string data = JsonUtility.ToJson(questDataList);
-        File.WriteAllText(path + filename, data);
-    }
-
-    public void LoadData()
-    {
-        if (File.Exists(path + filename))
-        {
-            string data = File.ReadAllText(path + filename);
-            questDataList = JsonUtility.FromJson<QuestDataList>(data);
-        }
-    }*/
 
     void QuestList()
     {

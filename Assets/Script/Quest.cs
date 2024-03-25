@@ -50,7 +50,6 @@ public class Quest : MonoBehaviour
 
     private void Start()
     {
-        //qmgr.LoadData(); // 앱이 시작될 때 저장된 데이터를 불러옵니다.
         UseQuestList(Qvalue);
         
     }

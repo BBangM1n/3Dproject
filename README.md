@@ -191,6 +191,7 @@
         StartCoroutine(BossCreateText());
     }
 ```
+![텍스트 깜빡임](./gitImage/수류탄회전2.gif)
 
 </details>
 
@@ -245,7 +246,7 @@
         offset = transform.position - target.position;
     }
 ```
-
+![수류탄 회전](./gitImage/수류탄회전2.gif)
 </details>
 
 ***

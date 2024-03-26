@@ -191,6 +191,7 @@
         StartCoroutine(BossCreateText());
     }
 ```
+![텍스트 깜빡임](./gitImage/텍스트깜빡임2.gif)
 
 </details>
 
@@ -245,7 +246,7 @@
         offset = transform.position - target.position;
     }
 ```
-
+![수류탄 회전](./gitImage/수류탄회전.gif)
 </details>
 
 ***
@@ -280,7 +281,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
      ......
     }
 ```
-
+![랜덤 퀘스트](./gitImage/랜덤퀘스트.gif)
 </details>
 
 ***
@@ -308,6 +309,14 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
         }
 ```
 
+</details>
+
+***
+
+- #11)(스크립트) Enum을 통해 분류하여 구현한 싸움 방식 ( 헤머 & 총 )
+<details>
+<summary>적용 이미지</summary>
+![싸움 방식](./gitImage/싸움방식.gif)
 </details>
 
 ***

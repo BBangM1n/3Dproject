@@ -395,7 +395,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 <details>
 <summary>적용 코드 및 이미지</summary>
 
-    ```
+```
     void Potion(int value) // 포션별 능력치 강화
     {
         isbuff = true; // 버프 중첩 방지 bool

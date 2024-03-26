@@ -326,7 +326,35 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 - #12)(이미지) 파티클 시스템을 이용한 수류탄 효과
 <details>
 <summary>적용 코드 및 이미지</summary>
-  
+
+```
+    IEnumerator Explosion() // 코루틴
+    {
+        yield return new WaitForSeconds(3f); // 3초뒤 발동
+        SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[7];
+        SoundManager.instance.Effect_Sound.Play();
+        rigid.velocity = Vector3.zero;
+        rigid.angularVelocity = Vector3.zero;
+        meshObj.SetActive(false);
+        effectObj.SetActive(true); // 임팩트 발동
+
+        RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, 15, Vector3.up, 0f, LayerMask.GetMask("Enemy")); // SphereCastAll : 구체모양 레이캐스팅
+
+        if(type == Type.Property) // 만약 타입이 있는 수류탄이라면
+        {
+            Instantiate(effect, transform.position, transform.rotation); // 저장돼있는 임펙트 활성화
+        }
+        else
+        {
+            foreach (RaycastHit hitObj in rayHits) // 레이히트에 접촉한 enemy들에게 적용
+            {
+                hitObj.transform.GetComponent<Enemy>().HitByGrenade(transform.position);
+            }
+        }
+        Destroy(gameObject, 5f);
+    }
+```
+
 ![수류탄](./gitImage/수류탄.gif)
 
 </details>
@@ -335,8 +363,8 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 - #13)(이미지) 플레이어 강화 시스템
 <details>
-<summary>적용 코드 및 이미지</summary>
-  
+<summary>이미지</summary>
+
 ![강화](./gitImage/강화.gif)
 
 </details>
@@ -366,7 +394,49 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 - #16)(이미지) 물약 버프 시스템
 <details>
 <summary>적용 코드 및 이미지</summary>
-  
+
+    ```
+    void Potion(int value) // 포션별 능력치 강화
+    {
+        isbuff = true; // 버프 중첩 방지 bool
+        buffEffect.SetActive(true); // 버프 임팩트 활성화
+        GameObject hand = GameObject.Find("Weapon Point"); // 버프를 위한 무기들 호출
+        Weapon Hammer = hand.transform.GetChild(0).gameObject.GetComponent<Weapon>();
+        Weapon Handgun = hand.transform.GetChild(1).gameObject.GetComponent<Weapon>();
+        Weapon Subgun = hand.transform.GetChild(2).gameObject.GetComponent<Weapon>();
+
+        switch (value) // 버프 포션 value값에 따른 버프 값
+        {
+            case 0:
+                speed += 10;
+                buffcolor = Color.green;
+                break;
+            case 1:
+                maxhealth += 50;
+                buffcolor = Color.red;
+                break;
+            case 2:
+                Hammer.damage += 10;
+                Handgun.damage += 7;
+                Subgun.damage += 3;
+                buffcolor = new Color(1f / 255f, 235f / 255f, 255f / 255f);
+                break;
+            case 3:
+                Hammer.rate -= 0.2f;
+                Handgun.rate -= 0.1f;
+                Subgun.rate -= 0.04f;
+                buffcolor = Color.gray;
+                break;
+            case 4:
+                iscbuff = true;
+                buffcolor = new Color(255f / 255f, 1f / 255f, 221f / 255f);
+                break;
+        }
+        StopCoroutine(Buffcontrol(value));
+        StartCoroutine(Buffcontrol(value));
+    }
+```
+
 ![물약](./gitImage/물약.gif)
 
 </details>

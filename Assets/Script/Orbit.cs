@@ -5,7 +5,7 @@ using UnityEngine;
 public class Orbit : MonoBehaviour
 {
     public Transform target; // 타겟 설정
-    public float orbitspeed; // 회전 속도
+    public float speed; // 회전 속도
     Vector3 offset;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,9 @@ public class Orbit : MonoBehaviour
     void Update()
     {
         transform.position = target.position + offset;
-        transform.RotateAround(target.position, Vector3.up, orbitspeed * Time.deltaTime); // RotateAround 회전시켜주는함수
+
+        transform.RotateAround(target.position, Vector3.up, speed * Time.deltaTime); // RotateAround 회전시켜주는함수
+
         offset = transform.position - target.position;
     }
 }

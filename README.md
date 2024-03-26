@@ -9,7 +9,7 @@
 ## 유튜브 영상 링크
 -
 ## 주요 활용 기술
-- #01)(스크립트) Json 직렬화 사용한 데이터 저장 및 불러오기
+- #01)(스크립트) Json 직렬화 사용한 데이터 관리 코드
 <details>
 <summary>적용 코드</summary>
   
@@ -164,7 +164,7 @@
 
 - #06)(스크립트) 텍스트 깜빡임 효과
 <details>
-<summary>적용 코드</summary>
+<summary>적용 코드 및 이미지</summary>
   
 ```
     public IEnumerator BossCreateText() // UI 보스 출현 깜빡임효과
@@ -227,7 +227,7 @@
 
 - #08)(스크립트) RotateAround을 통한 회전구현
 <details>
-<summary>적용 코드</summary>
+<summary>적용 코드 및 이미지</summary>
   
 ```
     public Transform target; // 타겟 설정
@@ -253,7 +253,7 @@
 
 - #09)(스크립트) List를 활용한 랜덤퀘스트 구현
 <details>
-<summary>적용 코드</summary>
+<summary>적용 코드 및 이미지</summary>
   
 ```
 public class QuestData
@@ -313,10 +313,91 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #11)(스크립트) Enum을 통해 분류하여 구현한 싸움 방식 ( 헤머 & 총 )
+- #11)(이미지) Enum을 통해 분류하여 구현한 싸움 방식 ( 헤머 & 총 )
 <details>
 <summary>적용 이미지</summary>
+  
 ![싸움 방식](./gitImage/싸움방식.gif)
+
+</details>
+
+***
+
+- #12)(이미지) 파티클 시스템을 이용한 수류탄 효과
+<details>
+<summary>적용 코드 및 이미지</summary>
+  
+![수류탄](./gitImage/수류탄.gif)
+
+</details>
+
+***
+
+- #13)(이미지) 플레이어 강화 시스템
+<details>
+<summary>적용 코드 및 이미지</summary>
+  
+![강화](./gitImage/강화.gif)
+
+</details>
+
+***
+
+- #14)(이미지) 메인퀘스트 시스템
+<details>
+<summary>적용 이미지</summary>
+  
+![메인퀘스트](./gitImage/메인퀘스트.gif)
+
+</details>
+
+***
+
+- #15)(이미지) 튜토리얼 시스템
+<details>
+<summary>적용 이미지</summary>
+  
+![튜토리얼](./gitImage/튜토리얼.gif)
+
+</details>
+
+***
+
+- #16)(이미지) 물약 버프 시스템
+<details>
+<summary>적용 코드 및 이미지</summary>
+  
+![물약](./gitImage/물약.gif)
+
+</details>
+
+***
+
+- #17)(이미지) 메뉴 시스템 및 데이터 저장 버튼
+<details>
+<summary>적용 이미지</summary>
+  
+![메뉴](./gitImage/메뉴판.gif)
+
+</details>
+
+***
+
+- #18)(스크립트) 데이터 삭제
+<details>
+<summary>적용 코드 및 이미지</summary>
+  
+```
+    public void DeleteData()
+    {
+        File.Delete(DataManager.instance.path + BtnValue); // path경로에 있는 데이터 삭제
+        slotText[BtnValue].text = "비어있음"; // 비어있음으로 다시 초기화
+        savefile[BtnValue] = false;
+    }
+```
+
+![데이터삭제](./gitImage/데이터삭제.gif)
+
 </details>
 
 ***

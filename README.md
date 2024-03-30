@@ -9,7 +9,7 @@
 ## 유튜브 영상 링크
 -
 ## 주요 활용 기술
-- #01)(스크립트) Json 직렬화 사용한 데이터 관리 코드
+- #01)(스크립트) [Json 직렬화 사용한 데이터 관리 코드](https://cafe.naver.com/bbangnity/45)
 <details>
 <summary>적용 코드</summary>
   

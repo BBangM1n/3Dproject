@@ -9,7 +9,7 @@
 ## 유튜브 영상 링크
 -
 ## 주요 활용 기술
-- #01)(스크립트) [Json 직렬화 사용한 데이터 관리 코드](https://cafe.naver.com/bbangnity/45)
+- #01)(스크립트) [Json 직렬화 사용한 데이터 관리 코드](https://cafe.naver.com/bbangnity/49)
 <details>
 <summary>적용 코드</summary>
   
@@ -31,7 +31,7 @@
 
 ***
 
-- #02)(스크립트) 싱글톤 패턴 활용
+- #02)(스크립트) [싱글톤 패턴 활용](https://cafe.naver.com/bbangnity/67)
 <details>
 <summary>적용 코드</summary>
   
@@ -56,7 +56,7 @@
 
 ***
 
-- #02)(스크립트) NavMeshAgent 활용한 자동 추적 및 복귀
+- #02)(스크립트) [NavMeshAgent 활용한 자동 추적 및 복귀](https://cafe.naver.com/bbangnity/50)
 <details>
 <summary>적용 코드</summary>
   
@@ -90,7 +90,7 @@
 
 ***
 
-- #03)(스크립트) Enemy스크립트를 이용한 상속
+- #03)(스크립트) [Enemy스크립트를 이용한 상속](https://cafe.naver.com/bbangnity/45)
 <details>
 <summary>적용 코드</summary>
   
@@ -113,7 +113,7 @@
 
 ***
 
-- #04)(스크립트) SmoothDamp를 활용한 부드러운 움직임 구현
+- #04)(스크립트) [SmoothDamp를 활용한 부드러운 움직임 구현](https://cafe.naver.com/bbangnity/56)
 <details>
 <summary>적용 코드</summary>
   
@@ -135,13 +135,12 @@
 
 ***
 
-- #05)(스크립트) string.Format를 활용한 UI 표시
+- #05)(스크립트) [string.Format를 활용한 UI 표시](https://cafe.naver.com/bbangnity/57)
 <details>
 <summary>적용 코드</summary>
   
 ```
         //상단 UI
-
         int hour = (int)(playTime / 3600);
         int min = (int)((playTime - hour * 3600) / 60);
         int sec = (int)(playTime % 60);
@@ -162,7 +161,7 @@
 
 ***
 
-- #06)(스크립트) 텍스트 깜빡임 효과
+- #06)(스크립트) [텍스트 깜빡임 효과](https://cafe.naver.com/bbangnity/45)
 <details>
 <summary>적용 코드 및 이미지</summary>
   
@@ -197,7 +196,7 @@
 
 ***
 
-- #07)(스크립트) string.IsNullOrWhiteSpace 문자열 판별
+- #07)(스크립트) [string.IsNullOrWhiteSpace 문자열 판별](https://cafe.naver.com/bbangnity/69)
 <details>
 <summary>적용 코드</summary>
   
@@ -225,7 +224,7 @@
 
 ***
 
-- #08)(스크립트) RotateAround을 통한 회전구현
+- #08)(스크립트) [RotateAround을 통한 회전구현](https://cafe.naver.com/bbangnity/62)
 <details>
 <summary>적용 코드 및 이미지</summary>
   
@@ -251,7 +250,7 @@
 
 ***
 
-- #09)(스크립트) List를 활용한 랜덤퀘스트 구현
+- #09)(스크립트) [List를 활용한 랜덤퀘스트 구현](https://cafe.naver.com/bbangnity/65)
 <details>
 <summary>적용 코드 및 이미지</summary>
   
@@ -286,7 +285,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #10)(스크립트) Physics Cast함수 이용한 물리충돌 감지
+- #10)(스크립트) [Physics Cast함수 이용한 물리충돌 감지](https://cafe.naver.com/bbangnity/66)
 <details>
 <summary>적용 코드</summary>
   
@@ -313,7 +312,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #11)(이미지) Enum을 통해 분류하여 구현한 싸움 방식 ( 헤머 & 총 )
+- #11)(이미지) [Enum을 통해 분류하여 구현한 싸움 방식 ( 헤머 & 총 )](https://cafe.naver.com/bbangnity/59)
 <details>
 <summary>적용 이미지</summary>
   
@@ -323,7 +322,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #12)(이미지) 파티클 시스템을 이용한 수류탄 효과
+- #12)(이미지) [파티클 시스템을 이용한 수류탄 효과](https://cafe.naver.com/bbangnity/54)
 <details>
 <summary>적용 코드 및 이미지</summary>
 
@@ -361,7 +360,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #13)(이미지) 플레이어 강화 시스템
+- #13)(이미지) [플레이어 강화 시스템](https://cafe.naver.com/bbangnity/51)
 <details>
 <summary>이미지</summary>
 
@@ -371,7 +370,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #14)(이미지) 메인퀘스트 시스템
+- #14)(이미지) [메인퀘스트 시스템](https://cafe.naver.com/bbangnity/60)
 <details>
 <summary>적용 이미지</summary>
   
@@ -381,7 +380,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #15)(이미지) 튜토리얼 시스템
+- #15)(이미지) [튜토리얼 시스템](https://cafe.naver.com/bbangnity/57)
 <details>
 <summary>적용 이미지</summary>
   
@@ -391,7 +390,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #16)(이미지) 물약 버프 시스템
+- #16)(이미지) [물약 버프 시스템](https://cafe.naver.com/bbangnity/64)
 <details>
 <summary>적용 코드 및 이미지</summary>
 
@@ -443,7 +442,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #17)(이미지) 메뉴 시스템 및 데이터 저장 버튼
+- #17)(이미지) [메뉴 시스템 및 데이터 저장 버튼](https://cafe.naver.com/bbangnity/63)
 <details>
 <summary>적용 이미지</summary>
   
@@ -453,7 +452,7 @@ public QuestDataList questDataList = new QuestDataList(); // 퀘스트 목록을
 
 ***
 
-- #18)(스크립트) 데이터 삭제
+- #18)(스크립트) [데이터 삭제](https://cafe.naver.com/bbangnity/63)
 <details>
 <summary>적용 코드 및 이미지</summary>
   

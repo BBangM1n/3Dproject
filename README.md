@@ -5,7 +5,7 @@
 ## 사용 엔진 : UNITY 2022.3.15f1
 ## 개발 기간 : 2023.10.31 ~ 2024.03.10
 ## 포트폴리오 빌드 파일 
--
+- [구글 드라이브 링크](https://drive.google.com/file/d/1Vlu0-TCDOu_4R6dct8ti3Sbd1dxhQFvo/view?usp=drive_link)
 ## 유튜브 영상 링크
 -
 ## 주요 활용 기술

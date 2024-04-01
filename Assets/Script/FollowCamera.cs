@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    public Transform target;
-    public Vector3 offset;
+    public Transform target; // 카메라 타겟
+    public Vector3 offset; // 카메라 위치 조절을 위한 벡터값
 
-    public Transform BossPosition;
+    public Transform BossPosition; // 보스 연출을 위한 값
     public float smoothTime;
     private Vector3 velocity = Vector3.zero;
     public bool Cameraon = true;
@@ -27,12 +27,6 @@ public class FollowCamera : MonoBehaviour
         if(Cameraon)
             transform.position = target.position + offset; // 타겟을 쫓아가는 카메라
 
-
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Cameraon = false;
-            isbosscoming = true;
-        }
         if(isbosscoming)
         {
             Vector3 Bosstarget = new Vector3(260, 30, 180);

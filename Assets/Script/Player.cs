@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // 인벤토리 관리
     int equipWeaponIndex = -1;
     int iteminfo1 = -1;
     int iteminfo2 = -1;
     int iteminfo3 = -1;
 
+    // 이동방향 및 공격 딜레이
     float haxis;
     float vaxis;
     float fireDelay;
 
+    // 플레이어 상태
     bool wdown;
     bool sdown1;
     bool sdown2;
@@ -39,9 +41,10 @@ public class Player : MonoBehaviour
     bool isbuff;
     bool iscbuff = false;
     public bool isstop;
-    
-
+   
     public float speed;
+
+    // 소지 아이템
     public GameObject[] weapons;
     public bool[] hasWeapons;
     public GameObject[] grenades;
@@ -66,6 +69,8 @@ public class Player : MonoBehaviour
     public bool havef2 = false;
     public bool havef3 = false;
 
+
+    // 퀘스트 관련 및 버프
     public int Qenemy;
     public int Qgrenade;
 
@@ -122,7 +127,6 @@ public class Player : MonoBehaviour
         GetInput();
         Move();
         Turn();
-        //Jump();
         Dodge();
         Interation();
         Swap();
@@ -132,7 +136,7 @@ public class Player : MonoBehaviour
         Usepotion();
     }
 
-    void GetInput()
+    void GetInput() // 키 입력 함수들
     {
         haxis = Input.GetAxisRaw("Horizontal"); // GetAxis -> Axis값을 정수로 반환
         vaxis = Input.GetAxisRaw("Vertical");
@@ -154,10 +158,10 @@ public class Player : MonoBehaviour
     {
         moveVec = new Vector3(haxis, 0, vaxis).normalized; // normalized : 방향 값이 1로 보정된 벡터
 
-        if (isdodge)
+        if (isdodge) // 구르고 있을 때
             moveVec = dodgeVec;
 
-        if (isswap || !isFireReady || isreload || isDead || isstop)
+        if (isswap || !isFireReady || isreload || isDead || isstop) // 못 움직이는 상태
             moveVec = Vector3.zero;
 
         if(!isborder)
@@ -168,11 +172,11 @@ public class Player : MonoBehaviour
         anim.SetBool("Walk", wdown);
 
 
-        if (!isdodge && speed != 15 && !isbuff)
+        if (!isdodge && speed != 15 && !isbuff) // 평상시 이동 속도 제한
             speed = 15;
     }
 
-    void Turn()
+    void Turn() // 캐릭터의 시점
     {
         // 키보드 회전 
         transform.LookAt(transform.position + moveVec); // LookAt : 지정된 벡터를 향해 회전시켜주는 함수
@@ -191,23 +195,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Jump()
-    {
-        if (jdown && moveVec == Vector3.zero && !isjump && !isdodge && !isswap && !isDead)
-        {
-            rigid.AddForce(Vector3.up * 15, ForceMode.Impulse);
-            isjump = true;
-            anim.SetBool("isJump", true);
-            anim.SetTrigger("Jump");
-        }
-    }
-
-    void Dodge()
+    void Dodge() // 구르기
     {
         if (jdown && moveVec != Vector3.zero && !isjump && !isdodge && !isswap && !isDead)
         {
             dodgeVec = moveVec;
-            speed *= 2;
+            speed *= 2; // 순간적인 이동속도
             isdodge = true;
             anim.SetTrigger("Dodge");
 
@@ -221,22 +214,23 @@ public class Player : MonoBehaviour
         isdodge = false;
     }
 
-    void Swap()
+    void Swap() // 무기 스왑
     {
-        if(sdown1 && (!hasWeapons[0] || equipWeaponIndex == 0))
+        if(sdown1 && (!hasWeapons[0] || equipWeaponIndex == 0)) // 1번을 눌렀을 시 
         {
             return;
         }
-        if (sdown2 && (!hasWeapons[1] || equipWeaponIndex == 1))
+        if (sdown2 && (!hasWeapons[1] || equipWeaponIndex == 1)) // 2번을 눌렀을 시
         {
             return;
         }
-        if (sdown3 && (!hasWeapons[2] || equipWeaponIndex == 2))
+        if (sdown3 && (!hasWeapons[2] || equipWeaponIndex == 2)) // 3번을 눌렀을 시
         {
             return;
         }
 
-        int weaponIndex = -1;
+        int weaponIndex = -1; // 인덱스 기본값
+
         if (sdown1)
             weaponIndex = 0;
         if (sdown2)
@@ -244,13 +238,13 @@ public class Player : MonoBehaviour
         if (sdown3)
             weaponIndex = 2;
 
-        if ((sdown1 || sdown2 || sdown3) && !isjump && !isdodge && !isDead)
+        if ((sdown1 || sdown2 || sdown3) && !isjump && !isdodge && !isDead) // 무기 스왑 함수
         {
             if (equipWeapon != null)
                 equipWeapon.gameObject.SetActive(false);
 
             equipWeaponIndex = weaponIndex;
-            equipWeapon = weapons[weaponIndex].GetComponent<Weapon>();
+            equipWeapon = weapons[weaponIndex].GetComponent<Weapon>(); // 웨폰 인덱스로 인한 무기 엑티브 활성화
             equipWeapon.gameObject.SetActive(true);
 
             anim.SetTrigger("Swap");
@@ -265,32 +259,35 @@ public class Player : MonoBehaviour
         isswap = false;
     }
 
-    void Interation()
+    void Interation() // 상호작용키 입력
     {
-        if(idown && nearObject != null && !isjump && !isdodge && !isDead)
+        if(idown && nearObject != null && !isjump && !isdodge && !isDead) // E ( 상호작용 ) 버튼을 눌렀을 경우 구별합니다.
         {
-            if(nearObject.tag == "Weapon")
+            if(nearObject.tag == "Weapon") // 무기일 경우
             {
                 Item item = nearObject.GetComponent<Item>();
-                int weponIndex = item.value;
-                hasWeapons[weponIndex] = true;
+                int weponIndex = item.value; // 아이템 벨류값에 따른 인덱스 지정
+                hasWeapons[weponIndex] = true; // 소지여부 true 값 반환
+
+                // 아이템 저장
                 if (weponIndex == 0)
                     DataManager.instance.nowPlayer.Weapon1 = true;
                 else if (weponIndex == 1)
                     DataManager.instance.nowPlayer.Weapon2 = true;
                 else if (weponIndex == 2)
                     DataManager.instance.nowPlayer.Weapon3 = true;
-                Destroy(nearObject);
+                Destroy(nearObject); // 필드에 있던 아이템 삭제
             }
-            else if (nearObject.tag == "Shop")
+            else if (nearObject.tag == "Shop") // 상점일 경우
             {
-                Shop shop = nearObject.GetComponent<Shop>();
+                Shop shop = nearObject.GetComponent<Shop>(); // 상점 열기
                 shop.Enter(this);
-                isshop = true;
+                isshop = true; // isshop 상태 활성화
             }
-            else if (nearObject.tag == "Potion")
+            else if (nearObject.tag == "Potion") // 포션일 경우
             {
-                if (!havef1)
+                // 포션 F1, F2, F3칸 아이템 존재 여부 확인 및 추가
+                if (!havef1) 
                 {
                     Item item = nearObject.GetComponent<Item>();
                     manager.potioncontrol(item.value);
@@ -322,37 +319,38 @@ public class Player : MonoBehaviour
         if (hasWeapons[0] == true && MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 1)
         {
             MainQuest.Instance.isClear = true;
+            Debug.Log("퀘스트클리어해머");
         }
     }
 
-    void Attack()
+    void Attack() // 공격
     {
         if (equipWeapon == null)
             return;
 
-        fireDelay += Time.deltaTime;
+        fireDelay += Time.deltaTime; // 공격 딜레이
         isFireReady = equipWeapon.rate < fireDelay;
 
-        if(fdown && isFireReady && !isdodge && !isswap && !isshop && !isDead)
+        if(fdown && isFireReady && !isdodge && !isstop &&!isswap && !isshop && !isDead) // 공격 키를 누를시
         {
-            equipWeapon.Use();
+            equipWeapon.Use(); // 들고있는 무기의 Use()함수 사용
             anim.SetTrigger(equipWeapon.type == Weapon.Type.Melee ? "Swing" : "Shot");
             fireDelay = 0;
         }
     }
 
-    void Reload()
+    void Reload() // 재장전
     {
-        if (equipWeapon == null)
+        if (equipWeapon == null) // 소지하지 않을 경우 리턴
             return;
 
-        if (equipWeapon.type == Weapon.Type.Melee)
+        if (equipWeapon.type == Weapon.Type.Melee) // 헤머일 경우 리턴
             return;
 
-        if (ammo == 0)
+        if (ammo == 0) // 총알이 없는 경우 리턴
             return;
 
-        if(rdown && !isjump && !isswap && !isdodge && isFireReady && !isDead)
+        if(rdown && !isjump && !isswap && !isdodge && isFireReady && !isDead) // 재장전 버튼을 누를시
         {
             anim.SetTrigger("Reload");
             isreload = true;
@@ -363,8 +361,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    void ReloadOut()
+    void ReloadOut() // 재장전 끝날 시
     {
+        // 해당 총알 차감
         int reAmmo = ammo < equipWeapon.maxammo ? ammo : equipWeapon.maxammo;
         equipWeapon.curammo = reAmmo;
         ammo -= reAmmo;
@@ -372,50 +371,41 @@ public class Player : MonoBehaviour
         isreload = false;
     }
 
-    void StopToWall()
+    void StopToWall() // 벽 뚫기 방지
     {
         Debug.DrawRay(transform.position, transform.forward * 5, Color.green);
         isborder = Physics.Raycast(transform.position, transform.forward , 5, LayerMask.GetMask("Wall"));
     }
     
-    void Grenade()
+    void Grenade() // 수류탄
     {
-        if (hasGrenade == 0)
+        if (hasGrenade == 0) // 수류탄을 소지하지 않을 시
             return;
 
-        if(gdown && !isreload && !isswap && !isDead)
+        if(gdown && !isreload && !isswap && !isDead) // 우클릭을 누르면
         {
-            Ray ray = followCamera.ScreenPointToRay(Input.mousePosition);  // ScreenPointToRay 스크린에서 월드로 Ray쏘는 함수
+            Ray ray = followCamera.ScreenPointToRay(Input.mousePosition);  // ScreenPointToRay 스크린에서 월드로 Ray쏘는 함수 수류탄 던질 위치
             RaycastHit rayHit;
             if (Physics.Raycast(ray, out rayHit, 100)) // out : return처럼 반환값을 주어진 변수에 저장하는 키워드
             {
-                Vector3 nextVec = rayHit.point - transform.position;
+                Vector3 nextVec = rayHit.point - transform.position; // 수류탄이 지점까지 던져지는 지점 계산
                 nextVec.y = 10;
 
                 // 생성
-                GameObject instantGrenade = Instantiate(grenadeObj[GrenadeList[0]], transform.position, transform.rotation);
-                Rigidbody rigidGrenade = instantGrenade.GetComponent<Rigidbody>();
-                rigidGrenade.AddForce(nextVec, ForceMode.Impulse);
+                GameObject instantGrenade = Instantiate(grenadeObj[GrenadeList[0]], transform.position, transform.rotation); // GrenadeList에있는 수류탄을 생성합니다.
+                Rigidbody rigidGrenade = instantGrenade.GetComponent<Rigidbody>(); // 그 수류탄의 컴포넌트를 가져온다.
+                rigidGrenade.AddForce(nextVec, ForceMode.Impulse); // 수류탄의 던져지면서의 물리현상을 구현
                 rigidGrenade.AddTorque(Vector3.back * 10, ForceMode.Impulse);
-                GrenadeList.RemoveAt(0);
-                hasGrenade--;
-                Qgrenade--;
-                childoff(grenades[hasGrenade]);
+                GrenadeList.RemoveAt(0); // 리스트 삭제
+                hasGrenade--; // 수류탄 갯수 소모
+                Qgrenade--; // 퀘스트를 진행중일 때 갯수 소모
+                childoff(grenades[hasGrenade]); // 회전하는 수류탄의 액티브 끄기
 
                 if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 2)
                 {
                     MainQuest.Instance.Grenade_Count++;
                 }
             }
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Floor")
-        {
-            isjump = false;
-            anim.SetBool("isJump", false);
         }
     }
 
@@ -436,19 +426,19 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Item")
+        if(other.tag == "Item") // 아이템에 닿으면
         {
             Item item = other.GetComponent<Item>();
-            switch (item.type)
+            switch (item.type) // 아이템 타입을 구별합니다
             {
-                case Item.Type.Ammo:
+                case Item.Type.Ammo: // 총알이면 총알증가
                     ammo += item.value;
                     DataManager.instance.nowPlayer.Ammo += item.value;
                     if (ammo > maxammo)
                         ammo = maxammo;
                     break;
-                case Item.Type.Coin:
-                    if(iscbuff)
+                case Item.Type.Coin: // 코인이면 골드 증가
+                    if(iscbuff) // 버프 상태이면 두배
                     {
                         coin += item.value * 2;
                         DataManager.instance.nowPlayer.Gold += item.value * 2;
@@ -463,17 +453,17 @@ public class Player : MonoBehaviour
                     SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[11];
                     SoundManager.instance.Effect_Sound.Play();
                     break;
-                case Item.Type.Heart:
+                case Item.Type.Heart: // 하트면 현재 HP 증가
                     health += item.value;
                     if (health > maxhealth)
                         health = maxhealth;
                     break;
-                case Item.Type.Grenade:
+                case Item.Type.Grenade: // 수류탄이면 수류탄 증가
                     if (hasGrenade == maxhasGrenade)
                         return;
                     //수류탄 종류 판별 후 넣기
                     GrenadeList.Add(item.Grenadevalue);
-                    //위치 grenades에 0, 1, 2, 3 0이 켜지고 item.value값으로 차일드 키기
+                    //위치 grenades에 0, 1, 2, 3 중 0이 켜지고 item.value값으로 차일드 키기
                     grenades[hasGrenade].SetActive(true);
                     grenadeargorizm();
                     grenades[0].transform.GetChild(item.Grenadevalue).gameObject.SetActive(true);
@@ -482,13 +472,13 @@ public class Player : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
-        else if(other.tag == "EnemyBullet")
+        else if(other.tag == "EnemyBullet") // 상대의 공격이면
         {
-            if (!isdamage)
+            if (!isdamage) // 무적상태가 아닐 때
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
 
-                if(defens < enemyBullet.damage)
+                if(defens < enemyBullet.damage) // 상대의 데미지와 내 방어력 계산
                 {
                     health -= (enemyBullet.damage - defens);
                 }
@@ -501,7 +491,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void grenadeargorizm()
+    void grenadeargorizm() // 수류탄 알고리즘
     {
         if (grenades[2].transform.GetChild(0).gameObject.activeSelf || grenades[2].transform.GetChild(1).gameObject.activeSelf || grenades[2].transform.GetChild(2).gameObject.activeSelf)
         {
@@ -563,7 +553,7 @@ public class Player : MonoBehaviour
 
     
 
-    IEnumerator OnDamage(bool isBossAtk)
+    IEnumerator OnDamage(bool isBossAtk) // 데미지를 입는 방식
     {
         SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[4];
         SoundManager.instance.Effect_Sound.Play();
@@ -571,11 +561,11 @@ public class Player : MonoBehaviour
         isdamage = true;
         foreach(MeshRenderer mesh in meshs)
         {
-            mesh.material.color = Color.yellow;
+            mesh.material.color = Color.yellow; // 피격시 노랑색 변화
         }
 
         if (isBossAtk)
-            rigid.AddForce(transform.forward * -25, ForceMode.Impulse);
+            rigid.AddForce(transform.forward * -25, ForceMode.Impulse); // 데미지를 받을 시 밀려나는 현상
 
         if (health <= 0 && !isDead)
             OnDie();
@@ -583,18 +573,17 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         isdamage = false;
+
         foreach (MeshRenderer mesh in meshs)
         {
-            mesh.material.color = Color.white;
+            mesh.material.color = Color.white; // 다시 색깔 기본값
         }
 
         if (isBossAtk)
-            rigid.velocity = Vector3.zero;
-
-        
+            rigid.velocity = Vector3.zero; 
     }
 
-    void childoff(GameObject obj)
+    void childoff(GameObject obj) // 몸 주변 수류탄 엑티브 끄기
     {
         if (obj.transform.GetChild(0).gameObject.activeSelf)
         {
@@ -610,17 +599,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Usepotion()
+    void Usepotion() // 포션 사용시
     {
         ParticleSystem buf = buffEffect.GetComponent<ParticleSystem>();
         var main = buf.main;
-
-        if (havef1 && sdownf1 && !isbuff)
+        // 어떤 키를 눌렀는지 알아내기
+        if (havef1 && sdownf1 && !isbuff) // F1인 경우
         {
-            Potion(iteminfo1);
-            havef1 = false;
-            manager.isitembool1 = false;
-            main.startColor = buffcolor;
+            Potion(iteminfo1); // F1에 담긴 포션의 능력을 플레이어에게 부여시킵니다
+            havef1 = false; // 소지판별을 False로 바꿉니다
+            manager.isitembool1 = false; // 소지하고 있지 않게 합니다.
+            main.startColor = buffcolor; // 버프 색깔에 맞게 활성화합니다.
             if (MainQuest.Instance.QuestOn && MainQuest.Instance.QuestList[MainQuest.Instance.QuestValue].QuestID == 2)
             {
                 MainQuest.Instance.Potion_Count++;
@@ -653,16 +642,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Potion(int value)
+    void Potion(int value) // 포션 능력 부여 함수
     {
-        isbuff = true;
-        buffEffect.SetActive(true);
+        isbuff = true; // 버프 중첩 상태 방지를 위해
+        buffEffect.SetActive(true); // 버프 이펙트를 켜줍니다.
         GameObject hand = GameObject.Find("Weapon Point");
         Weapon Hammer = hand.transform.GetChild(0).gameObject.GetComponent<Weapon>();
         Weapon Handgun = hand.transform.GetChild(1).gameObject.GetComponent<Weapon>();
         Weapon Subgun = hand.transform.GetChild(2).gameObject.GetComponent<Weapon>();
 
-        switch (value)
+        switch (value) // 각 능력을 부여해 주기위해 switch로 판별해줍니다.
         {
             case 0:
                 speed += 10;

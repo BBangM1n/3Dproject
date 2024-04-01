@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Floor : MonoBehaviour
 {
-    public bool isVillage;
-    public string FloorName;
+    public bool isVillage; // 마을 여부 체크
+    public string FloorName; // 땅 이름
 
     public Text FloorText;
     // Start is called before the first frame update
@@ -23,10 +23,10 @@ public class Floor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Player")) // 플레이어가 땅을 밟을 시
         {
-            if (isVillage)
-                StartCoroutine(HPUP());
+            if (isVillage) 
+                StartCoroutine(HPUP()); // 마을이면 HP자동 회복 함수 발동
 
             GameManager manager = GameObject.Find("Game Manager").gameObject.GetComponent<GameManager>();
             manager.stageNameText.text = FloorName;
@@ -56,7 +56,6 @@ public class Floor : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         StopAllCoroutines();
-        Debug.Log("코루틴끝");
     }
 
     IEnumerator HPUP()
@@ -70,7 +69,6 @@ public class Floor : MonoBehaviour
                 player.health = player.maxhealth;
             }
         }
-        Debug.Log("피업");
         yield return new WaitForSeconds(5f);
         StartCoroutine(HPUP());
     }

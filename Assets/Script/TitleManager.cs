@@ -72,12 +72,12 @@ public class TitleManager : MonoBehaviour
         SceneManager.LoadScene("GameScene"); // 게임씬으로 이동
     }
 
-    public void DeleteBtnClick(int value)
+    public void DeleteBtnClick(int value) // 삭제 버튼 클릭
     {
         MessagePanel.SetActive(true);
         BtnValue = value;
     }
-    public void DeleteData()
+    public void DeleteData() // 삭제 기능 함수
     {
         File.Delete(DataManager.instance.path + BtnValue);
         slotText[BtnValue].text = "비어있음";

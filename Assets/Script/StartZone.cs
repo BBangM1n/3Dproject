@@ -9,7 +9,7 @@ public class StartZone : MonoBehaviour
     public Vector3 spawnVt;
 
     public Text FloorText;
-    // Start is called before the first frame update
+
     void Start()
     {
         FloorText = GameObject.Find("FloorUIText").gameObject.GetComponent<Text>();
@@ -19,15 +19,15 @@ public class StartZone : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            if(manager.isBossbattle == false)
-                other.gameObject.transform.position = spawnVt;
+            if(manager.isBossbattle == false) // 보스 배틀중이 아니라면
+                other.gameObject.transform.position = spawnVt; // 지정된 곳으로 순간이동
 
             StopCoroutine(FloorTextCoroutin());
-            StartCoroutine(FloorTextCoroutin());
+            StartCoroutine(FloorTextCoroutin()); // 지정된 맵 이름 알림 코루틴
         }
     }
 
-    public IEnumerator FloorTextCoroutin()
+    public IEnumerator FloorTextCoroutin() // 맵 이름 알림 코루틴
     {
         yield return new WaitForSeconds(0.5f);
         FloorText.gameObject.SetActive(true);

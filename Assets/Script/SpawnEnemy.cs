@@ -25,15 +25,10 @@ public class SpawnEnemy : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>();
         manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Enemycount <= 2 && !isspawn && !isboss && !manager.isBossbattle) // 일정 갯수 제한
+        if(Enemycount <= 2 && !isspawn && !isboss && !manager.isBossbattle) // 스폰되는 몬스터 일정 갯수 제한 총 3마리
         {
             isspawn = true;
             StartCoroutine(Spawnenemy());
@@ -45,37 +40,38 @@ public class SpawnEnemy : MonoBehaviour
 
         if(isboss)
         {
-            if(manager.BossCounting > 4   )
+            if(manager.BossCounting > 4 ) // 보스는 5마리를 잡으면 소환되게 설정
             {
                 manager.isBossbattle = true;
                 StartCoroutine(BossSpawn());
-                Debug.Log("보스나온다웨엥");
-                SoundManager.instance.SoundChange(2);
+                SoundManager.instance.SoundChange(2); // BGM 변경
                 SoundManager.instance.isboss = true;
             }
 
         }
     }
-    IEnumerator BossSpawn()
+    IEnumerator BossSpawn() // 보스가 소환될때
     {
-        manager.BossCounting = 0;
-        manager.BossComing.SetActive(true);
-        thisCoroutine = StartCoroutine(manager.BossCreateText());
+        manager.BossCounting = 0; // 보스가 다시 소환 될 수 있도록 카운팅 0으로
+        manager.BossComing.SetActive(true); // 보스 출현 임펙트
+        thisCoroutine = StartCoroutine(manager.BossCreateText()); // 보스출현 텍스트 발동
 
         yield return new WaitForSeconds(4f);
 
         manager.BossComing.SetActive(false);
-        StopCoroutine(thisCoroutine);
+        StopCoroutine(thisCoroutine); // 보스출현 텍스트 중지
 
         yield return new WaitForSeconds(1f);
 
-        player.isreload = true;
+        player.isstop = true; // 플레이어 정지
+
+        // 카메라 연출
         FollowCamera camera = GameObject.Find("Main Camera").gameObject.GetComponent<FollowCamera>();
         camera.Cameraon = false;
         camera.isbosscoming = true;
         Vector3 BossVt = transform.position;
         BossVt = new Vector3(BossVt.x, BossVt.y -20 , BossVt.z);
-        GameObject instantEnemy = Instantiate(enemys[0], BossVt, transform.rotation);
+        GameObject instantEnemy = Instantiate(enemys[0], BossVt, transform.rotation); // 보스 소환
 
         yield return new WaitForSeconds(8f);
 
@@ -87,7 +83,8 @@ public class SpawnEnemy : MonoBehaviour
 
         yield return new WaitForSeconds(10f);
 
-        player.isreload = false;
+        player.isstop = false;
+        // 보스 설정
         Boss enemy = instantEnemy.GetComponent<Boss>();
         enemy.Target = player.transform;
         enemy.manager = manager;
@@ -101,6 +98,7 @@ public class SpawnEnemy : MonoBehaviour
         yield return new WaitForSeconds(10f);
         int i = Random.Range(0, enemys.Length);
         GameObject instantEnemy = Instantiate(enemys[i], transform.position, transform.rotation);
+        // 소환한 몬스터 기본설정
         Enemy enemy = instantEnemy.GetComponent<Enemy>();
         enemy.Spawnposition = gameObject.transform;
         enemy.Target = player.transform;

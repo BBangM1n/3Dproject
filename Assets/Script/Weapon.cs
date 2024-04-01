@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public enum Type { Melee, Range };
+    public enum Type { Melee, Range }; // 헤머, 총 타입 구분
     public Type type;
-    public enum RangeType { nothing ,Hand, Sub };
+    public enum RangeType { nothing ,Hand, Sub }; // 총의 핸드건 서브머신건 구분
     public RangeType rangetype;
-    public int damage;
-    public float rate;
-    public BoxCollider meleeArea;
-    public TrailRenderer trailEffect;
+    public int damage; // 데미지
+    public float rate; // 공격속도
+    public BoxCollider meleeArea; // 공격범위
+    public TrailRenderer trailEffect; // 공격할때의 모션을위해 적용
+
+    // 총알
     public Transform bulletPos;
     public GameObject bullet;
     public Transform bulletCasePos;

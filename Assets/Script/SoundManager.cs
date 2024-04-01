@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public static SoundManager instance; // ΩÃ±€≈Ê∆–≈œ
 
     public AudioClip[] SoundGroup;
@@ -47,12 +46,6 @@ public class SoundManager : MonoBehaviour
                 Bgm_Sound.Play();
                 break;
         }
-    }
-
-    public void BtnClickSound()
-    {
-        SoundManager.instance.Effect_Sound_2.clip = SoundManager.instance.EffectGroup[14];
-        SoundManager.instance.Effect_Sound_2.Play();
     }
 
 }

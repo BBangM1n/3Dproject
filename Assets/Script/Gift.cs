@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class Gift : MonoBehaviour // 퀘스트 클리어 아이템 관리 함수
 {
-    public enum GiftType { Coin, Ammo, Grenade, Potion };
+    public enum GiftType { Coin, Ammo, Grenade, Potion }; // 아이템 구별
     public GiftType Gifttype;
-    public enum GrenadeType { Basic, Fire, Ice };
+    public enum GrenadeType { Basic, Fire, Ice }; // 수류탄 구별
     public GrenadeType grenadetype;
-    public enum PotionType { Speed, Health, Pawer, AS, Coin };
+    public enum PotionType { Speed, Health, Pawer, AS, Coin }; // 포션 구별
     public PotionType Potiontype;
 
-    public GameObject[] Grenades;
-    public GameObject[] Potions;
+    public GameObject[] Grenades; // 수류탄 프리팹 저장
+    public GameObject[] Potions; // 포션 프리팹 저장
 
     public Image giftimg;
     public Sprite[] GiftTypeimg;

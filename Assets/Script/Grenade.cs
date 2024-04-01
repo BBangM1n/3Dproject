@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Grenade : MonoBehaviour
-{   public enum Type { Basic, Property };
+{   public enum Type { Basic, Property }; // 기본, 속성 인지 구별하기 위한 값
     public Type type;
-    public GameObject meshObj;
-    public GameObject effectObj;
+    public GameObject meshObj; // 수류탄 메쉬
+    public GameObject effectObj; // 임펙트 오브젝트
     public Rigidbody rigid;
     public GameObject effect;
-    // Start is called before the first frame update
+
     void Start()
     {
         StartCoroutine(Explosion());
     }
 
-    // Update is called once per frame
     IEnumerator Explosion() // 코루틴
     {
         yield return new WaitForSeconds(3f); // 3초뒤 발동

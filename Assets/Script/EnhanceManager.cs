@@ -5,17 +5,19 @@ using UnityEngine.UI;
 
 public class EnhanceManager : MonoBehaviour
 {
-    public enum Type {Head, Armor, Hammer, Gun }
+    public enum Type {Head, Armor, Hammer, Gun } // 강화 구별하기
     public Type type;
+
     //플레이어 강화 상태 불러오기
     public int Level;
     public int gold;
     public int PlusStat; // 강화된 스탯수치
     public int PlusHand;
     public int PlusSub;
-    public int Probability; // 확률
+    public int Probability; // 확률 지정
     public bool isGun;
 
+    // UI Text
     public Text LvText;
     public Text Stat;
     public Text Consumgold;
@@ -25,6 +27,7 @@ public class EnhanceManager : MonoBehaviour
 
     void Start()
     {
+        // 타입 별 플레이어 저장된 정보 불러오기
         player = GameObject.Find("Player").gameObject.GetComponent<Player>();
         if (type == Type.Head)
         {
@@ -57,7 +60,8 @@ public class EnhanceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Enhance(Level);
+        Enhance(Level); // 실시간 강화 레벨에 따른 확률 및 골드값
+
         LvText.text = "Lv." + Level;
         if (isGun)
             Stat.text = "+ " + PlusHand + " & + " + PlusSub;
@@ -66,18 +70,18 @@ public class EnhanceManager : MonoBehaviour
         Consumgold.text = gold.ToString();
     }
 
-    public void EnhanceBtnClick()
+    public void EnhanceBtnClick() // 강화 버튼 클릭시
     {
-        if(player.coin < gold)
+        if(player.coin < gold) // 돈이 없는 상태
         {
             TalkText.text = "지금 가진 돈이 부족해!";
         }
-        else
+        else // 돈이 있는 상태
         {
             player.coin -= gold;
             DataManager.instance.nowPlayer.Gold -= gold;
-            int random = Random.Range(0, 101);
-            if (Probability > random)
+            int random = Random.Range(0, 101); // 강화 확률 0 ~ 100
+            if (Probability > random) // Probability(강화 확률) 보다 낮을 시 성공
             {
                 TalkText.text = "축하해! 강화에 성공했어!";
                 Level++;
@@ -89,7 +93,7 @@ public class EnhanceManager : MonoBehaviour
                     MainQuest.Instance.Enhance_Count++;
                 }
 
-                switch (type)
+                switch (type) // 스탯 강화
                 {
                     case Type.Head:
                         player.maxhealth += 10;
@@ -115,7 +119,7 @@ public class EnhanceManager : MonoBehaviour
                         break;
                 }
             }
-            else
+            else // 강화 실패
             {
                 TalkText.text = "아쉽게 강화에 실패했어...";
                 SoundManager.instance.Effect_Sound_2.clip = SoundManager.instance.EffectGroup[10];
@@ -124,7 +128,7 @@ public class EnhanceManager : MonoBehaviour
         }
     }
 
-    public void Enhance(int level)
+    public void Enhance(int level) // 실시간 강화 레벨에 따른 확률 및 골드값
     {
         switch(level)
         {

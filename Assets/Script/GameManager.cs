@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    // 카메라
     public GameObject menuCam;
     public GameObject gameCam;
     public Player player;
     public Boss boss;
+
+    // 상점
     public GameObject itemShop;
     public GameObject weaponShop;
     public GameObject potionShop;
@@ -19,15 +22,18 @@ public class GameManager : MonoBehaviour
     public float playTime;
     public bool isBattle;
 
+    // 퀘스트 관리 enemy카운트
     public int enemyCntA;
     public int enemyCntB;
     public int enemyCntC;
     public int enemyCntD;
 
+    // 포션 아이템칸 활성화 여부
     public bool isitembool1 = false;
     public bool isitembool2 = false;
     public bool isitembool3 = false;
 
+    // UI
     public Transform[] enemyZones;
     public GameObject[] enemies;
     public List<int> enemyList;
@@ -36,12 +42,14 @@ public class GameManager : MonoBehaviour
     public GameObject gamePanel;
     public GameObject overPanel;
     public GameObject pausePanel;
+
     public Text maxScoreText;
     public Text stageNameText;
     public Text playTimeText;
     public Text playerHealthText;
     public Text playerAmmoText;
     public Text playerCoinText;
+
     public Image weapon1Img;
     public Image weapon2Img;
     public Image weapon3Img;
@@ -58,7 +66,6 @@ public class GameManager : MonoBehaviour
     public Text curScoreText;
     public Text RespawnText;
     public Button RestartBtn;
-
 
     public Sprite[] potiomimage;
 
@@ -125,8 +132,6 @@ public class GameManager : MonoBehaviour
             }
             else
                 EndBtn.gameObject.SetActive(false);
-
-            Debug.Log(TutorialImageGroup.Length);
         }
         else
             return;
@@ -237,7 +242,6 @@ public class GameManager : MonoBehaviour
         overPanel.SetActive(true);
         RestartBtn.interactable = false;
         StartCoroutine(RespawnTexton());
-
     }
 
     IEnumerator RespawnTexton()
@@ -265,7 +269,7 @@ public class GameManager : MonoBehaviour
         gamePanel.SetActive(true);
         overPanel.SetActive(false);
         if (isBossbattle)
-            player.transform.position = new Vector3(227, 1, -35);
+            player.transform.position = new Vector3(227, 1, -35); // 보스 지점
         else
             player.transform.position = new Vector3(0, 1, 0);
         player.isDead = false;

@@ -564,11 +564,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 3
-  maxHealth: 200
-  curHealth: 200
+  maxHealth: 150
+  curHealth: 150
   score: 500
   manager: {fileID: 0}
   Target: {fileID: 0}
+  Spawnposition: {fileID: 0}
   meleeArea: {fileID: 2922190969650407704}
   bullet: {fileID: 8400218538040954504, guid: c35649382b068494bb6bbd1dc2d83281, type: 3}
   coins:
@@ -581,7 +582,6 @@ MonoBehaviour:
   isdamage: 0
   isfire: 0
   isice: 0
-  ispoison: 0
   rigid: {fileID: 0}
   boxCollider: {fileID: 0}
   meshs: []
@@ -590,10 +590,12 @@ MonoBehaviour:
   Debuffeffect:
   - {fileID: 4952244031549935458}
   - {fileID: 1440671217841258205}
+  spawnenemy: {fileID: 0}
   missile: {fileID: 3401992989218241100, guid: 5af1cb1da2e219146ae099a3b68ff0a8, type: 3}
   missilePortA: {fileID: 2922190968513954733}
   missilePortB: {fileID: 2922190969742994763}
   isLook: 1
+  notspawn: 0
 --- !u!1 &2922190969604808265
 GameObject:
   m_ObjectHideFlags: 0

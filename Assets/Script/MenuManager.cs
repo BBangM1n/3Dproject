@@ -28,36 +28,38 @@ public class MenuManager : MonoBehaviour
     }
     void Start()
     {
-        Volume.value = DataManager.instance.nowPlayer.SoundVolume;
+        Volume.value = DataManager.instance.nowPlayer.SoundVolume; // 볼륨데이터 값 저장
     }
 
 
     void Update()
     {
-        BgmSound.volume = Volume.value;
+        BgmSound.volume = Volume.value; // 볼륨데이터 값 전달
     }
 
-    public void MenuBtnClick()
+    public void MenuBtnClick() // 메뉴 버튼 클릭
     {
         Menu.SetActive(true);
         player.isstop = true;
     }
 
-    public void MuteBtnClick()
+    public void MuteBtnClick() // 음소거 버튼 클릭
     {
         mute = mute ? false : true;
 
         if(mute == true)
         {
             Muteimage.SetActive(true);
+            Volume.value = 0;
         }
         else if(mute == false)
         {
             Muteimage.SetActive(false);
+            Volume.value = DataManager.instance.nowPlayer.SoundVolume;
         }
     }
 
-    public void VolumeUpBtnClick() // 0~1
+    public void VolumeUpBtnClick() // 0~1 볼륨 업 버튼 클릭
     {
         Volume.value += 0.1f;
         DataManager.instance.nowPlayer.SoundVolume = Volume.value;
@@ -68,7 +70,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void VolumeDownBtnClick()
+    public void VolumeDownBtnClick() // 볼륨 다운 버튼 클릭
     {
         Volume.value -= 0.1f;
         DataManager.instance.nowPlayer.SoundVolume = Volume.value;
@@ -80,21 +82,20 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void CloseMenuBtnClick()
+    public void CloseMenuBtnClick() // 메뉴 닫기 버튼 클릭
     {
         Menu.SetActive(false);
         player.isstop = false;
     }
 
-    public void ExitBtnClick()
+    public void ExitBtnClick() // 나가기 버튼 클릭
     {
         Menu.SetActive(false);
         manager.Pause();
     }
 
-    public void SaveBtnClick()
+    public void SaveBtnClick() // 세이브 버튼 클릭
     {
         DataManager.instance.SaveData();
-        Debug.Log("세이브");
     }
 }

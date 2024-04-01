@@ -12,9 +12,10 @@ public class MainQuestData
 
 public class MainQuest : MonoBehaviour
 {
-    public static MainQuest Instance { get; private set;}
+    public static MainQuest Instance { get; private set;} // 싱글톤
 
-    public List<MainQuestData> QuestList = new List<MainQuestData>();
+    public List<MainQuestData> QuestList = new List<MainQuestData>(); // 리스트 선언
+
     string[] text = new string[10];
     string Endtext;
     string Falsetext;
@@ -230,7 +231,7 @@ public class MainQuest : MonoBehaviour
         }
     }
 
-    public void NextBtnClick()
+    public void NextBtnClick() // 넘기기 버튼
     {
         if (string.IsNullOrWhiteSpace(text[Count + 1]) == false)
         {
@@ -248,7 +249,7 @@ public class MainQuest : MonoBehaviour
         SoundManager.instance.Effect_Sound.Play();
     }
 
-    public void YesBtnClick()
+    public void YesBtnClick() // 수락하기 버튼
     {
         Story.SetActive(false);
         ClearBtn.SetActive(false);
@@ -257,10 +258,10 @@ public class MainQuest : MonoBehaviour
         QuestOn = true;
         TitleText.text = text[0];
         QText.text = Conditiontext;
-        player.isshop = false;
+        player.isstop = false;
     }
 
-    public void NoBtnClick()
+    public void NoBtnClick() // 거절하기 버튼
     {
         Count = 0;
         Story.SetActive(false);
@@ -268,10 +269,10 @@ public class MainQuest : MonoBehaviour
         ClearBtn.SetActive(false);
         YesBtn.SetActive(false);
         NoBtn.SetActive(false);
-        player.isshop = false;
+        player.isstop = false;
     }
     
-    public void ClearBtnClick()
+    public void ClearBtnClick() // 완료하기 버튼
     {
         if (isClear)
         {
@@ -290,7 +291,7 @@ public class MainQuest : MonoBehaviour
             ClearBtn.SetActive(false);
             TitleText.text = "";
             QText.text = "";
-            player.isshop = false;
+            player.isstop = false;
             SoundManager.instance.Effect_Sound.clip = SoundManager.instance.EffectGroup[9];
             SoundManager.instance.Effect_Sound.Play();
         }
@@ -330,7 +331,7 @@ public class MainQuest : MonoBehaviour
         if(other.tag == "Player" && Input.GetKey(KeyCode.E))
         {
             Story.SetActive(true);
-            player.isshop = true;
+            player.isstop = true;
             if(QuestOn)
             {
                 if(isClear)

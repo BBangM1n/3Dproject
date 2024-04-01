@@ -34,24 +34,13 @@ public class Quest : MonoBehaviour
 
     private void Awake()
     {
-        Button QuestClick = GetComponent<Button>();
-        Text QuestTitleText = GetComponent<Text>();
-        Text ContentText = GetComponent<Text>();
-        Text ConditionText = GetComponent<Text>();
-        Button Yesbtn = GetComponent<Button>();
-        Button Nobtn = GetComponent<Button>();
-        Button Clearbtn = GetComponent<Button>();
-        Image Questicon = GetComponent<Image>();
-        Text nobtnText = Nobtn.GetComponent<Text>();
-        QuestManager qmgr = GameObject.Find("QuestMgr").GetComponent<QuestManager>();
         player = GameObject.Find("Player").GetComponent<Player>();
-        Qvalue = Random.Range(0, 10);
+        Qvalue = Random.Range(0, 10); // 랜덤 Quest값 부여
     }
 
     private void Start()
     {
-        UseQuestList(Qvalue);
-        
+        UseQuestList(Qvalue); 
     }
 
     private void Update()
@@ -96,13 +85,13 @@ public class Quest : MonoBehaviour
         if(isclear)
         {
             Gift gi= gift.GetComponent<Gift>();
-            gi.Clear();
+            gi.Clear(); // 조건 보상 물품 지급
             Debug.Log("조건이 충족됐습니다");
-            Clear(Qvalue);
+            Clear(Qvalue); // 퀘스트 클리어 함수
             quest.transform.GetChild(2).gameObject.SetActive(false);
 
 
-            Qvalue = Random.Range(0, 8);
+            Qvalue = Random.Range(0, 10); // 다시 초기화
             UseQuestList(Qvalue);
             Qcondition(Qvalue);
             isclear = false;

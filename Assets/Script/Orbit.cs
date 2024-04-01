@@ -7,13 +7,13 @@ public class Orbit : MonoBehaviour
     public Transform target; // 타겟 설정
     public float speed; // 회전 속도
     Vector3 offset;
-    // Start is called before the first frame update
+
     void Start()
     {
         offset = transform.position - target.position;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         transform.position = target.position + offset;

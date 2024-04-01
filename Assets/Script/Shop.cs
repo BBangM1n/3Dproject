@@ -34,7 +34,6 @@ public class Shop : MonoBehaviour
             enterPlayer = hit.transform.gameObject.GetComponent<Player>();
             enterPlayer.nearObject = this.gameObject;
             FindPlayer = true;
-            Debug.Log("플레이어가 왔습니다");
         }
 
         if(FindPlayer == true && rayHits.Length == 0) // 감지된 플레이어 배열이 0개라면,
@@ -42,18 +41,15 @@ public class Shop : MonoBehaviour
             FindPlayer = false;
             enterPlayer.nearObject = null;
             Exit();
-            Debug.Log("플레이어가 떠낫습니다");
         }
     }
-    public void Enter(Player player)
+    public void Enter(Player player) // 플레이어가 상점을 열때
     {
         enterPlayer = player;
         uiGroup.anchoredPosition = Vector3.zero;
     }
-
-    // Update is called once per frame
     
-    public void Exit()
+    public void Exit() // 플레이어가 떠날 때
     {
         if(!isQuest)
             anim.SetTrigger("Hello");
@@ -62,22 +58,22 @@ public class Shop : MonoBehaviour
         uiGroup.anchoredPosition = Vector3.down * 1000;
     }
 
-    public void Buy(int index)
+    public void Buy(int index) // 구입
     {
-        int price = itemPrice[index];
-        if(price > enterPlayer.coin)
+        int price = itemPrice[index]; // 아이템의 가격
+        if(price > enterPlayer.coin) // 가격보다 코인이 적다면
         {
             StopCoroutine(Talk());
             StartCoroutine(Talk());
             return;
         }
+
         SoundManager.instance.Effect_Sound_2.clip = SoundManager.instance.EffectGroup[0];
         SoundManager.instance.Effect_Sound_2.Play();
-        enterPlayer.coin -= price;
+        enterPlayer.coin -= price; // 값 지불
         DataManager.instance.nowPlayer.Gold -= price;
         Vector3 ranVec = Vector3.right * Random.Range(-3, 3) + Vector3.forward * Random.Range(-3, 3);
         Instantiate(itemObj[index], itemPos[index].position + ranVec, itemPos[index].rotation);
-
     }
 
     IEnumerator Talk()

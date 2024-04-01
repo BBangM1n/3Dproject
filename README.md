@@ -7,7 +7,7 @@
 ## 포트폴리오 빌드 파일 
 - [구글 드라이브 링크](https://drive.google.com/file/d/1Vlu0-TCDOu_4R6dct8ti3Sbd1dxhQFvo/view?usp=drive_link)
 ## 유튜브 영상 링크
--
+- [유튜브 영상 링크](https://www.youtube.com/watch?v=v50233gSmvE)
 ## 주요 활용 기술
 - #01)(스크립트) [Json 직렬화 사용한 데이터 관리 코드](https://cafe.naver.com/bbangnity/49)
 <details>
